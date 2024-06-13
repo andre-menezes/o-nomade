@@ -1,2 +1,19 @@
 # o-nomade
-Repositório do teste técnico da empresa NTConsult para a vaga de Desenvolvedor Frontend Pleno
+
+## Project setup
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
