@@ -1,0 +1,822 @@
+[
+  {
+    "id": 1,
+    "name": "Hotel Exemplo A",
+    "location": {
+      "address": "Rua Exemplo, 123",
+      "city": "São Paulo",
+      "state": "SP",
+      "country": "Brasil",
+      "zip_code": "01000-000"
+    },
+    "description": "Um hotel de luxo no coração da cidade.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Academia",
+      "Café da manhã incluso"
+    ],
+    "rating": 4.5,
+    "numberOfRooms": 150,
+    "pricePerNight": 450.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 2,
+    "name": "Hotel Exemplo B",
+    "location": {
+      "address": "Avenida Exemplo, 456",
+      "city": "Rio de Janeiro",
+      "state": "RJ",
+      "country": "Brasil",
+      "zip_code": "20000-000"
+    },
+    "description": "Hotel confortável com vista para o mar.",
+    "amenities": ["Wi-Fi grátis", "Piscina", "Estacionamento", "Restaurante"],
+    "rating": 4.0,
+    "numberOfRooms": 200,
+    "pricePerNight": 350.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 3,
+    "name": "Hotel Exemplo C",
+    "location": {
+      "address": "Praça Exemplo, 789",
+      "city": "Belo Horizonte",
+      "state": "MG",
+      "country": "Brasil",
+      "zip_code": "30000-000"
+    },
+    "description": "Um hotel econômico próximo ao centro.",
+    "amenities": ["Wi-Fi grátis", "Café da manhã incluso", "Recepção 24 horas"],
+    "rating": 3.5,
+    "numberOfRooms": 100,
+    "pricePerNight": 200.0,
+    "cancellationPolicy": "Cancelamento gratuito até 72 horas antes do check-in."
+  },
+  {
+    "id": 4,
+    "name": "Hotel Exemplo D",
+    "location": {
+      "address": "Alameda Exemplo, 101",
+      "city": "Curitiba",
+      "state": "PR",
+      "country": "Brasil",
+      "zip_code": "80000-000"
+    },
+    "description": "Hotel boutique no centro histórico.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Spa",
+      "Café da manhã incluso",
+      "Pet friendly"
+    ],
+    "rating": 4.7,
+    "numberOfRooms": 75,
+    "pricePerNight": 480.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 5,
+    "name": "Hotel Exemplo E",
+    "location": {
+      "address": "Rua das Flores, 234",
+      "city": "Florianópolis",
+      "state": "SC",
+      "country": "Brasil",
+      "zip_code": "88000-000"
+    },
+    "description": "Hotel à beira-mar com vista deslumbrante.",
+    "amenities": ["Wi-Fi grátis", "Piscina", "Serviço de quarto", "Bar"],
+    "rating": 4.6,
+    "numberOfRooms": 120,
+    "pricePerNight": 500.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 6,
+    "name": "Hotel Exemplo F",
+    "location": {
+      "address": "Avenida Central, 789",
+      "city": "Brasília",
+      "state": "DF",
+      "country": "Brasil",
+      "zip_code": "70000-000"
+    },
+    "description": "Hotel moderno próximo aos principais pontos turísticos.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Estacionamento",
+      "Academia",
+      "Café da manhã incluso"
+    ],
+    "rating": 4.3,
+    "numberOfRooms": 180,
+    "pricePerNight": 400.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 7,
+    "name": "Hotel Exemplo G",
+    "location": {
+      "address": "Praia Exemplo, 123",
+      "city": "Salvador",
+      "state": "BA",
+      "country": "Brasil",
+      "zip_code": "40000-000"
+    },
+    "description": "Hotel com temática colonial e vista para o mar.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Restaurante",
+      "Café da manhã incluso"
+    ],
+    "rating": 4.2,
+    "numberOfRooms": 130,
+    "pricePerNight": 370.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 8,
+    "name": "Hotel Exemplo H",
+    "location": {
+      "address": "Rua das Palmeiras, 456",
+      "city": "Fortaleza",
+      "state": "CE",
+      "country": "Brasil",
+      "zip_code": "60000-000"
+    },
+    "description": "Hotel familiar próximo à praia.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Estacionamento",
+      "Café da manhã incluso"
+    ],
+    "rating": 4.1,
+    "numberOfRooms": 110,
+    "pricePerNight": 350.0,
+    "cancellationPolicy": "Cancelamento gratuito até 72 horas antes do check-in."
+  },
+  {
+    "id": 9,
+    "name": "Hotel Exemplo I",
+    "location": {
+      "address": "Largo Exemplo, 789",
+      "city": "Porto Alegre",
+      "state": "RS",
+      "country": "Brasil",
+      "zip_code": "90000-000"
+    },
+    "description": "Hotel de negócios com excelente localização.",
+    "amenities": ["Wi-Fi grátis", "Estacionamento", "Academia", "Restaurante"],
+    "rating": 4.4,
+    "numberOfRooms": 140,
+    "pricePerNight": 420.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 10,
+    "name": "Hotel Exemplo J",
+    "location": {
+      "address": "Avenida Beira Rio, 234",
+      "city": "Manaus",
+      "state": "AM",
+      "country": "Brasil",
+      "zip_code": "69000-000"
+    },
+    "description": "Hotel ecológico com vista para o rio.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Restaurante",
+      "Café da manhã incluso"
+    ],
+    "rating": 4.3,
+    "numberOfRooms": 95,
+    "pricePerNight": 380.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 11,
+    "name": "Hotel Exemplo K",
+    "location": {
+      "address": "Rua do Porto, 345",
+      "city": "Recife",
+      "state": "PE",
+      "country": "Brasil",
+      "zip_code": "50000-000"
+    },
+    "description": "Hotel moderno com vista para o mar.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Academia",
+      "Café da manhã incluso"
+    ],
+    "rating": 4.5,
+    "numberOfRooms": 160,
+    "pricePerNight": 460.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 12,
+    "name": "Hotel Exemplo L",
+    "location": {
+      "address": "Avenida das Nações, 678",
+      "city": "Foz do Iguaçu",
+      "state": "PR",
+      "country": "Brasil",
+      "zip_code": "85800-000"
+    },
+    "description": "Hotel com fácil acesso às Cataratas do Iguaçu.",
+    "amenities": ["Wi-Fi grátis", "Piscina", "Estacionamento", "Restaurante"],
+    "rating": 4.4,
+    "numberOfRooms": 145,
+    "pricePerNight": 430.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 13,
+    "name": "Hotel Exemplo M",
+    "location": {
+      "address": "Rua do Lago, 890",
+      "city": "Gramado",
+      "state": "RS",
+      "country": "Brasil",
+      "zip_code": "95670-000"
+    },
+    "description": "Hotel aconchegante próximo ao Lago Negro.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Café da manhã incluso",
+      "Estacionamento",
+      "Serviço de quarto"
+    ],
+    "rating": 4.6,
+    "numberOfRooms": 70,
+    "pricePerNight": 480.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 14,
+    "name": "Hotel Exemplo N",
+    "location": {
+      "address": "Rua do Bosque, 321",
+      "city": "Campos do Jordão",
+      "state": "SP",
+      "country": "Brasil",
+      "zip_code": "12460-000"
+    },
+    "description": "Hotel charmoso em meio à natureza.",
+    "amenities": ["Wi-Fi grátis", "Spa", "Piscina", "Café da manhã incluso"],
+    "rating": 4.7,
+    "numberOfRooms": 60,
+    "pricePerNight": 500.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 15,
+    "name": "Hotel Exemplo O",
+    "location": {
+      "address": "Avenida do Sol, 456",
+      "city": "Natal",
+      "state": "RN",
+      "country": "Brasil",
+      "zip_code": "59000-000"
+    },
+    "description": "Hotel à beira-mar com vista para as dunas.",
+    "amenities": ["Wi-Fi grátis", "Piscina", "Restaurante", "Estacionamento"],
+    "rating": 4.5,
+    "numberOfRooms": 150,
+    "pricePerNight": 470.0,
+    "cancellationPolicy": "Cancelamento gratuito até 72 horas antes do check-in."
+  },
+  {
+    "id": 16,
+    "name": "Hotel Exemplo P",
+    "location": {
+      "address": "Rua da Praia, 567",
+      "city": "Porto Seguro",
+      "state": "BA",
+      "country": "Brasil",
+      "zip_code": "45810-000"
+    },
+    "description": "Hotel com temática tropical próximo à praia.",
+    "amenities": ["Wi-Fi grátis", "Piscina", "Bar", "Café da manhã incluso"],
+    "rating": 4.3,
+    "numberOfRooms": 110,
+    "pricePerNight": 430.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 17,
+    "name": "Hotel Exemplo Q",
+    "location": {
+      "address": "Rua do Comércio, 789",
+      "city": "Belém",
+      "state": "PA",
+      "country": "Brasil",
+      "zip_code": "66000-000"
+    },
+    "description": "Hotel moderno no centro da cidade.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Estacionamento",
+      "Café da manhã incluso",
+      "Serviço de quarto"
+    ],
+    "rating": 4.2,
+    "numberOfRooms": 130,
+    "pricePerNight": 410.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 18,
+    "name": "Hotel Exemplo R",
+    "location": {
+      "address": "Rua das Águas, 123",
+      "city": "Maceió",
+      "state": "AL",
+      "country": "Brasil",
+      "zip_code": "57000-000"
+    },
+    "description": "Hotel à beira-mar com vista para o oceano.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Restaurante",
+      "Café da manhã incluso"
+    ],
+    "rating": 4.4,
+    "numberOfRooms": 125,
+    "pricePerNight": 440.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 19,
+    "name": "Hotel Exemplo S",
+    "location": {
+      "address": "Avenida do Mar, 234",
+      "city": "Aracaju",
+      "state": "SE",
+      "country": "Brasil",
+      "zip_code": "49000-000"
+    },
+    "description": "Hotel familiar com vista para o mar.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Estacionamento",
+      "Café da manhã incluso"
+    ],
+    "rating": 4.1,
+    "numberOfRooms": 105,
+    "pricePerNight": 390.0,
+    "cancellationPolicy": "Cancelamento gratuito até 72 horas antes do check-in."
+  },
+  {
+    "id": 20,
+    "name": "Hotel Exemplo T",
+    "location": {
+      "address": "Praça Central, 567",
+      "city": "João Pessoa",
+      "state": "PB",
+      "country": "Brasil",
+      "zip_code": "58000-000"
+    },
+    "description": "Hotel no centro histórico com vista para o mar.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Restaurante",
+      "Café da manhã incluso"
+    ],
+    "rating": 4.5,
+    "numberOfRooms": 140,
+    "pricePerNight": 450.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 21,
+    "name": "Hotel Exemplo U",
+    "location": {
+      "address": "Avenida dos Pássaros, 890",
+      "city": "Vitória",
+      "state": "ES",
+      "country": "Brasil",
+      "zip_code": "29000-000"
+    },
+    "description": "Hotel moderno com vista para o mar.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Estacionamento",
+      "Café da manhã incluso"
+    ],
+    "rating": 4.3,
+    "numberOfRooms": 125,
+    "pricePerNight": 420.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 22,
+    "name": "Hotel Exemplo V",
+    "location": {
+      "address": "Rua das Pedras, 321",
+      "city": "Búzios",
+      "state": "RJ",
+      "country": "Brasil",
+      "zip_code": "28950-000"
+    },
+    "description": "Hotel charmoso com vista para a praia.",
+    "amenities": ["Wi-Fi grátis", "Piscina", "Bar", "Café da manhã incluso"],
+    "rating": 4.6,
+    "numberOfRooms": 90,
+    "pricePerNight": 460.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 23,
+    "name": "Hotel Exemplo W",
+    "location": {
+      "address": "Avenida das Américas, 123",
+      "city": "Balneário Camboriú",
+      "state": "SC",
+      "country": "Brasil",
+      "zip_code": "88330-000"
+    },
+    "description": "Hotel moderno com vista para o mar.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Academia",
+      "Café da manhã incluso"
+    ],
+    "rating": 4.7,
+    "numberOfRooms": 110,
+    "pricePerNight": 470.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 24,
+    "name": "Hotel Exemplo X",
+    "location": {
+      "address": "Rua das Oliveiras, 456",
+      "city": "Petrópolis",
+      "state": "RJ",
+      "country": "Brasil",
+      "zip_code": "25600-000"
+    },
+    "description": "Hotel histórico com vista para a serra.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Café da manhã incluso",
+      "Estacionamento"
+    ],
+    "rating": 4.4,
+    "numberOfRooms": 100,
+    "pricePerNight": 430.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 25,
+    "name": "Hotel Exemplo Y",
+    "location": {
+      "address": "Avenida dos Lagos, 789",
+      "city": "Angra dos Reis",
+      "state": "RJ",
+      "country": "Brasil",
+      "zip_code": "23900-000"
+    },
+    "description": "Hotel de luxo com vista para o mar.",
+    "amenities": ["Wi-Fi grátis", "Spa", "Piscina", "Restaurante"],
+    "rating": 4.8,
+    "numberOfRooms": 85,
+    "pricePerNight": 490.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 26,
+    "name": "Hotel Exemplo Z",
+    "location": {
+      "address": "Rua das Montanhas, 890",
+      "city": "Campos do Jordão",
+      "state": "SP",
+      "country": "Brasil",
+      "zip_code": "12460-000"
+    },
+    "description": "Hotel aconchegante em meio à serra.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Spa",
+      "Café da manhã incluso",
+      "Pet friendly"
+    ],
+    "rating": 4.7,
+    "numberOfRooms": 70,
+    "pricePerNight": 480.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 27,
+    "name": "Hotel Exemplo AA",
+    "location": {
+      "address": "Avenida das Orquídeas, 234",
+      "city": "São Paulo",
+      "state": "SP",
+      "country": "Brasil",
+      "zip_code": "01300-000"
+    },
+    "description": "Hotel de negócios no centro da cidade.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Estacionamento",
+      "Academia",
+      "Café da manhã incluso"
+    ],
+    "rating": 4.5,
+    "numberOfRooms": 140,
+    "pricePerNight": 460.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 28,
+    "name": "Hotel Exemplo AB",
+    "location": {
+      "address": "Rua das Acácias, 456",
+      "city": "Campinas",
+      "state": "SP",
+      "country": "Brasil",
+      "zip_code": "13000-000"
+    },
+    "description": "Hotel moderno com fácil acesso ao centro.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Estacionamento",
+      "Café da manhã incluso"
+    ],
+    "rating": 4.3,
+    "numberOfRooms": 120,
+    "pricePerNight": 440.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 29,
+    "name": "Hotel Exemplo AC",
+    "location": {
+      "address": "Avenida das Palmeiras, 678",
+      "city": "Fortaleza",
+      "state": "CE",
+      "country": "Brasil",
+      "zip_code": "60000-000"
+    },
+    "description": "Hotel familiar próximo à praia.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Restaurante",
+      "Café da manhã incluso"
+    ],
+    "rating": 4.2,
+    "numberOfRooms": 130,
+    "pricePerNight": 430.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 30,
+    "name": "Hotel Exemplo AD",
+    "location": {
+      "address": "Rua das Garças, 789",
+      "city": "Manaus",
+      "state": "AM",
+      "country": "Brasil",
+      "zip_code": "69000-000"
+    },
+    "description": "Hotel ecológico com vista para o rio.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Café da manhã incluso",
+      "Serviço de quarto"
+    ],
+    "rating": 4.4,
+    "numberOfRooms": 100,
+    "pricePerNight": 420.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 31,
+    "name": "Hotel Exemplo AE",
+    "location": {
+      "address": "Praça das Águas, 234",
+      "city": "Maceió",
+      "state": "AL",
+      "country": "Brasil",
+      "zip_code": "57000-000"
+    },
+    "description": "Hotel à beira-mar com vista para o oceano.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Restaurante",
+      "Café da manhã incluso"
+    ],
+    "rating": 4.5,
+    "numberOfRooms": 150,
+    "pricePerNight": 450.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 32,
+    "name": "Hotel Exemplo AF",
+    "location": {
+      "address": "Avenida das Palmeiras, 456",
+      "city": "Recife",
+      "state": "PE",
+      "country": "Brasil",
+      "zip_code": "50000-000"
+    },
+    "description": "Hotel moderno com vista para o mar.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Academia",
+      "Café da manhã incluso"
+    ],
+    "rating": 4.6,
+    "numberOfRooms": 160,
+    "pricePerNight": 460.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 33,
+    "name": "Hotel Exemplo AG",
+    "location": {
+      "address": "Avenida das Palmeiras, 890",
+      "city": "Natal",
+      "state": "RN",
+      "country": "Brasil",
+      "zip_code": "59000-000"
+    },
+    "description": "Hotel à beira-mar com vista para as dunas.",
+    "amenities": ["Wi-Fi grátis", "Piscina", "Restaurante", "Estacionamento"],
+    "rating": 4.7,
+    "numberOfRooms": 150,
+    "pricePerNight": 470.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 34,
+    "name": "Hotel Exemplo AH",
+    "location": {
+      "address": "Rua das Palmeiras, 234",
+      "city": "São Paulo",
+      "state": "SP",
+      "country": "Brasil",
+      "zip_code": "01300-000"
+    },
+    "description": "Hotel de negócios no centro da cidade.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Estacionamento",
+      "Academia",
+      "Café da manhã incluso"
+    ],
+    "rating": 4.5,
+    "numberOfRooms": 140,
+    "pricePerNight": 460.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 35,
+    "name": "Hotel Exemplo AI",
+    "location": {
+      "address": "Avenida das Palmeiras, 678",
+      "city": "Campinas",
+      "state": "SP",
+      "country": "Brasil",
+      "zip_code": "13000-000"
+    },
+    "description": "Hotel moderno com fácil acesso ao centro.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Estacionamento",
+      "Café da manhã incluso"
+    ],
+    "rating": 4.3,
+    "numberOfRooms": 120,
+    "pricePerNight": 440.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 36,
+    "name": "Hotel Exemplo AJ",
+    "location": {
+      "address": "Rua das Palmeiras, 456",
+      "city": "Fortaleza",
+      "state": "CE",
+      "country": "Brasil",
+      "zip_code": "60000-000"
+    },
+    "description": "Hotel familiar próximo à praia.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Restaurante",
+      "Café da manhã incluso"
+    ],
+    "rating": 4.2,
+    "numberOfRooms": 130,
+    "pricePerNight": 430.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 37,
+    "name": "Hotel Exemplo AK",
+    "location": {
+      "address": "Rua das Garças, 789",
+      "city": "Manaus",
+      "state": "AM",
+      "country": "Brasil",
+      "zip_code": "69000-000"
+    },
+    "description": "Hotel ecológico com vista para o rio.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Café da manhã incluso",
+      "Serviço de quarto"
+    ],
+    "rating": 4.4,
+    "numberOfRooms": 100,
+    "pricePerNight": 420.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 38,
+    "name": "Hotel Exemplo AL",
+    "location": {
+      "address": "Praça das Águas, 234",
+      "city": "Maceió",
+      "state": "AL",
+      "country": "Brasil",
+      "zip_code": "57000-000"
+    },
+    "description": "Hotel à beira-mar com vista para o oceano.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Restaurante",
+      "Café da manhã incluso"
+    ],
+    "rating": 4.5,
+    "numberOfRooms": 150,
+    "pricePerNight": 450.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 39,
+    "name": "Hotel Exemplo AM",
+    "location": {
+      "address": "Avenida das Palmeiras, 456",
+      "city": "Recife",
+      "state": "PE",
+      "country": "Brasil",
+      "zip_code": "50000-000"
+    },
+    "description": "Hotel moderno com vista para o mar.",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Academia",
+      "Café da manhã incluso"
+    ],
+    "rating": 4.6,
+    "numberOfRooms": 160,
+    "pricePerNight": 460.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 40,
+    "name": "Hotel Exemplo AN",
+    "location": {
+      "address": "Avenida das Palmeiras, 890",
+      "city": "Natal",
+      "state": "RN",
+      "country": "Brasil",
+      "zip_code": "59000-000"
+    },
+    "description": "Hotel à beira-mar com vista para as dunas.",
+    "amenities": ["Wi-Fi grátis", "Piscina", "Restaurante", "Estacionamento"],
+    "rating": 4.7,
+    "numberOfRooms": 150,
+    "pricePerNight": 470.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  }
+]
