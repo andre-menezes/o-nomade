@@ -9,8 +9,17 @@ const routes: Array<RouteRecordRaw> = [
     path: "/",
     name: "Home",
     component: lazyLoad("Home"),
+    meta: {
+      layout: "default",
+    },
   },
-  // Adicione outras rotas conforme necessário
+  {
+    path: "/:pathMatch(.*)",
+    component: lazyLoad("PageNotFound"),
+    meta: {
+      layout: "not-found",
+    },
+  },
 ];
 
 const router = createRouter({
