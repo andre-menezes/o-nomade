@@ -52,7 +52,7 @@ export const useMocksStore = defineStore("mocks", {
         return Promise.reject(error);
       }
     },
-    getHotelsByCity(city: string) {
+    getHotelsByLocale(city: string) {
       try {
         const hotels = this.hotels.filter(
           (hotel) => hotel.location.city.toLowerCase() === city.toLowerCase()
