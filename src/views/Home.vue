@@ -1,6 +1,7 @@
 <template>
-  <main>
-    <h1>Home</h1>
-    <p>Hello, world!</p>
-  </main>
+  <SearchHotels></SearchHotels>
 </template>
+
+<script setup lang="ts">
+import SearchHotels from '@/components/SearchHotels.vue';
+</script>
