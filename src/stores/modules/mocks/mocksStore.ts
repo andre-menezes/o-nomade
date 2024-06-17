@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 import axios from "axios";
 
-interface HotelData {
+export interface HotelData {
   id: number;
   name: string;
   location: {
@@ -12,6 +12,7 @@ interface HotelData {
     zip_code: string;
   };
   description: string;
+  image: string;
   amenities: string[];
   rating: number;
   number_of_rooms: number;
@@ -19,16 +20,21 @@ interface HotelData {
   cancellation_policy: string;
 }
 
-export const useMocksStore = defineStore("mocks", {
-  state: () => ({
-    hotels: [] as HotelData[],
-    loading: false,
-    error: null as string | null,
+interface MocksState {
+  hotels: HotelData[];
+  error: string;
+  time: number;
+}
+
+export const useMocksStore = defineStore({
+  id: "mocks",
+  state: (): MocksState => ({
+    hotels: [],
+    error: "",
+    time: 1500,
   }),
   actions: {
-    async fetchHotelData() {
-      this.loading = true;
-      this.error = null;
+    async fetchHotelData(this: { hotels: HotelData[]; error: string }) {
       try {
         const cachedHotels = localStorage.getItem("hotels");
         if (cachedHotels) {
@@ -40,49 +46,44 @@ export const useMocksStore = defineStore("mocks", {
         }
       } catch (error) {
         this.error = "Erro ao buscar os dados dos hotéis";
-      } finally {
-        this.loading = false;
       }
     },
-    getHotelDataById(id: number) {
+  },
+  getters: {
+    getHotelDataById:
+      (state) =>
+      (id: number): HotelData | undefined => {
+        try {
+          const hotel = state.hotels.find((h) => h.id === id);
+          return hotel;
+        } catch (error) {
+          throw new Error("Erro ao buscar o hotel pelo ID");
+        }
+      },
+
+    getHotelsByLocale:
+      (state) =>
+      async (locale: string): Promise<HotelData[]> => {
+        try {
+          const hotels = state.hotels.filter(
+            (hotel) =>
+              hotel.location.city.toLowerCase() === locale.toLowerCase()
+          );
+          return hotels;
+        } catch (error) {
+          throw new Error(`Erro ao buscar hotéis em ${locale}`);
+        }
+      },
+
+    getBestRatingHotels: (state) => async (): Promise<HotelData[]> => {
       try {
-        const hotel = this.hotels.find((hotel) => hotel.id === id);
-        return Promise.resolve(hotel);
+        const bestRating = state.hotels
+          .sort((a, b) => b.rating - a.rating)
+          .filter((hotel) => hotel.rating === 5);
+        return bestRating;
       } catch (error) {
-        return Promise.reject(error);
-      }
-    },
-    getHotelsByLocale(city: string) {
-      try {
-        const hotels = this.hotels.filter(
-          (hotel) => hotel.location.city.toLowerCase() === city.toLowerCase()
-        );
-        return Promise.resolve(hotels);
-      } catch (error) {
-        return Promise.reject(error);
-      }
-    },
-    getHotelsByName(name: string) {
-      try {
-        const hotels = this.hotels.filter((hotel) =>
-          hotel.name.toLowerCase().includes(name.toLowerCase())
-        );
-        return Promise.resolve(hotels);
-      } catch (error) {
-        return Promise.reject(error);
-      }
-    },
-    getHotelsByAmenities(amenities: string[]) {
-      try {
-        const hotels = this.hotels.filter((hotel) =>
-          amenities.every((amenity) => hotel.amenities.includes(amenity))
-        );
-        return Promise.resolve(hotels);
-      } catch (error) {
-        return Promise.reject(error);
+        throw new Error("Erro ao buscar os hotéis com melhor classificação");
       }
     },
   },
 });
-
-export default useMocksStore;

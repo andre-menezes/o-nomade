@@ -10,13 +10,14 @@
       "zip_code": "01000-000"
     },
     "description": "Um hotel de luxo no coração da cidade.",
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945",
     "amenities": [
       "Wi-Fi grátis",
       "Piscina",
       "Academia",
       "Café da manhã incluso"
     ],
-    "rating": 4.5,
+    "rating": 3,
     "numberOfRooms": 150,
     "pricePerNight": 450.0,
     "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
@@ -32,8 +33,9 @@
       "zip_code": "20000-000"
     },
     "description": "Hotel confortável com vista para o mar.",
+    "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791",
     "amenities": ["Wi-Fi grátis", "Piscina", "Estacionamento", "Restaurante"],
-    "rating": 4.0,
+    "rating": 5,
     "numberOfRooms": 200,
     "pricePerNight": 350.0,
     "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
@@ -49,8 +51,9 @@
       "zip_code": "30000-000"
     },
     "description": "Um hotel econômico próximo ao centro.",
+    "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
     "amenities": ["Wi-Fi grátis", "Café da manhã incluso", "Recepção 24 horas"],
-    "rating": 3.5,
+    "rating": 5,
     "numberOfRooms": 100,
     "pricePerNight": 200.0,
     "cancellationPolicy": "Cancelamento gratuito até 72 horas antes do check-in."
@@ -66,13 +69,14 @@
       "zip_code": "80000-000"
     },
     "description": "Hotel boutique no centro histórico.",
+    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4",
     "amenities": [
       "Wi-Fi grátis",
       "Spa",
       "Café da manhã incluso",
       "Pet friendly"
     ],
-    "rating": 4.7,
+    "rating": 4,
     "numberOfRooms": 75,
     "pricePerNight": 480.0,
     "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
@@ -88,8 +92,9 @@
       "zip_code": "88000-000"
     },
     "description": "Hotel à beira-mar com vista deslumbrante.",
+    "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461",
     "amenities": ["Wi-Fi grátis", "Piscina", "Serviço de quarto", "Bar"],
-    "rating": 4.6,
+    "rating": 3,
     "numberOfRooms": 120,
     "pricePerNight": 500.0,
     "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
@@ -105,13 +110,14 @@
       "zip_code": "70000-000"
     },
     "description": "Hotel moderno próximo aos principais pontos turísticos.",
+    "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa",
     "amenities": [
       "Wi-Fi grátis",
       "Estacionamento",
       "Academia",
       "Café da manhã incluso"
     ],
-    "rating": 4.3,
+    "rating": 2,
     "numberOfRooms": 180,
     "pricePerNight": 400.0,
     "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
@@ -127,13 +133,14 @@
       "zip_code": "40000-000"
     },
     "description": "Hotel com temática colonial e vista para o mar.",
+    "image": "https://images.unsplash.com/photo-1586611292717-f828b167408c",
     "amenities": [
       "Wi-Fi grátis",
       "Piscina",
       "Restaurante",
       "Café da manhã incluso"
     ],
-    "rating": 4.2,
+    "rating": 1,
     "numberOfRooms": 130,
     "pricePerNight": 370.0,
     "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
@@ -149,13 +156,14 @@
       "zip_code": "60000-000"
     },
     "description": "Hotel familiar próximo à praia.",
+    "image": "https://images.unsplash.com/photo-1592229505726-ca121723b8ef",
     "amenities": [
       "Wi-Fi grátis",
       "Piscina",
       "Estacionamento",
       "Café da manhã incluso"
     ],
-    "rating": 4.1,
+    "rating": 3,
     "numberOfRooms": 110,
     "pricePerNight": 350.0,
     "cancellationPolicy": "Cancelamento gratuito até 72 horas antes do check-in."
@@ -171,8 +179,9 @@
       "zip_code": "90000-000"
     },
     "description": "Hotel de negócios com excelente localização.",
+    "image": "https://images.unsplash.com/photo-1614957004131-9e8f2a13123c",
     "amenities": ["Wi-Fi grátis", "Estacionamento", "Academia", "Restaurante"],
-    "rating": 4.4,
+    "rating": 2,
     "numberOfRooms": 140,
     "pricePerNight": 420.0,
     "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
@@ -188,13 +197,14 @@
       "zip_code": "69000-000"
     },
     "description": "Hotel ecológico com vista para o rio.",
+    "image": "https://images.unsplash.com/photo-1561501878-aabd62634533",
     "amenities": [
       "Wi-Fi grátis",
       "Piscina",
       "Restaurante",
       "Café da manhã incluso"
     ],
-    "rating": 4.3,
+    "rating": 2,
     "numberOfRooms": 95,
     "pricePerNight": 380.0,
     "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
@@ -210,13 +220,14 @@
       "zip_code": "50000-000"
     },
     "description": "Hotel moderno com vista para o mar.",
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945",
     "amenities": [
       "Wi-Fi grátis",
       "Piscina",
       "Academia",
       "Café da manhã incluso"
     ],
-    "rating": 4.5,
+    "rating": 3,
     "numberOfRooms": 160,
     "pricePerNight": 460.0,
     "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
@@ -232,8 +243,9 @@
       "zip_code": "85800-000"
     },
     "description": "Hotel com fácil acesso às Cataratas do Iguaçu.",
+    "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791",
     "amenities": ["Wi-Fi grátis", "Piscina", "Estacionamento", "Restaurante"],
-    "rating": 4.4,
+    "rating": 2,
     "numberOfRooms": 145,
     "pricePerNight": 430.0,
     "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
@@ -249,13 +261,14 @@
       "zip_code": "95670-000"
     },
     "description": "Hotel aconchegante próximo ao Lago Negro.",
+    "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
     "amenities": [
       "Wi-Fi grátis",
       "Café da manhã incluso",
       "Estacionamento",
       "Serviço de quarto"
     ],
-    "rating": 4.6,
+    "rating": 3,
     "numberOfRooms": 70,
     "pricePerNight": 480.0,
     "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
@@ -271,8 +284,9 @@
       "zip_code": "12460-000"
     },
     "description": "Hotel charmoso em meio à natureza.",
+    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4",
     "amenities": ["Wi-Fi grátis", "Spa", "Piscina", "Café da manhã incluso"],
-    "rating": 4.7,
+    "rating": 4,
     "numberOfRooms": 60,
     "pricePerNight": 500.0,
     "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
@@ -288,8 +302,9 @@
       "zip_code": "59000-000"
     },
     "description": "Hotel à beira-mar com vista para as dunas.",
+    "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461",
     "amenities": ["Wi-Fi grátis", "Piscina", "Restaurante", "Estacionamento"],
-    "rating": 4.5,
+    "rating": 3,
     "numberOfRooms": 150,
     "pricePerNight": 470.0,
     "cancellationPolicy": "Cancelamento gratuito até 72 horas antes do check-in."
@@ -305,8 +320,9 @@
       "zip_code": "45810-000"
     },
     "description": "Hotel com temática tropical próximo à praia.",
+    "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa",
     "amenities": ["Wi-Fi grátis", "Piscina", "Bar", "Café da manhã incluso"],
-    "rating": 4.3,
+    "rating": 2,
     "numberOfRooms": 110,
     "pricePerNight": 430.0,
     "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
@@ -322,13 +338,14 @@
       "zip_code": "66000-000"
     },
     "description": "Hotel moderno no centro da cidade.",
+    "image": "https://images.unsplash.com/photo-1586611292717-f828b167408c",
     "amenities": [
       "Wi-Fi grátis",
       "Estacionamento",
       "Café da manhã incluso",
       "Serviço de quarto"
     ],
-    "rating": 4.2,
+    "rating": 1,
     "numberOfRooms": 130,
     "pricePerNight": 410.0,
     "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
@@ -344,13 +361,14 @@
       "zip_code": "57000-000"
     },
     "description": "Hotel à beira-mar com vista para o oceano.",
+    "image": "https://images.unsplash.com/photo-1592229505726-ca121723b8ef",
     "amenities": [
       "Wi-Fi grátis",
       "Piscina",
       "Restaurante",
       "Café da manhã incluso"
     ],
-    "rating": 4.4,
+    "rating": 2,
     "numberOfRooms": 125,
     "pricePerNight": 440.0,
     "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
@@ -366,13 +384,14 @@
       "zip_code": "49000-000"
     },
     "description": "Hotel familiar com vista para o mar.",
+    "image": "https://images.unsplash.com/photo-1614957004131-9e8f2a13123c",
     "amenities": [
       "Wi-Fi grátis",
       "Piscina",
       "Estacionamento",
       "Café da manhã incluso"
     ],
-    "rating": 4.1,
+    "rating": 3,
     "numberOfRooms": 105,
     "pricePerNight": 390.0,
     "cancellationPolicy": "Cancelamento gratuito até 72 horas antes do check-in."
@@ -388,13 +407,14 @@
       "zip_code": "58000-000"
     },
     "description": "Hotel no centro histórico com vista para o mar.",
+    "image": "https://images.unsplash.com/photo-1561501878-aabd62634533",
     "amenities": [
       "Wi-Fi grátis",
       "Piscina",
       "Restaurante",
       "Café da manhã incluso"
     ],
-    "rating": 4.5,
+    "rating": 3,
     "numberOfRooms": 140,
     "pricePerNight": 450.0,
     "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
@@ -410,13 +430,14 @@
       "zip_code": "29000-000"
     },
     "description": "Hotel moderno com vista para o mar.",
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945",
     "amenities": [
       "Wi-Fi grátis",
       "Piscina",
       "Estacionamento",
       "Café da manhã incluso"
     ],
-    "rating": 4.3,
+    "rating": 2,
     "numberOfRooms": 125,
     "pricePerNight": 420.0,
     "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
@@ -432,8 +453,9 @@
       "zip_code": "28950-000"
     },
     "description": "Hotel charmoso com vista para a praia.",
+    "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791",
     "amenities": ["Wi-Fi grátis", "Piscina", "Bar", "Café da manhã incluso"],
-    "rating": 4.6,
+    "rating": 3,
     "numberOfRooms": 90,
     "pricePerNight": 460.0,
     "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
@@ -449,13 +471,14 @@
       "zip_code": "88330-000"
     },
     "description": "Hotel moderno com vista para o mar.",
+    "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
     "amenities": [
       "Wi-Fi grátis",
       "Piscina",
       "Academia",
       "Café da manhã incluso"
     ],
-    "rating": 4.7,
+    "rating": 4,
     "numberOfRooms": 110,
     "pricePerNight": 470.0,
     "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
@@ -471,13 +494,14 @@
       "zip_code": "25600-000"
     },
     "description": "Hotel histórico com vista para a serra.",
+    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4",
     "amenities": [
       "Wi-Fi grátis",
       "Piscina",
       "Café da manhã incluso",
       "Estacionamento"
     ],
-    "rating": 4.4,
+    "rating": 2,
     "numberOfRooms": 100,
     "pricePerNight": 430.0,
     "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
@@ -493,8 +517,9 @@
       "zip_code": "23900-000"
     },
     "description": "Hotel de luxo com vista para o mar.",
+    "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461",
     "amenities": ["Wi-Fi grátis", "Spa", "Piscina", "Restaurante"],
-    "rating": 4.8,
+    "rating": 5,
     "numberOfRooms": 85,
     "pricePerNight": 490.0,
     "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
@@ -510,13 +535,14 @@
       "zip_code": "12460-000"
     },
     "description": "Hotel aconchegante em meio à serra.",
+    "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa",
     "amenities": [
       "Wi-Fi grátis",
       "Spa",
       "Café da manhã incluso",
       "Pet friendly"
     ],
-    "rating": 4.7,
+    "rating": 4,
     "numberOfRooms": 70,
     "pricePerNight": 480.0,
     "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
@@ -532,13 +558,14 @@
       "zip_code": "01300-000"
     },
     "description": "Hotel de negócios no centro da cidade.",
+    "image": "https://images.unsplash.com/photo-1586611292717-f828b167408c",
     "amenities": [
       "Wi-Fi grátis",
       "Estacionamento",
       "Academia",
       "Café da manhã incluso"
     ],
-    "rating": 4.5,
+    "rating": 3,
     "numberOfRooms": 140,
     "pricePerNight": 460.0,
     "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
@@ -554,13 +581,14 @@
       "zip_code": "13000-000"
     },
     "description": "Hotel moderno com fácil acesso ao centro.",
+    "image": "https://images.unsplash.com/photo-1592229505726-ca121723b8ef",
     "amenities": [
       "Wi-Fi grátis",
       "Piscina",
       "Estacionamento",
       "Café da manhã incluso"
     ],
-    "rating": 4.3,
+    "rating": 2,
     "numberOfRooms": 120,
     "pricePerNight": 440.0,
     "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
@@ -576,13 +604,14 @@
       "zip_code": "60000-000"
     },
     "description": "Hotel familiar próximo à praia.",
+    "image": "https://images.unsplash.com/photo-1614957004131-9e8f2a13123c",
     "amenities": [
       "Wi-Fi grátis",
       "Piscina",
       "Restaurante",
       "Café da manhã incluso"
     ],
-    "rating": 4.2,
+    "rating": 5,
     "numberOfRooms": 130,
     "pricePerNight": 430.0,
     "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
@@ -598,13 +627,14 @@
       "zip_code": "69000-000"
     },
     "description": "Hotel ecológico com vista para o rio.",
+    "image": "https://images.unsplash.com/photo-1561501878-aabd62634533",
     "amenities": [
       "Wi-Fi grátis",
       "Piscina",
       "Café da manhã incluso",
       "Serviço de quarto"
     ],
-    "rating": 4.4,
+    "rating": 2,
     "numberOfRooms": 100,
     "pricePerNight": 420.0,
     "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
@@ -620,13 +650,14 @@
       "zip_code": "57000-000"
     },
     "description": "Hotel à beira-mar com vista para o oceano.",
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945",
     "amenities": [
       "Wi-Fi grátis",
       "Piscina",
       "Restaurante",
       "Café da manhã incluso"
     ],
-    "rating": 4.5,
+    "rating": 3,
     "numberOfRooms": 150,
     "pricePerNight": 450.0,
     "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
@@ -642,13 +673,14 @@
       "zip_code": "50000-000"
     },
     "description": "Hotel moderno com vista para o mar.",
+    "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791",
     "amenities": [
       "Wi-Fi grátis",
       "Piscina",
       "Academia",
       "Café da manhã incluso"
     ],
-    "rating": 4.6,
+    "rating": 3,
     "numberOfRooms": 160,
     "pricePerNight": 460.0,
     "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
@@ -664,8 +696,9 @@
       "zip_code": "59000-000"
     },
     "description": "Hotel à beira-mar com vista para as dunas.",
+    "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
     "amenities": ["Wi-Fi grátis", "Piscina", "Restaurante", "Estacionamento"],
-    "rating": 4.7,
+    "rating": 4,
     "numberOfRooms": 150,
     "pricePerNight": 470.0,
     "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
@@ -681,13 +714,14 @@
       "zip_code": "01300-000"
     },
     "description": "Hotel de negócios no centro da cidade.",
+    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4",
     "amenities": [
       "Wi-Fi grátis",
       "Estacionamento",
       "Academia",
       "Café da manhã incluso"
     ],
-    "rating": 4.5,
+    "rating": 3,
     "numberOfRooms": 140,
     "pricePerNight": 460.0,
     "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
@@ -703,13 +737,14 @@
       "zip_code": "13000-000"
     },
     "description": "Hotel moderno com fácil acesso ao centro.",
+    "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461",
     "amenities": [
       "Wi-Fi grátis",
       "Piscina",
       "Estacionamento",
       "Café da manhã incluso"
     ],
-    "rating": 4.3,
+    "rating": 2,
     "numberOfRooms": 120,
     "pricePerNight": 440.0,
     "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
@@ -725,13 +760,14 @@
       "zip_code": "60000-000"
     },
     "description": "Hotel familiar próximo à praia.",
+    "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa",
     "amenities": [
       "Wi-Fi grátis",
       "Piscina",
       "Restaurante",
       "Café da manhã incluso"
     ],
-    "rating": 4.2,
+    "rating": 5,
     "numberOfRooms": 130,
     "pricePerNight": 430.0,
     "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
@@ -747,13 +783,14 @@
       "zip_code": "69000-000"
     },
     "description": "Hotel ecológico com vista para o rio.",
+    "image": "https://images.unsplash.com/photo-1586611292717-f828b167408c",
     "amenities": [
       "Wi-Fi grátis",
       "Piscina",
       "Café da manhã incluso",
       "Serviço de quarto"
     ],
-    "rating": 4.4,
+    "rating": 2,
     "numberOfRooms": 100,
     "pricePerNight": 420.0,
     "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
@@ -769,13 +806,14 @@
       "zip_code": "57000-000"
     },
     "description": "Hotel à beira-mar com vista para o oceano.",
+    "image": "https://images.unsplash.com/photo-1592229505726-ca121723b8ef",
     "amenities": [
       "Wi-Fi grátis",
       "Piscina",
       "Restaurante",
       "Café da manhã incluso"
     ],
-    "rating": 4.5,
+    "rating": 3,
     "numberOfRooms": 150,
     "pricePerNight": 450.0,
     "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
@@ -791,13 +829,14 @@
       "zip_code": "50000-000"
     },
     "description": "Hotel moderno com vista para o mar.",
+    "image": "https://images.unsplash.com/photo-1614957004131-9e8f2a13123c",
     "amenities": [
       "Wi-Fi grátis",
       "Piscina",
       "Academia",
       "Café da manhã incluso"
     ],
-    "rating": 4.6,
+    "rating": 3,
     "numberOfRooms": 160,
     "pricePerNight": 460.0,
     "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
@@ -813,8 +852,9 @@
       "zip_code": "59000-000"
     },
     "description": "Hotel à beira-mar com vista para as dunas.",
+    "image": "https://images.unsplash.com/photo-1561501878-aabd62634533",
     "amenities": ["Wi-Fi grátis", "Piscina", "Restaurante", "Estacionamento"],
-    "rating": 4.7,
+    "rating": 4,
     "numberOfRooms": 150,
     "pricePerNight": 470.0,
     "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
