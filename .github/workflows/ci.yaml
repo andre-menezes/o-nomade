@@ -1,12 +1,13 @@
 name: CI
 
 on:
-  pull_request:
+  push:
     branches:
       - development
 
 jobs:
-  build:
+  deploy:
+    name: Deploy Application
     runs-on: ubuntu-latest
 
     steps:
@@ -21,7 +22,17 @@ jobs:
           cache: "yarn"
 
       - name: Install dependencies
-        run: yarn install
-      
-      - name: Build project
+        run: |
+          npm install -g @vue/cli yarn
+          yarn install
+
+      - name: Build Application
         run: yarn build
+
+      - name: Deploy project
+        uses: s0/git-publish-subdir-action@development
+        env:
+          REPO: self
+          BRANCH: main
+          FOLDER: dist
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
