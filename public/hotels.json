@@ -1,0 +1,862 @@
+[
+  {
+    "id": 1,
+    "name": "Hotel Paradiso",
+    "location": {
+      "address": "Rua Exemplo, 123",
+      "city": "São Paulo",
+      "state": "SP",
+      "country": "Brasil",
+      "zip_code": "01000-000"
+    },
+    "description": "Um hotel de luxo no coração da cidade.",
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Academia",
+      "Café da manhã incluso"
+    ],
+    "rating": 3,
+    "numberOfRooms": 150,
+    "pricePerNight": 450.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 2,
+    "name": "Oceanview Resort",
+    "location": {
+      "address": "Avenida Exemplo, 456",
+      "city": "Rio de Janeiro",
+      "state": "RJ",
+      "country": "Brasil",
+      "zip_code": "20000-000"
+    },
+    "description": "Hotel confortável com vista para o mar.",
+    "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791",
+    "amenities": ["Wi-Fi grátis", "Piscina", "Estacionamento", "Restaurante"],
+    "rating": 5,
+    "numberOfRooms": 200,
+    "pricePerNight": 350.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 3,
+    "name": "Mountain Peak Inn",
+    "location": {
+      "address": "Praça Exemplo, 789",
+      "city": "Belo Horizonte",
+      "state": "MG",
+      "country": "Brasil",
+      "zip_code": "30000-000"
+    },
+    "description": "Um hotel econômico próximo ao centro.",
+    "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
+    "amenities": ["Wi-Fi grátis", "Café da manhã incluso", "Recepção 24 horas"],
+    "rating": 5,
+    "numberOfRooms": 100,
+    "pricePerNight": 200.0,
+    "cancellationPolicy": "Cancelamento gratuito até 72 horas antes do check-in."
+  },
+  {
+    "id": 4,
+    "name": "Golden Sands Hotel",
+    "location": {
+      "address": "Alameda Exemplo, 101",
+      "city": "Curitiba",
+      "state": "PR",
+      "country": "Brasil",
+      "zip_code": "80000-000"
+    },
+    "description": "Hotel boutique no centro histórico.",
+    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Spa",
+      "Café da manhã incluso",
+      "Pet friendly"
+    ],
+    "rating": 4,
+    "numberOfRooms": 75,
+    "pricePerNight": 480.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 5,
+    "name": "Crystal Lagoon Retreat",
+    "location": {
+      "address": "Rua das Flores, 234",
+      "city": "Florianópolis",
+      "state": "SC",
+      "country": "Brasil",
+      "zip_code": "88000-000"
+    },
+    "description": "Hotel à beira-mar com vista deslumbrante.",
+    "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461",
+    "amenities": ["Wi-Fi grátis", "Piscina", "Serviço de quarto", "Bar"],
+    "rating": 3,
+    "numberOfRooms": 120,
+    "pricePerNight": 500.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 6,
+    "name": "Serene Meadows Lodge",
+    "location": {
+      "address": "Avenida Central, 789",
+      "city": "Brasília",
+      "state": "DF",
+      "country": "Brasil",
+      "zip_code": "70000-000"
+    },
+    "description": "Hotel moderno próximo aos principais pontos turísticos.",
+    "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Estacionamento",
+      "Academia",
+      "Café da manhã incluso"
+    ],
+    "rating": 2,
+    "numberOfRooms": 180,
+    "pricePerNight": 400.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 7,
+    "name": "Blue Horizon Hotel",
+    "location": {
+      "address": "Praia Exemplo, 123",
+      "city": "Salvador",
+      "state": "BA",
+      "country": "Brasil",
+      "zip_code": "40000-000"
+    },
+    "description": "Hotel com temática colonial e vista para o mar.",
+    "image": "https://images.unsplash.com/photo-1586611292717-f828b167408c",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Restaurante",
+      "Café da manhã incluso"
+    ],
+    "rating": 1,
+    "numberOfRooms": 130,
+    "pricePerNight": 370.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 8,
+    "name": "Sunset Vista Resort",
+    "location": {
+      "address": "Rua das Palmeiras, 456",
+      "city": "Fortaleza",
+      "state": "CE",
+      "country": "Brasil",
+      "zip_code": "60000-000"
+    },
+    "description": "Hotel familiar próximo à praia.",
+    "image": "https://images.unsplash.com/photo-1592229505726-ca121723b8ef",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Estacionamento",
+      "Café da manhã incluso"
+    ],
+    "rating": 3,
+    "numberOfRooms": 110,
+    "pricePerNight": 350.0,
+    "cancellationPolicy": "Cancelamento gratuito até 72 horas antes do check-in."
+  },
+  {
+    "id": 9,
+    "name": "Grand Heritage Hotel",
+    "location": {
+      "address": "Largo Exemplo, 789",
+      "city": "Porto Alegre",
+      "state": "RS",
+      "country": "Brasil",
+      "zip_code": "90000-000"
+    },
+    "description": "Hotel de negócios com excelente localização.",
+    "image": "https://images.unsplash.com/photo-1614957004131-9e8f2a13123c",
+    "amenities": ["Wi-Fi grátis", "Estacionamento", "Academia", "Restaurante"],
+    "rating": 2,
+    "numberOfRooms": 140,
+    "pricePerNight": 420.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 10,
+    "name": "Emerald Bay Suites",
+    "location": {
+      "address": "Avenida Beira Rio, 234",
+      "city": "Manaus",
+      "state": "AM",
+      "country": "Brasil",
+      "zip_code": "69000-000"
+    },
+    "description": "Hotel ecológico com vista para o rio.",
+    "image": "https://images.unsplash.com/photo-1561501878-aabd62634533",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Restaurante",
+      "Café da manhã incluso"
+    ],
+    "rating": 2,
+    "numberOfRooms": 95,
+    "pricePerNight": 380.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 11,
+    "name": "Starlight Palace Hotel",
+    "location": {
+      "address": "Rua do Porto, 345",
+      "city": "Recife",
+      "state": "PE",
+      "country": "Brasil",
+      "zip_code": "50000-000"
+    },
+    "description": "Hotel moderno com vista para o mar.",
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Academia",
+      "Café da manhã incluso"
+    ],
+    "rating": 3,
+    "numberOfRooms": 160,
+    "pricePerNight": 460.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 12,
+    "name": "Silver Creek Inn",
+    "location": {
+      "address": "Avenida das Nações, 678",
+      "city": "Foz do Iguaçu",
+      "state": "PR",
+      "country": "Brasil",
+      "zip_code": "85800-000"
+    },
+    "description": "Hotel com fácil acesso às Cataratas do Iguaçu.",
+    "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791",
+    "amenities": ["Wi-Fi grátis", "Piscina", "Estacionamento", "Restaurante"],
+    "rating": 2,
+    "numberOfRooms": 145,
+    "pricePerNight": 430.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 13,
+    "name": "Royal Orchid Resort",
+    "location": {
+      "address": "Rua do Lago, 890",
+      "city": "Gramado",
+      "state": "RS",
+      "country": "Brasil",
+      "zip_code": "95670-000"
+    },
+    "description": "Hotel aconchegante próximo ao Lago Negro.",
+    "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Café da manhã incluso",
+      "Estacionamento",
+      "Serviço de quarto"
+    ],
+    "rating": 3,
+    "numberOfRooms": 70,
+    "pricePerNight": 480.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 14,
+    "name": "Tranquil Gardens Hotel",
+    "location": {
+      "address": "Rua do Bosque, 321",
+      "city": "Campos do Jordão",
+      "state": "SP",
+      "country": "Brasil",
+      "zip_code": "12460-000"
+    },
+    "description": "Hotel charmoso em meio à natureza.",
+    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4",
+    "amenities": ["Wi-Fi grátis", "Spa", "Piscina", "Café da manhã incluso"],
+    "rating": 4,
+    "numberOfRooms": 60,
+    "pricePerNight": 500.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 15,
+    "name": "Majestic Heights Hotel",
+    "location": {
+      "address": "Avenida do Sol, 456",
+      "city": "Natal",
+      "state": "RN",
+      "country": "Brasil",
+      "zip_code": "59000-000"
+    },
+    "description": "Hotel à beira-mar com vista para as dunas.",
+    "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461",
+    "amenities": ["Wi-Fi grátis", "Piscina", "Restaurante", "Estacionamento"],
+    "rating": 3,
+    "numberOfRooms": 150,
+    "pricePerNight": 470.0,
+    "cancellationPolicy": "Cancelamento gratuito até 72 horas antes do check-in."
+  },
+  {
+    "id": 16,
+    "name": "Whispering Pines Lodge",
+    "location": {
+      "address": "Rua da Praia, 567",
+      "city": "Porto Seguro",
+      "state": "BA",
+      "country": "Brasil",
+      "zip_code": "45810-000"
+    },
+    "description": "Hotel com temática tropical próximo à praia.",
+    "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa",
+    "amenities": ["Wi-Fi grátis", "Piscina", "Bar", "Café da manhã incluso"],
+    "rating": 2,
+    "numberOfRooms": 110,
+    "pricePerNight": 430.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 17,
+    "name": "Coastal Breeze Hotel",
+    "location": {
+      "address": "Rua do Comércio, 789",
+      "city": "Belém",
+      "state": "PA",
+      "country": "Brasil",
+      "zip_code": "66000-000"
+    },
+    "description": "Hotel moderno no centro da cidade.",
+    "image": "https://images.unsplash.com/photo-1586611292717-f828b167408c",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Estacionamento",
+      "Café da manhã incluso",
+      "Serviço de quarto"
+    ],
+    "rating": 1,
+    "numberOfRooms": 130,
+    "pricePerNight": 410.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 18,
+    "name": "Luxuria Grand Hotel",
+    "location": {
+      "address": "Rua das Águas, 123",
+      "city": "Maceió",
+      "state": "AL",
+      "country": "Brasil",
+      "zip_code": "57000-000"
+    },
+    "description": "Hotel à beira-mar com vista para o oceano.",
+    "image": "https://images.unsplash.com/photo-1592229505726-ca121723b8ef",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Restaurante",
+      "Café da manhã incluso"
+    ],
+    "rating": 2,
+    "numberOfRooms": 125,
+    "pricePerNight": 440.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 19,
+    "name": "Dreamscape Inn",
+    "location": {
+      "address": "Avenida do Mar, 234",
+      "city": "Aracaju",
+      "state": "SE",
+      "country": "Brasil",
+      "zip_code": "49000-000"
+    },
+    "description": "Hotel familiar com vista para o mar.",
+    "image": "https://images.unsplash.com/photo-1614957004131-9e8f2a13123c",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Estacionamento",
+      "Café da manhã incluso"
+    ],
+    "rating": 3,
+    "numberOfRooms": 105,
+    "pricePerNight": 390.0,
+    "cancellationPolicy": "Cancelamento gratuito até 72 horas antes do check-in."
+  },
+  {
+    "id": 20,
+    "name": "Riverview Retreat",
+    "location": {
+      "address": "Praça Central, 567",
+      "city": "João Pessoa",
+      "state": "PB",
+      "country": "Brasil",
+      "zip_code": "58000-000"
+    },
+    "description": "Hotel no centro histórico com vista para o mar.",
+    "image": "https://images.unsplash.com/photo-1561501878-aabd62634533",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Restaurante",
+      "Café da manhã incluso"
+    ],
+    "rating": 3,
+    "numberOfRooms": 140,
+    "pricePerNight": 450.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 21,
+    "name": "Horizon Bliss Hotel",
+    "location": {
+      "address": "Avenida dos Pássaros, 890",
+      "city": "Vitória",
+      "state": "ES",
+      "country": "Brasil",
+      "zip_code": "29000-000"
+    },
+    "description": "Hotel moderno com vista para o mar.",
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Estacionamento",
+      "Café da manhã incluso"
+    ],
+    "rating": 2,
+    "numberOfRooms": 125,
+    "pricePerNight": 420.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 22,
+    "name": "Sapphire Shores Inn",
+    "location": {
+      "address": "Rua das Pedras, 321",
+      "city": "Búzios",
+      "state": "RJ",
+      "country": "Brasil",
+      "zip_code": "28950-000"
+    },
+    "description": "Hotel charmoso com vista para a praia.",
+    "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791",
+    "amenities": ["Wi-Fi grátis", "Piscina", "Bar", "Café da manhã incluso"],
+    "rating": 3,
+    "numberOfRooms": 90,
+    "pricePerNight": 460.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 23,
+    "name": "Golden Leaf Lodge",
+    "location": {
+      "address": "Avenida das Américas, 123",
+      "city": "Balneário Camboriú",
+      "state": "SC",
+      "country": "Brasil",
+      "zip_code": "88330-000"
+    },
+    "description": "Hotel moderno com vista para o mar.",
+    "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Academia",
+      "Café da manhã incluso"
+    ],
+    "rating": 4,
+    "numberOfRooms": 110,
+    "pricePerNight": 470.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 24,
+    "name": "Azure Haven Resort",
+    "location": {
+      "address": "Rua das Oliveiras, 456",
+      "city": "Petrópolis",
+      "state": "RJ",
+      "country": "Brasil",
+      "zip_code": "25600-000"
+    },
+    "description": "Hotel histórico com vista para a serra.",
+    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Café da manhã incluso",
+      "Estacionamento"
+    ],
+    "rating": 2,
+    "numberOfRooms": 100,
+    "pricePerNight": 430.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 25,
+    "name": "Palms & Pines Hotel",
+    "location": {
+      "address": "Avenida dos Lagos, 789",
+      "city": "Angra dos Reis",
+      "state": "RJ",
+      "country": "Brasil",
+      "zip_code": "23900-000"
+    },
+    "description": "Hotel de luxo com vista para o mar.",
+    "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461",
+    "amenities": ["Wi-Fi grátis", "Spa", "Piscina", "Restaurante"],
+    "rating": 5,
+    "numberOfRooms": 85,
+    "pricePerNight": 490.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 26,
+    "name": "Sunset Cove Retreat",
+    "location": {
+      "address": "Rua das Montanhas, 890",
+      "city": "Campos do Jordão",
+      "state": "SP",
+      "country": "Brasil",
+      "zip_code": "12460-000"
+    },
+    "description": "Hotel aconchegante em meio à serra.",
+    "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Spa",
+      "Café da manhã incluso",
+      "Pet friendly"
+    ],
+    "rating": 4,
+    "numberOfRooms": 70,
+    "pricePerNight": 480.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 27,
+    "name": "Royal Vista Hotel",
+    "location": {
+      "address": "Avenida das Orquídeas, 234",
+      "city": "São Paulo",
+      "state": "SP",
+      "country": "Brasil",
+      "zip_code": "01300-000"
+    },
+    "description": "Hotel de negócios no centro da cidade.",
+    "image": "https://images.unsplash.com/photo-1586611292717-f828b167408c",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Estacionamento",
+      "Academia",
+      "Café da manhã incluso"
+    ],
+    "rating": 2,
+    "numberOfRooms": 140,
+    "pricePerNight": 460.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 28,
+    "name": "Coral Reef Inn",
+    "location": {
+      "address": "Rua das Acácias, 456",
+      "city": "Campinas",
+      "state": "SP",
+      "country": "Brasil",
+      "zip_code": "13000-000"
+    },
+    "description": "Hotel moderno com fácil acesso ao centro.",
+    "image": "https://images.unsplash.com/photo-1592229505726-ca121723b8ef",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Estacionamento",
+      "Café da manhã incluso"
+    ],
+    "rating": 2,
+    "numberOfRooms": 120,
+    "pricePerNight": 440.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 29,
+    "name": "Grand Elysium Hotel",
+    "location": {
+      "address": "Avenida das Palmeiras, 678",
+      "city": "Fortaleza",
+      "state": "CE",
+      "country": "Brasil",
+      "zip_code": "60000-000"
+    },
+    "description": "Hotel familiar próximo à praia.",
+    "image": "https://images.unsplash.com/photo-1614957004131-9e8f2a13123c",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Restaurante",
+      "Café da manhã incluso"
+    ],
+    "rating": 5,
+    "numberOfRooms": 130,
+    "pricePerNight": 430.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 30,
+    "name": "Lakeside Serenity Hotel",
+    "location": {
+      "address": "Rua das Garças, 789",
+      "city": "Manaus",
+      "state": "AM",
+      "country": "Brasil",
+      "zip_code": "69000-000"
+    },
+    "description": "Hotel ecológico com vista para o rio.",
+    "image": "https://images.unsplash.com/photo-1561501878-aabd62634533",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Café da manhã incluso",
+      "Serviço de quarto"
+    ],
+    "rating": 2,
+    "numberOfRooms": 100,
+    "pricePerNight": 420.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 31,
+    "name": "Moonlight Bay Resort",
+    "location": {
+      "address": "Praça das Águas, 234",
+      "city": "Maceió",
+      "state": "AL",
+      "country": "Brasil",
+      "zip_code": "57000-000"
+    },
+    "description": "Hotel à beira-mar com vista para o oceano.",
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Restaurante",
+      "Café da manhã incluso"
+    ],
+    "rating": 3,
+    "numberOfRooms": 150,
+    "pricePerNight": 450.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 32,
+    "name": "Diamond Crest Hotel",
+    "location": {
+      "address": "Avenida das Palmeiras, 456",
+      "city": "Recife",
+      "state": "PE",
+      "country": "Brasil",
+      "zip_code": "50000-000"
+    },
+    "description": "Hotel moderno com vista para o mar.",
+    "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Academia",
+      "Café da manhã incluso"
+    ],
+    "rating": 3,
+    "numberOfRooms": 160,
+    "pricePerNight": 460.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 33,
+    "name": "Alpine View Lodge",
+    "location": {
+      "address": "Avenida das Palmeiras, 890",
+      "city": "Natal",
+      "state": "RN",
+      "country": "Brasil",
+      "zip_code": "59000-000"
+    },
+    "description": "Hotel à beira-mar com vista para as dunas.",
+    "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
+    "amenities": ["Wi-Fi grátis", "Piscina", "Restaurante", "Estacionamento"],
+    "rating": 4,
+    "numberOfRooms": 150,
+    "pricePerNight": 470.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 34,
+    "name": "Ocean Pearl Suites",
+    "location": {
+      "address": "Rua das Palmeiras, 234",
+      "city": "São Paulo",
+      "state": "SP",
+      "country": "Brasil",
+      "zip_code": "01300-000"
+    },
+    "description": "Hotel de negócios no centro da cidade.",
+    "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Estacionamento",
+      "Academia",
+      "Café da manhã incluso"
+    ],
+    "rating": 5,
+    "numberOfRooms": 140,
+    "pricePerNight": 460.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 35,
+    "name": "Whispering Waves Resort",
+    "location": {
+      "address": "Avenida das Palmeiras, 678",
+      "city": "Campinas",
+      "state": "SP",
+      "country": "Brasil",
+      "zip_code": "13000-000"
+    },
+    "description": "Hotel moderno com fácil acesso ao centro.",
+    "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Estacionamento",
+      "Café da manhã incluso"
+    ],
+    "rating": 2,
+    "numberOfRooms": 120,
+    "pricePerNight": 440.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 36,
+    "name": "Harmony Hills Hotel",
+    "location": {
+      "address": "Rua das Palmeiras, 456",
+      "city": "Fortaleza",
+      "state": "CE",
+      "country": "Brasil",
+      "zip_code": "60000-000"
+    },
+    "description": "Hotel familiar próximo à praia.",
+    "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Restaurante",
+      "Café da manhã incluso"
+    ],
+    "rating": 5,
+    "numberOfRooms": 130,
+    "pricePerNight": 430.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 37,
+    "name": "Mystic River Lodge",
+    "location": {
+      "address": "Rua das Garças, 789",
+      "city": "Manaus",
+      "state": "AM",
+      "country": "Brasil",
+      "zip_code": "69000-000"
+    },
+    "description": "Hotel ecológico com vista para o rio.",
+    "image": "https://images.unsplash.com/photo-1586611292717-f828b167408c",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Café da manhã incluso",
+      "Serviço de quarto"
+    ],
+    "rating": 2,
+    "numberOfRooms": 100,
+    "pricePerNight": 420.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 38,
+    "name": "Celestial Garden Inn",
+    "location": {
+      "address": "Praça das Águas, 234",
+      "city": "Maceió",
+      "state": "AL",
+      "country": "Brasil",
+      "zip_code": "57000-000"
+    },
+    "description": "Hotel à beira-mar com vista para o oceano.",
+    "image": "https://images.unsplash.com/photo-1592229505726-ca121723b8ef",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Restaurante",
+      "Café da manhã incluso"
+    ],
+    "rating": 3,
+    "numberOfRooms": 150,
+    "pricePerNight": 450.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  },
+  {
+    "id": 39,
+    "name": "Infinity Pool Resort",
+    "location": {
+      "address": "Avenida das Palmeiras, 456",
+      "city": "Recife",
+      "state": "PE",
+      "country": "Brasil",
+      "zip_code": "50000-000"
+    },
+    "description": "Hotel moderno com vista para o mar.",
+    "image": "https://images.unsplash.com/photo-1614957004131-9e8f2a13123c",
+    "amenities": [
+      "Wi-Fi grátis",
+      "Piscina",
+      "Academia",
+      "Café da manhã incluso"
+    ],
+    "rating": 3,
+    "numberOfRooms": 160,
+    "pricePerNight": 460.0,
+    "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+  },
+  {
+    "id": 40,
+    "name": "Tropical Oasis Hotel",
+    "location": {
+      "address": "Avenida das Palmeiras, 890",
+      "city": "Natal",
+      "state": "RN",
+      "country": "Brasil",
+      "zip_code": "59000-000"
+    },
+    "description": "Hotel à beira-mar com vista para as dunas.",
+    "image": "https://images.unsplash.com/photo-1561501878-aabd62634533",
+    "amenities": ["Wi-Fi grátis", "Piscina", "Restaurante", "Estacionamento"],
+    "rating": 4,
+    "numberOfRooms": 150,
+    "pricePerNight": 470.0,
+    "cancellationPolicy": "Cancelamento gratuito até 48 horas antes do check-in."
+  }
+]
