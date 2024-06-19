@@ -10,6 +10,14 @@ jobs:
     name: Deploy Application
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+      pages: 'write'
+      actions: 'write'
+      checks: 'write'
+      deployments: 'write'
+    
     steps:
       - name: Clonar repositório
         uses: actions/checkout@v3
