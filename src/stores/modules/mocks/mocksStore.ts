@@ -50,14 +50,14 @@ export const useMocksStore = defineStore({
     },
   },
   getters: {
-    getHotelDataById:
+    getHotelById:
       (state) =>
       (id: number): HotelData | undefined => {
         try {
-          const hotel = state.hotels.find((h) => h.id === id);
+          const hotel = state.hotels.find((hotel) => hotel.id === id);
           return hotel;
         } catch (error) {
-          throw new Error("Erro ao buscar o hotel pelo ID");
+          throw new Error(`Erro ao buscar hotel com ID ${id}`);
         }
       },
 
@@ -75,7 +75,7 @@ export const useMocksStore = defineStore({
         }
       },
 
-    getBestRatingHotels: (state) => async (): Promise<HotelData[]> => {
+    getBestRatingHotels: (state) => (): HotelData[] => {
       try {
         const bestRating = state.hotels
           .sort((a, b) => b.rating - a.rating)
@@ -85,7 +85,7 @@ export const useMocksStore = defineStore({
         throw new Error("Erro ao buscar os hotéis mais bem avaliados");
       }
     },
-    getAllHotel: (state) => async (): Promise<HotelData[]> => {
+    getAllHotel: (state) => (): HotelData[] => {
       try {
         return state.hotels;
       } catch (error) {

@@ -4,7 +4,7 @@
     <button
       class="flex items-center py-2 px-4 bg-primary hover:bg-primary-hover hover:shadow-xl text-white rounded uppercase font-medium"
       type="button" @click="previousRoute">
-      <i class="fa-solid fa-angle-left mr-2"></i>
+      <i :class="getIconClass('arrowLeft')" class="mr-2"></i>
       voltar
     </button>
   </main>
@@ -16,6 +16,6 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 
 function previousRoute() {
-  router.back();
+  router.push({ name: 'Home' });
 }
 </script>

@@ -2,21 +2,21 @@
   <section class="absolute z-10 w-96 mt-5 px-2 py-2 rounded shadow-lg bg-white flex flex-col">
     <div class="flex justify-center items-center px-1 py-1 self-end rounded-full cursor-pointer hover:bg-gray-50"
       @click="handleClick">
-      <i class="w-4 h-4 fa fa-close"></i>
+      <i :class="getIconClass('close')" class="w-4 h-4"></i>
     </div>
     <div class="flex items-center justify-center gap-4 mb-8">
       <h3 class="text-center text-lg font-semibold">
-        <i class="fa-solid fa-user mr-2"></i>
+        <i :class="getIconClass('user')" class="mr-2"></i>
         Adultos
       </h3>
       <div>
         <button :disabled="adults <= 1" type="button" @click="decrement('adults')"
           class="h-8 w-8 rounded-full bg-primary disabled:bg-gray-100 disabled:text-gray-300 text-white mx-2">
-          <i class="fa fa-minus"></i>
+          <i :class="getIconClass('minus')"></i>
         </button>
         <span class="text-xl text-center inline-block w-8 h-8 font-bold">{{ adults }}</span>
         <button type="button" @click="increment('adults')" class="h-8 w-8 rounded-full bg-primary text-white mx-2">
-          <i class="fa fa-plus"></i>
+          <i :class="getIconClass('plus')"></i>
         </button>
       </div>
     </div>
@@ -25,7 +25,7 @@
 
     <div class="flex items-center justify-center gap-4 my-8">
       <h3 class="flex items-center text-center text-lg font-semibold">
-        <i class="fa-solid fa-children mr-2"></i>
+        <i :class="getIconClass('children')" class="mr-2"></i>
         <span class="flex flex-col">
           Crianças
           <span class="text-xs text-gray-300">(até 14 anos)</span>
@@ -34,11 +34,11 @@
       <div>
         <button :disabled="children <= 0" type="button" @click="decrement('children')"
           class="h-8 w-8 rounded-full bg-primary disabled:bg-gray-100 disabled:text-gray-300 text-white mx-2">
-          <i class="fa fa-minus"></i>
+          <i :class="getIconClass('minus')"></i>
         </button>
         <span class="text-xl text-center inline-block w-8 h-8 font-bold">{{ children }}</span>
         <button type="button" @click="increment('children')" class="h-8 w-8 rounded-full bg-primary text-white mx-2">
-          <i class="fa fa-plus"></i>
+          <i :class="getIconClass('plus')"></i>
         </button>
       </div>
     </div>
@@ -47,18 +47,18 @@
 
     <div class="flex items-center justify-center gap-4 my-8">
       <h3 class="flex items-center text-center text-lg font-semibold">
-        <i class="fa-solid fa-bed mr-2"></i>
+        <i :class="getIconClass('bed')" class="mr-2"></i>
         Quartos
       </h3>
       <div>
         <button :disabled="rooms <= 1 || rooms <= adults" type="button" @click="decrement('rooms')"
           class="h-8 w-8 rounded-full bg-primary disabled:bg-gray-100 disabled:text-gray-300 text-white mx-2">
-          <i class="fa fa-minus"></i>
+          <i :class="getIconClass('minus')"></i>
         </button>
         <span class="text-xl text-center inline-block w-8 h-8 font-bold">{{ rooms }}</span>
         <button :disabled="rooms >= adults" type="button" @click="increment('rooms')"
           class="h-8 w-8 rounded-full bg-primary disabled:bg-gray-100 disabled:text-gray-300 text-white mx-2">
-          <i class="fa fa-plus"></i>
+          <i :class="getIconClass('plus')"></i>
         </button>
       </div>
     </div>
@@ -68,6 +68,7 @@
 
 <script setup lang="ts">
 import { defineEmits, ref, watch } from 'vue';
+import { getIconClass } from '@/utils';
 
 const props = defineProps({
   data: {

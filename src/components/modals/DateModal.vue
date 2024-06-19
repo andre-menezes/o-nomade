@@ -2,10 +2,10 @@
   <section class="absolute z-10 w-96 mt-5 px-2 py-2 rounded shadow-lg bg-white flex flex-col">
     <div class="flex justify-center items-center px-1 py-1 self-end rounded-full cursor-pointer hover:bg-gray-50"
       @click="closeModal">
-      <i class="w-4 h-4 fa fa-close"></i>
+      <i :class="getIconClass('close')" class="mr-2"></i>
     </div>
     <h3 class="text-center text-lg font-semibold">
-      <i class="fa-regular fa-calendar mr-2"></i>
+      <i :class="getIconClass('calendar')" class="mr-2"></i>
       Selecione a data do {{ props.role }}
     </h3>
     <div class="grow px-4 py-4 flex items-center justify-center">
@@ -16,6 +16,7 @@
 
 <script setup lang="ts">
 import { defineEmits, ref } from 'vue';
+import { getIconClass } from '@/utils';
 
 const props = defineProps({
   role: {

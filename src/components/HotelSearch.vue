@@ -1,12 +1,12 @@
 <template>
   <section class="w-full px-8 py-8 bg-white rounded shadow">
     <h2 class="text-2xl mb-14 font-semibold">
-      <i class="fa-solid fa-search"></i>
+      <i :class="getIconClass('search')"></i>
       Veja o que nós encontramos
     </h2>
 
     <label class="font-medium mb-8">
-      <i class="mr-2 fa-solid fa-arrow-down-wide-short"></i>
+      <i :class="getIconClass('search')" class="mr-2"></i>
       Ordenar por:
       <select id="order-by" v-model="orderBy" class=" ml-2 mb-8 px-4 py-2 bg-slate-50 rounded outline-none">
         <option v-for="(label, key) in orderOptions" :key="key" :value="key" class="px-4 py-2 hover:bg-gray-300">
@@ -18,7 +18,7 @@
     <article v-if="!hotels.length">
       <div class="text-center text-2xl py-8">
         <div>
-          <i class="mr-2 fa-regular fa-face-frown"></i>
+          <i :class="getIconClass('sad')" class="mr-2"></i>
           Que pena! Não encontramos nenhum hotel nessa localidade.
         </div>
         <Button class="mx-auto" text="Voltar" icon="fa fa-angle-left" @click="previousRoute"></Button>
@@ -37,11 +37,12 @@
 import { onBeforeMount, ref, watch } from 'vue';
 import { useMocksStore } from '@/stores/modules/mocks';
 import { useRouter } from 'vue-router';
-import CardHotel from '@/components/CardHotel.vue';
 import { HotelData } from '@/stores/modules/mocks/mocksStore';
+import { SearchParams } from '@/views/Search.vue';
+import { getIconClass } from '@/utils';
+import CardHotel from '@/components/CardHotel.vue';
 import Button from './utils/Button.vue';
 import BestRating from './BestRating.vue';
-import { SearchParams } from '@/views/Search.vue';
 
 const props = defineProps({
   params: { type: Object as () => SearchParams, required: true }

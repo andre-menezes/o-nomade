@@ -5,7 +5,7 @@
         <div @click.stop="openModal('locale')"
           class="px-6 py-3 shadow rounded text-center cursor-pointer hover:bg-slate-100 active:bg-gray-300 transition-colors">
           <div class="font-bold">
-            <i class="fa-solid fa-location-dot"></i>
+            <i :class="getIconClass('location')"></i>
             Onde?
           </div>
           <span class="text-md text-gray-400">{{ selectedLocale }}</span>
@@ -18,7 +18,7 @@
         <div @click.stop="openModal('checkin')"
           class="px-6 py-3 shadow rounded text-center cursor-pointer hover:bg-slate-100 active:bg-gray-300 transition-colors">
           <div class="font-bold">
-            <i class="fa-regular fa-calendar-check"></i>
+            <i :class="getIconClass('checkin')"></i>
             Check-in
           </div>
           <span class="text-md text-gray-400">{{ showDate(checkin) }}</span>
@@ -32,7 +32,7 @@
         <div @click.stop="openModal('checkout')"
           class="px-6 py-3 shadow rounded text-center cursor-pointer hover:bg-slate-100 active:bg-gray-300 transition-colors">
           <div class="font-bold">
-            <i class="fa-regular fa-calendar-xmark"></i>
+            <i :class="getIconClass('checkout')"></i>
             Check-out
           </div>
           <span class="text-md text-gray-400">{{ showDate(checkout) }}</span>
@@ -46,7 +46,7 @@
         <div @click.stop="openModal('guests')"
           class="px-6 py-3 shadow rounded text-center cursor-pointer hover:bg-slate-100 active:bg-gray-300 transition-colors">
           <div class="font-bold">
-            <i class="fa-solid fa-users"></i>
+            <i :class="getIconClass('users')"></i>
             Hóspedes
           </div>
           <span class="text-md text-gray-400">{{ hotelGuests }}</span>
@@ -63,6 +63,7 @@
 <script setup lang="ts">
 import { computed, reactive, ref } from 'vue';
 import { useRouter } from 'vue-router';
+import { getIconClass } from '@/utils';
 import Button from './utils/Button.vue';
 import LocaleModal from './modals/LocaleModal.vue';
 import DateModal from './modals/DateModal.vue';
