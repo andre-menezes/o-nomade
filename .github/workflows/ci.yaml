@@ -6,14 +6,24 @@ on:
       - main
 
 jobs:
-  build_deploy_vue:
+  deploy:
+    name: Deploy Application
     runs-on: ubuntu-latest
-    name: Build and Deploy Vue
+
     steps:
-      - uses: actions/checkout@v2
-      - id: Build-Deploy-Vue
-        uses: thefrustrateddev/vue-deploy-github-pages@v1.0.0
+      - name: Clone repository
+        uses: actions/checkout@v3
+
+      - name: Using Node.js and Yarn
+        uses: actions/setup-node@v2
         with:
-          username: "andre-menezes"
-          reponame: "o-nomade"
-          token: ${{ secrets.GITHUB_TOKEN }}
+          node-version: "18.x"
+          registry-url: "https://registry.npmjs.org"
+          cache: "yarn"
+
+      - name: Run install and build
+        run: |
+          npm install -g @vue/cli yarn
+          yarn install
+          yarn build
+          ls -la
