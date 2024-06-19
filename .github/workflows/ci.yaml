@@ -6,31 +6,14 @@ on:
       - main
 
 jobs:
-  deploy:
-    name: Deploy Application
+  build_deploy_vue:
     runs-on: ubuntu-latest
-
+    name: Build and Deploy Vue
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Setup Node.js and Yarn
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v2
+      - id: Build-Deploy-Vue
+        uses: thefrustrateddev/vue-deploy-github-pages@v1.0.0
         with:
-          node-version: "18"
-          registry-url: "https://registry.npmjs.org"
-          cache: "yarn"
-
-      - name: Install dependencies
-        run: |
-          npm install -g @vue/cli yarn
-          yarn install
-
-      - name: Build Application
-        run: yarn build
-
-      - name: Archive production artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: dist
-          path: dist
+          username: "andre-menezes"
+          reponame: "o-nomade"
+          token: ${{ secrets.GITHUB_TOKEN }}

@@ -8,8 +8,7 @@
   },
   "scripts": {
     "serve": "vue-cli-service serve --open",
-    "build": "vue-cli-service build",
-    "deploy": "gh-pages -d dist -r https://github.com/andre-menezes/o-nomade.git"
+    "build": "CI=false vue-cli-service build"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.22",
