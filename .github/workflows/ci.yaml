@@ -29,6 +29,11 @@ jobs:
       - name: Build Application
         run: yarn build
 
+      - name: Debug Build Output
+        run: |
+          echo "Listing dist directory:"
+          ls -la dist
+
       - name: Deploy to GitHub Pages
         run: |
           git config --global user.name "github-actions[bot]"
@@ -40,7 +45,14 @@ jobs:
 
           cp -r dist/* gh-pages/
 
+          echo "Listing gh-pages directory after copy:"
+          ls -la gh-pages
+
           cd gh-pages
           git add .
-          git commit -m "Deploy de aplicação Vue 3 - $(date +'%Y-%m-%d %H:%M:%S')"
-          git push origin gh-pages
+          if git diff-index --quiet HEAD; then
+            echo "No changes to commit"
+          else
+            git commit -m "Deploy de aplicação Vue 3 - $(date +'%Y-%m-%d %H:%M:%S')"
+            git push origin gh-pages
+          fi
