@@ -15,9 +15,9 @@ export interface HotelData {
   image: string;
   amenities: string[];
   rating: number;
-  number_of_rooms: number;
-  price_per_night: number;
-  cancellation_policy: string;
+  numberOfRooms: number;
+  pricePerNight: number;
+  cancellationPolicy: string;
 }
 
 interface MocksState {
@@ -63,7 +63,7 @@ export const useMocksStore = defineStore({
 
     getHotelsByLocale:
       (state) =>
-      async (locale: string): Promise<HotelData[]> => {
+      (locale: string): HotelData[] => {
         try {
           const hotels = state.hotels.filter(
             (hotel) =>
@@ -82,7 +82,14 @@ export const useMocksStore = defineStore({
           .filter((hotel) => hotel.rating === 5);
         return bestRating;
       } catch (error) {
-        throw new Error("Erro ao buscar os hotéis com melhor classificação");
+        throw new Error("Erro ao buscar os hotéis mais bem avaliados");
+      }
+    },
+    getAllHotel: (state) => async (): Promise<HotelData[]> => {
+      try {
+        return state.hotels;
+      } catch (error) {
+        throw new Error("Erro ao buscar todos os hotéis");
       }
     },
   },

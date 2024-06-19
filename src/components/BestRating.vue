@@ -7,8 +7,8 @@
       <i class="fa-solid fa-star"></i>
       Confira os hotéis mais bem avaliados
     </h2>
-    <div class=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 px-4 justify-items-center gap-6">
-      <CardBestHotel v-for="hotel in bestRatingHotel" :key="hotel.id" :hotel="hotel"></CardBestHotel>
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 px-4 justify-items-center gap-6">
+      <CardHotel v-for="hotel in bestRatingHotel" :key="hotel.id" :hotel="hotel"></CardHotel>
     </div>
   </section>
 </template>
@@ -17,7 +17,7 @@
 import { useMocksStore } from '@/stores/modules/mocks';
 import { HotelData } from '@/stores/modules/mocks/mocksStore';
 import { onMounted, ref } from 'vue';
-import CardBestHotel from './CardBestHotel.vue';
+import CardHotel from './CardHotel.vue';
 
 const bestRatingHotel = ref<HotelData[] | null>(null);
 const isLoading = ref(false);

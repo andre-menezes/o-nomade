@@ -55,7 +55,7 @@
         </GuestModal>
       </article>
 
-      <Button :disabled="!locale" class="mx-auto" text="Buscar" icon="fa fa-search" @click="searchHotels"></Button>
+      <Button class="mx-auto" text="Buscar" icon="fa fa-search" @click="searchHotels"></Button>
     </form>
   </section>
 </template>
@@ -92,7 +92,7 @@ function searchHotels() {
       checkout: checkout.value.toLocaleDateString() || '',
       adults: guests.value.adults.toString(),
       children: guests.value.children.toString(),
-      rooms: guests.value.children.toString()
+      rooms: guests.value.rooms.toString()
     }
   });
 }

@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Hotel Exemplo A",
+    "name": "Hotel Paradiso",
     "location": {
       "address": "Rua Exemplo, 123",
       "city": "São Paulo",
@@ -24,7 +24,7 @@
   },
   {
     "id": 2,
-    "name": "Hotel Exemplo B",
+    "name": "Oceanview Resort",
     "location": {
       "address": "Avenida Exemplo, 456",
       "city": "Rio de Janeiro",
@@ -42,7 +42,7 @@
   },
   {
     "id": 3,
-    "name": "Hotel Exemplo C",
+    "name": "Mountain Peak Inn",
     "location": {
       "address": "Praça Exemplo, 789",
       "city": "Belo Horizonte",
@@ -60,7 +60,7 @@
   },
   {
     "id": 4,
-    "name": "Hotel Exemplo D",
+    "name": "Golden Sands Hotel",
     "location": {
       "address": "Alameda Exemplo, 101",
       "city": "Curitiba",
@@ -83,7 +83,7 @@
   },
   {
     "id": 5,
-    "name": "Hotel Exemplo E",
+    "name": "Crystal Lagoon Retreat",
     "location": {
       "address": "Rua das Flores, 234",
       "city": "Florianópolis",
@@ -101,7 +101,7 @@
   },
   {
     "id": 6,
-    "name": "Hotel Exemplo F",
+    "name": "Serene Meadows Lodge",
     "location": {
       "address": "Avenida Central, 789",
       "city": "Brasília",
@@ -124,7 +124,7 @@
   },
   {
     "id": 7,
-    "name": "Hotel Exemplo G",
+    "name": "Blue Horizon Hotel",
     "location": {
       "address": "Praia Exemplo, 123",
       "city": "Salvador",
@@ -147,7 +147,7 @@
   },
   {
     "id": 8,
-    "name": "Hotel Exemplo H",
+    "name": "Sunset Vista Resort",
     "location": {
       "address": "Rua das Palmeiras, 456",
       "city": "Fortaleza",
@@ -170,7 +170,7 @@
   },
   {
     "id": 9,
-    "name": "Hotel Exemplo I",
+    "name": "Grand Heritage Hotel",
     "location": {
       "address": "Largo Exemplo, 789",
       "city": "Porto Alegre",
@@ -188,7 +188,7 @@
   },
   {
     "id": 10,
-    "name": "Hotel Exemplo J",
+    "name": "Emerald Bay Suites",
     "location": {
       "address": "Avenida Beira Rio, 234",
       "city": "Manaus",
@@ -211,7 +211,7 @@
   },
   {
     "id": 11,
-    "name": "Hotel Exemplo K",
+    "name": "Starlight Palace Hotel",
     "location": {
       "address": "Rua do Porto, 345",
       "city": "Recife",
@@ -234,7 +234,7 @@
   },
   {
     "id": 12,
-    "name": "Hotel Exemplo L",
+    "name": "Silver Creek Inn",
     "location": {
       "address": "Avenida das Nações, 678",
       "city": "Foz do Iguaçu",
@@ -252,7 +252,7 @@
   },
   {
     "id": 13,
-    "name": "Hotel Exemplo M",
+    "name": "Royal Orchid Resort",
     "location": {
       "address": "Rua do Lago, 890",
       "city": "Gramado",
@@ -275,7 +275,7 @@
   },
   {
     "id": 14,
-    "name": "Hotel Exemplo N",
+    "name": "Tranquil Gardens Hotel",
     "location": {
       "address": "Rua do Bosque, 321",
       "city": "Campos do Jordão",
@@ -293,7 +293,7 @@
   },
   {
     "id": 15,
-    "name": "Hotel Exemplo O",
+    "name": "Majestic Heights Hotel",
     "location": {
       "address": "Avenida do Sol, 456",
       "city": "Natal",
@@ -311,7 +311,7 @@
   },
   {
     "id": 16,
-    "name": "Hotel Exemplo P",
+    "name": "Whispering Pines Lodge",
     "location": {
       "address": "Rua da Praia, 567",
       "city": "Porto Seguro",
@@ -329,7 +329,7 @@
   },
   {
     "id": 17,
-    "name": "Hotel Exemplo Q",
+    "name": "Coastal Breeze Hotel",
     "location": {
       "address": "Rua do Comércio, 789",
       "city": "Belém",
@@ -352,7 +352,7 @@
   },
   {
     "id": 18,
-    "name": "Hotel Exemplo R",
+    "name": "Luxuria Grand Hotel",
     "location": {
       "address": "Rua das Águas, 123",
       "city": "Maceió",
@@ -375,7 +375,7 @@
   },
   {
     "id": 19,
-    "name": "Hotel Exemplo S",
+    "name": "Dreamscape Inn",
     "location": {
       "address": "Avenida do Mar, 234",
       "city": "Aracaju",
@@ -398,7 +398,7 @@
   },
   {
     "id": 20,
-    "name": "Hotel Exemplo T",
+    "name": "Riverview Retreat",
     "location": {
       "address": "Praça Central, 567",
       "city": "João Pessoa",
@@ -421,7 +421,7 @@
   },
   {
     "id": 21,
-    "name": "Hotel Exemplo U",
+    "name": "Horizon Bliss Hotel",
     "location": {
       "address": "Avenida dos Pássaros, 890",
       "city": "Vitória",
@@ -444,7 +444,7 @@
   },
   {
     "id": 22,
-    "name": "Hotel Exemplo V",
+    "name": "Sapphire Shores Inn",
     "location": {
       "address": "Rua das Pedras, 321",
       "city": "Búzios",
@@ -462,7 +462,7 @@
   },
   {
     "id": 23,
-    "name": "Hotel Exemplo W",
+    "name": "Golden Leaf Lodge",
     "location": {
       "address": "Avenida das Américas, 123",
       "city": "Balneário Camboriú",
@@ -485,7 +485,7 @@
   },
   {
     "id": 24,
-    "name": "Hotel Exemplo X",
+    "name": "Azure Haven Resort",
     "location": {
       "address": "Rua das Oliveiras, 456",
       "city": "Petrópolis",
@@ -508,7 +508,7 @@
   },
   {
     "id": 25,
-    "name": "Hotel Exemplo Y",
+    "name": "Palms & Pines Hotel",
     "location": {
       "address": "Avenida dos Lagos, 789",
       "city": "Angra dos Reis",
@@ -526,7 +526,7 @@
   },
   {
     "id": 26,
-    "name": "Hotel Exemplo Z",
+    "name": "Sunset Cove Retreat",
     "location": {
       "address": "Rua das Montanhas, 890",
       "city": "Campos do Jordão",
@@ -549,7 +549,7 @@
   },
   {
     "id": 27,
-    "name": "Hotel Exemplo AA",
+    "name": "Royal Vista Hotel",
     "location": {
       "address": "Avenida das Orquídeas, 234",
       "city": "São Paulo",
@@ -565,14 +565,14 @@
       "Academia",
       "Café da manhã incluso"
     ],
-    "rating": 3,
+    "rating": 2,
     "numberOfRooms": 140,
     "pricePerNight": 460.0,
     "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
   },
   {
     "id": 28,
-    "name": "Hotel Exemplo AB",
+    "name": "Coral Reef Inn",
     "location": {
       "address": "Rua das Acácias, 456",
       "city": "Campinas",
@@ -595,7 +595,7 @@
   },
   {
     "id": 29,
-    "name": "Hotel Exemplo AC",
+    "name": "Grand Elysium Hotel",
     "location": {
       "address": "Avenida das Palmeiras, 678",
       "city": "Fortaleza",
@@ -618,7 +618,7 @@
   },
   {
     "id": 30,
-    "name": "Hotel Exemplo AD",
+    "name": "Lakeside Serenity Hotel",
     "location": {
       "address": "Rua das Garças, 789",
       "city": "Manaus",
@@ -641,7 +641,7 @@
   },
   {
     "id": 31,
-    "name": "Hotel Exemplo AE",
+    "name": "Moonlight Bay Resort",
     "location": {
       "address": "Praça das Águas, 234",
       "city": "Maceió",
@@ -664,7 +664,7 @@
   },
   {
     "id": 32,
-    "name": "Hotel Exemplo AF",
+    "name": "Diamond Crest Hotel",
     "location": {
       "address": "Avenida das Palmeiras, 456",
       "city": "Recife",
@@ -687,7 +687,7 @@
   },
   {
     "id": 33,
-    "name": "Hotel Exemplo AG",
+    "name": "Alpine View Lodge",
     "location": {
       "address": "Avenida das Palmeiras, 890",
       "city": "Natal",
@@ -705,7 +705,7 @@
   },
   {
     "id": 34,
-    "name": "Hotel Exemplo AH",
+    "name": "Ocean Pearl Suites",
     "location": {
       "address": "Rua das Palmeiras, 234",
       "city": "São Paulo",
@@ -721,14 +721,14 @@
       "Academia",
       "Café da manhã incluso"
     ],
-    "rating": 3,
+    "rating": 5,
     "numberOfRooms": 140,
     "pricePerNight": 460.0,
     "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
   },
   {
     "id": 35,
-    "name": "Hotel Exemplo AI",
+    "name": "Whispering Waves Resort",
     "location": {
       "address": "Avenida das Palmeiras, 678",
       "city": "Campinas",
@@ -751,7 +751,7 @@
   },
   {
     "id": 36,
-    "name": "Hotel Exemplo AJ",
+    "name": "Harmony Hills Hotel",
     "location": {
       "address": "Rua das Palmeiras, 456",
       "city": "Fortaleza",
@@ -774,7 +774,7 @@
   },
   {
     "id": 37,
-    "name": "Hotel Exemplo AK",
+    "name": "Mystic River Lodge",
     "location": {
       "address": "Rua das Garças, 789",
       "city": "Manaus",
@@ -797,7 +797,7 @@
   },
   {
     "id": 38,
-    "name": "Hotel Exemplo AL",
+    "name": "Celestial Garden Inn",
     "location": {
       "address": "Praça das Águas, 234",
       "city": "Maceió",
@@ -820,7 +820,7 @@
   },
   {
     "id": 39,
-    "name": "Hotel Exemplo AM",
+    "name": "Infinity Pool Resort",
     "location": {
       "address": "Avenida das Palmeiras, 456",
       "city": "Recife",
@@ -843,7 +843,7 @@
   },
   {
     "id": 40,
-    "name": "Hotel Exemplo AN",
+    "name": "Tropical Oasis Hotel",
     "location": {
       "address": "Avenida das Palmeiras, 890",
       "city": "Natal",

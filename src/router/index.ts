@@ -14,9 +14,17 @@ const routes: Array<RouteRecordRaw> = [
     },
   },
   {
-    path: "/hotels",
-    name: "Hotels",
+    path: "/hotel",
+    name: "Hotel",
     component: lazyLoad("Home"),
+    meta: {
+      layout: "default",
+    },
+  },
+  {
+    path: "/pesquisa",
+    name: "Search",
+    component: lazyLoad("Search"),
     meta: {
       layout: "default",
     },
