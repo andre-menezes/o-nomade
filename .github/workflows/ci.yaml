@@ -29,30 +29,39 @@ jobs:
       - name: Build Application
         run: yarn build
 
-      - name: Debug Build Output
-        run: |
-          echo "Listing dist directory:"
-          ls -la dist
-
       - name: Deploy to GitHub Pages
         run: |
+          # Configurar git
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
+          # Clonar a branch gh-pages
           git clone --depth 1 --branch gh-pages https://github.com/andre-menezes/o-nomade.git gh-pages
 
+          # Remover todos os arquivos atuais da branch gh-pages
           rm -rf gh-pages/*
 
+          # Copiar os arquivos da build para a branch gh-pages
           cp -r dist/* gh-pages/
 
-          echo "Listing gh-pages directory after copy:"
-          ls -la gh-pages
-
+          # Entrar no diretório gh-pages
           cd gh-pages
+
+          # Adicionar todos os arquivos ao commit
           git add .
+
+          # Verificar se há mudanças para commit
           if git diff-index --quiet HEAD; then
             echo "No changes to commit"
           else
+            # Fazer commit com mensagem incluindo data e hora
             git commit -m "Deploy de aplicação Vue 3 - $(date +'%Y-%m-%d %H:%M:%S')"
-            git push origin gh-pages
+            
+            # Configurar a origem para usar o token do GitHub
+            git remote set-url origin "https://github.com/${GITHUB_REPOSITORY}.git"
+            
+            # Fazer push para a branch gh-pages usando o token do GitHub
+            git push --set-upstream origin gh-pages
           fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
