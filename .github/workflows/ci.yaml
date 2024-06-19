@@ -33,16 +33,3 @@ jobs:
           npm install -g @vue/cli yarn
           yarn install
           yarn build
-
-      - name: Configurar Pages
-        uses: actions/configure-pages@v3
-
-      - name: Enviar artefato
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: 'dist/'
-
-      - name: Fazer deploy no GitHub Pages
-        uses: actions/deploy-pages@v1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
