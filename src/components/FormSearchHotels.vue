@@ -8,7 +8,7 @@
             <i class="fa-solid fa-location-dot"></i>
             Onde?
           </div>
-          <span class="text-xl text-gray-400">{{ selectedLocale }}</span>
+          <span class="text-md text-gray-400">{{ selectedLocale }}</span>
         </div>
         <LocaleModal v-show="isHovered['locale']" :data="locale" @close="closeModal('locale')" @data="updateLocale">
         </LocaleModal>
@@ -21,7 +21,7 @@
             <i class="fa-regular fa-calendar-check"></i>
             Check-in
           </div>
-          <span class="text-xl text-gray-400">{{ showDate(checkin) }}</span>
+          <span class="text-md text-gray-400">{{ showDate(checkin) }}</span>
         </div>
         <DateModal v-if="isHovered['checkin']" role="check-in" :data="checkin" @close="closeModal('checkin')"
           @data="updateDate">
@@ -35,7 +35,7 @@
             <i class="fa-regular fa-calendar-xmark"></i>
             Check-out
           </div>
-          <span class="text-xl text-gray-400">{{ showDate(checkout) }}</span>
+          <span class="text-md text-gray-400">{{ showDate(checkout) }}</span>
         </div>
         <DateModal v-if="isHovered['checkout']" role="check-out" :min="checkin" :data="checkout"
           @close="closeModal('checkout')" @data="updateDate">
@@ -49,13 +49,13 @@
             <i class="fa-solid fa-users"></i>
             Hóspedes
           </div>
-          <span class="text-xl text-gray-400">{{ hotelGuests }}</span>
+          <span class="text-md text-gray-400">{{ hotelGuests }}</span>
         </div>
         <GuestModal v-if="isHovered['guests']" @close="closeModal('guests')" :data="guests" @data="updateGuests">
         </GuestModal>
       </article>
 
-      <Button :disabled="!locale" class="mx-auto" text="Buscar" icon="fa fa-search" @click="searchHotels"></Button>
+      <Button class="mx-auto" text="Buscar" icon="fa fa-search" @click="searchHotels"></Button>
     </form>
   </section>
 </template>
@@ -73,14 +73,14 @@ const router = useRouter();
 const locale = ref('');
 const checkin = ref(new Date());
 const checkout = ref(new Date());
-const guests = ref({ adults: 1, children: 0 });
+const guests = ref({ adults: 1, children: 0, rooms: 1 });
 
 const selectedLocale = computed(() => {
   return locale.value ? locale.value : 'Busque um destino'
 });
 
 const hotelGuests = computed(() => {
-  return `Adultos: ${guests.value.adults} | Crianças: ${guests.value.children}`;
+  return `Adultos: ${guests.value.adults} | Crianças: ${guests.value.children} | Quartos: ${guests.value.rooms}`;
 });
 
 function searchHotels() {
@@ -91,7 +91,8 @@ function searchHotels() {
       checkin: checkin.value.toLocaleDateString() || '',
       checkout: checkout.value.toLocaleDateString() || '',
       adults: guests.value.adults.toString(),
-      children: guests.value.children.toString()
+      children: guests.value.children.toString(),
+      rooms: guests.value.rooms.toString()
     }
   });
 }
@@ -142,10 +143,12 @@ function showDate(date: Date) {
 interface Guests {
   adults: number,
   children: number,
+  rooms: number,
 }
 
-function updateGuests({ adults, children }: Guests) {
+function updateGuests({ adults, children, rooms }: Guests) {
   guests.value.adults = adults;
   guests.value.children = children;
+  guests.value.rooms = rooms;
 }
 </script>

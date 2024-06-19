@@ -10,7 +10,7 @@
         Adultos
       </h3>
       <div>
-        <button :disabled="adults < 2" type="button" @click="decrement('adults')"
+        <button :disabled="adults <= 1" type="button" @click="decrement('adults')"
           class="h-8 w-8 rounded-full bg-primary disabled:bg-gray-100 disabled:text-gray-300 text-white mx-2">
           <i class="fa fa-minus"></i>
         </button>
@@ -32,7 +32,7 @@
         </span>
       </h3>
       <div>
-        <button :disabled="children < 1" type="button" @click="decrement('children')"
+        <button :disabled="children <= 0" type="button" @click="decrement('children')"
           class="h-8 w-8 rounded-full bg-primary disabled:bg-gray-100 disabled:text-gray-300 text-white mx-2">
           <i class="fa fa-minus"></i>
         </button>
@@ -42,8 +42,29 @@
         </button>
       </div>
     </div>
+
+    <hr>
+
+    <div class="flex items-center justify-center gap-4 my-8">
+      <h3 class="flex items-center text-center text-lg font-semibold">
+        <i class="fa-solid fa-bed mr-2"></i>
+        Quartos
+      </h3>
+      <div>
+        <button :disabled="rooms <= 1 || rooms <= adults" type="button" @click="decrement('rooms')"
+          class="h-8 w-8 rounded-full bg-primary disabled:bg-gray-100 disabled:text-gray-300 text-white mx-2">
+          <i class="fa fa-minus"></i>
+        </button>
+        <span class="text-xl text-center inline-block w-8 h-8 font-bold">{{ rooms }}</span>
+        <button :disabled="rooms >= adults" type="button" @click="increment('rooms')"
+          class="h-8 w-8 rounded-full bg-primary disabled:bg-gray-100 disabled:text-gray-300 text-white mx-2">
+          <i class="fa fa-plus"></i>
+        </button>
+      </div>
+    </div>
   </section>
 </template>
+
 
 <script setup lang="ts">
 import { defineEmits, ref, watch } from 'vue';
@@ -51,12 +72,13 @@ import { defineEmits, ref, watch } from 'vue';
 const props = defineProps({
   data: {
     type: Object,
-    default: { adults: 1, children: 0 }
+    default: { adults: 1, children: 0, rooms: 1 }
   }
 })
 
 const adults = ref(props.data.adults);
 const children = ref(props.data.children);
+const rooms = ref(props.data.rooms);
 
 const emit = defineEmits(['close', 'data']);
 
@@ -65,13 +87,49 @@ function handleClick() {
 }
 
 function increment(guest: string) {
-  return guest === 'adults' ? adults.value++ : children.value++
+  switch (guest) {
+    case 'adults':
+      adults.value++;
+      break;
+    case 'children':
+      children.value++;
+      break;
+    case 'rooms':
+      if (rooms.value < adults.value) {
+        rooms.value++;
+      }
+      break;
+    default:
+      return;
+  }
 }
 
 function decrement(guest: string) {
-  return guest === 'adults' ? adults.value-- : children.value--
+  switch (guest) {
+    case 'adults':
+      if (adults.value > 1) {
+        adults.value--;
+        if (rooms.value > adults.value) {
+          rooms.value = adults.value;
+        }
+      }
+      break;
+    case 'children':
+      if (children.value > 0) {
+        children.value--;
+      }
+      break;
+    case 'rooms':
+      if (rooms.value > 1 && rooms.value > adults.value) {
+        rooms.value--;
+      }
+      break;
+    default:
+      return;
+  }
 }
 
-watch(adults, () => emit('data', { adults: adults.value, children: children.value }));
-watch(children, () => emit('data', { adults: adults.value, children: children.value }));
+watch(adults, () => emit('data', { adults: adults.value, children: children.value, rooms: rooms.value }));
+watch(children, () => emit('data', { adults: adults.value, children: children.value, rooms: rooms.value }));
+watch(rooms, () => emit('data', { adults: adults.value, children: children.value, rooms: rooms.value }));
 </script>
