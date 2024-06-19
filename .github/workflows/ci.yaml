@@ -10,25 +10,17 @@ jobs:
     name: Deploy Application
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: 'read'
-      id-token: 'write'
-      pages: 'write'
-      actions: 'write'
-      checks: 'write'
-      deployments: 'write'
-    
     steps:
-      - name: Clonar repositório
+      - name: Clone repository
         uses: actions/checkout@v3
 
-      - name: Configurar Node.js e Yarn
+      - name: Config Node.js and Yarn
         uses: actions/setup-node@v3
         with:
-          node-version: '18.x'
-          cache: 'yarn'
+          node-version: "18.x"
+          cache: "yarn"
 
-      - name: Instalar dependências e construir
+      - name: Install dependencies, build and test
         run: |
           npm install -g @vue/cli yarn
           yarn install
