@@ -29,10 +29,18 @@ jobs:
       - name: Build Application
         run: yarn build
 
-      - name: Deploy project
-        uses: s0/git-publish-subdir-action@development
-        env:
-          REPO: self
-          BRANCH: main
-          FOLDER: dist
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy to GitHub Pages
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git clone --depth 1 --branch gh-pages https://github.com/andre-menezes/o-nomade.git gh-pages
+
+          rm -rf gh-pages/*
+
+          cp -r dist/* gh-pages/
+
+          cd gh-pages
+          git add .
+          git commit -m "Deploy de aplicação Vue 3 - $(date +'%Y-%m-%d %H:%M:%S')"
+          git push origin gh-pages
