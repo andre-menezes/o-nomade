@@ -9,7 +9,6 @@
         <div>
           <i v-for="n in hotel?.rating" :class="getIconClass('star')" class="w-8 my-2 text-yellow-300 drop-shadow"></i>
         </div>
-
       </h1>
 
       <article class="text-md">
@@ -87,7 +86,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onBeforeMount, ref } from 'vue';
+import { computed, onBeforeMount, ref, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useMocksStore } from '@/stores/modules/mocks';
 import { HotelData } from '@/stores/modules/mocks/mocksStore';
@@ -100,13 +99,17 @@ const router = useRouter();
 
 const hotel = ref<HotelData | undefined>(undefined)
 
+watch(route, () => {
+  hotel.value = mockStore.getHotelById(+route.params.id);
+})
+
 onBeforeMount(() => {
   if (route.params) {
     hotel.value = mockStore.getHotelById(+route.params.id);
   }
 
   if (!hotel.value) {
-    router.push('/pagina-nao-encontrada')
+    router.push({ name: 'Page Not Found' })
   }
 })
 

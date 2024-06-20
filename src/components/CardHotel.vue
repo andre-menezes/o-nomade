@@ -61,6 +61,6 @@ const itemSelected = ref(false);
 const router = useRouter();
 
 function moreDetails(id: number) {
-  router.push(`/hotel/${id}`);
+  router.push({ name: 'Hotel Details', params: { id } });
 }
 </script>

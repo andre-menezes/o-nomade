@@ -14,19 +14,12 @@ const routes: Array<RouteRecordRaw> = [
     },
   },
   {
-    path: "/hotel",
-    name: "Hotel",
-    component: lazyLoad("Home"),
-    meta: {
-      layout: "default",
-    },
-  },
-  {
-    path: "/hotel/:id",
-    name: "Hotel",
+    path: "/hotel/:id?",
+    name: "Hotel Details",
     component: lazyLoad("Hotel"),
     meta: {
       layout: "default",
+      requiresId: true,
     },
   },
   {
@@ -38,7 +31,8 @@ const routes: Array<RouteRecordRaw> = [
     },
   },
   {
-    path: "/:pathMatch(.*)",
+    path: "/:pathMatch(.*)*",
+    name: "Page Not Found",
     component: lazyLoad("PageNotFound"),
     meta: {
       layout: "not-found",
@@ -49,6 +43,23 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { top: 0, left: 0 };
+    }
+  }
+});
+
+router.beforeEach((to, from, next) => {
+  const requiresId = to.matched.some(record => record.meta.requiresId);
+
+  if (requiresId && !to.params.id) {
+    next({ name: 'Home' });
+  } else {
+    next();
+  }
 });
 
 export default router;
