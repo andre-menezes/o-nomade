@@ -5,7 +5,7 @@
       <span class='hidden md:block'>O Nômade</span>
     </div>
     <component :is="isMobile ? MenuMobile : Menu" />
-    <Button type="button" class="hidden md:block" text="Entrar" :icon="getIconClass('user')" />
+    <Button type="button" class="hidden md:block" text="Entrar" :icon="getIconClass('user')" @click="userLogin" />
   </section>
 </template>
 
@@ -17,6 +17,7 @@ import Button from './Button.vue';
 import MenuMobile from './MenuMobile.vue';
 import Menu from './Menu.vue';
 import { MenuInterface } from '@/interfaces';
+import router from '@/router';
 
 const menu = ref<MenuInterface[]>(menuItems);
 
@@ -41,4 +42,8 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('resize', updateWidth);
 });
+
+function userLogin() {
+  router.push({ name: 'Login' });
+}
 </script>
