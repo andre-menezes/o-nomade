@@ -33,7 +33,7 @@
       "zip_code": "20000-000"
     },
     "description": "Hotel confortável com vista para o mar.",
-    "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791",
+    "image": "https://images.unsplash.com/photo-1598598795009-f80c5072e665",
     "amenities": ["Wi-Fi grátis", "Piscina", "Estacionamento", "Restaurante"],
     "rating": 5,
     "numberOfRooms": 200,
@@ -243,7 +243,7 @@
       "zip_code": "85800-000"
     },
     "description": "Hotel com fácil acesso às Cataratas do Iguaçu.",
-    "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791",
+    "image": "https://images.unsplash.com/photo-1598598795009-f80c5072e665",
     "amenities": ["Wi-Fi grátis", "Piscina", "Estacionamento", "Restaurante"],
     "rating": 2,
     "numberOfRooms": 145,
@@ -453,7 +453,7 @@
       "zip_code": "28950-000"
     },
     "description": "Hotel charmoso com vista para a praia.",
-    "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791",
+    "image": "https://images.unsplash.com/photo-1598598795009-f80c5072e665",
     "amenities": ["Wi-Fi grátis", "Piscina", "Bar", "Café da manhã incluso"],
     "rating": 3,
     "numberOfRooms": 90,
@@ -673,7 +673,7 @@
       "zip_code": "50000-000"
     },
     "description": "Hotel moderno com vista para o mar.",
-    "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791",
+    "image": "https://images.unsplash.com/photo-1598598795009-f80c5072e665",
     "amenities": [
       "Wi-Fi grátis",
       "Piscina",

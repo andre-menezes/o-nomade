@@ -5,7 +5,7 @@
       <Menu />
       <hr>
       <article class="my-4 flex justify-center">
-        <Button type="button" text="Entrar" :icon="getIconClass('user')" />
+        <Button type="button" text="Entrar" :icon="getIconClass('user')" class="mt-2" />
       </article>
     </section>
   </nav>
@@ -15,6 +15,7 @@
 import { ref } from 'vue';
 import { getIconClass } from '@/utils';
 import Menu from './Menu.vue';
+import Button from './Button.vue';
 
 const dialogMenu = ref(false);
 

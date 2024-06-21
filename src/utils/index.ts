@@ -1,5 +1,23 @@
 import { Icons } from "@/enums/icons";
+import { MenuInterface } from "@/interfaces";
 
 export function getIconClass(amenity: string): string {
   return Icons[amenity as keyof typeof Icons] || "";
 }
+
+export const menuItems: MenuInterface[] = [
+  {
+    name: "Home",
+    icon: "home",
+    path: "/",
+    active: false,
+  },
+  {
+    name: "Hotéis",
+    icon: "hotel",
+    path: "/hoteis",
+    active: false,
+  },
+];
+
+export const MOBILE_BREAKPOINT: number = 768;

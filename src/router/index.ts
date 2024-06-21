@@ -15,19 +15,18 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/hoteis",
-    name: "Hoteis",
+    name: "Hotéis",
     component: lazyLoad("Search"),
     meta: {
       layout: "default",
     },
   },
   {
-    path: "/hoteis/:id?",
-    name: "Hoteis",
+    path: "/hoteis/:id",
+    name: "Hotel",
     component: lazyLoad("Hotel"),
     meta: {
       layout: "default",
-      requiresId: true,
     },
   },
   {
