@@ -64,7 +64,7 @@
 import { computed, reactive, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { getIconClass } from '@/utils';
-import Button from './utils/Button.vue';
+import Button from './Button.vue';
 import LocaleModal from './modals/LocaleModal.vue';
 import DateModal from './modals/DateModal.vue';
 import GuestModal from './modals/GuestModal.vue';
