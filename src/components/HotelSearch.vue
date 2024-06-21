@@ -25,7 +25,7 @@
       </div>
     </article>
 
-    <article v-else class="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center lg:px-40"
+    <article v-else class="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center"
       :class="hotels.length < 4 ? `lg:grid-cols-${hotels.length} xl:grid-cols-${hotels.length}` : 'lg:grid-cols-3 xl:grid-cols-4'">
       <CardHotel v-for="hotel in hotels" :key="hotel.id" :hotel="hotel" />
     </article>
@@ -41,20 +41,18 @@ import { getIconClass } from '@/utils';
 import CardHotel from '@/components/CardHotel.vue';
 import Button from './Button.vue';
 import BestRating from './BestRating.vue';
-import { HotelData, OrderBy, SearchParams } from '@/interfaces';
+import { HotelDataInterface, OrderBy, SearchParamsInterface } from '@/interfaces';
 
 const props = defineProps({
-  params: { type: Object as () => SearchParams }
+  params: { type: Object as () => SearchParamsInterface }
 });
 
-const hotels = ref<HotelData[]>([]);
+const hotels = ref<HotelDataInterface[]>([]);
 const mockStore = useMocksStore();
 
 onBeforeMount(async () => {
   hotels.value = props.params?.locale ? await mockStore.getHotelsByLocale(props.params.locale) : await mockStore.getAllHotel();
 })
-
-
 
 const orderOptions: Record<OrderBy, string> = {
   rating: "Avaliação",
@@ -65,7 +63,7 @@ const orderOptions: Record<OrderBy, string> = {
 
 const orderBy = ref<OrderBy>("rating");
 
-watch(orderBy, (val: string) => {
+watch(orderBy, (val: OrderBy) => {
   switch (val) {
     case 'name':
       hotels.value = hotels.value.sort((a, b) => a.name.localeCompare(b.name))

@@ -20,7 +20,7 @@
       </p>
       <div class="w-full px-4 grid grid-cols-2 gap-2 justify-items-stretch">
         <div v-for="amenity in hotel.amenities" class="text-xs font-semibold truncate">
-          <i :class="getIconClass(amenity)" class="w-4 text-blue-700 mr-2"></i>
+          <i :class="getIconClass(amenity)" class="w-4 text-blue-700"></i>
           {{ amenity }}
         </div>
       </div>
