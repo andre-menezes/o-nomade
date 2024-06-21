@@ -1,40 +1,19 @@
 import { defineStore } from "pinia";
 import axios from "axios";
-
-export interface HotelData {
-  id: number;
-  name: string;
-  location: {
-    city: string;
-    state: string;
-    address: string;
-    country: string;
-    zip_code: string;
-  };
-  description: string;
-  image: string;
-  amenities: string[];
-  rating: number;
-  numberOfRooms: number;
-  pricePerNight: number;
-  cancellationPolicy: string;
-}
-
-interface MocksState {
-  hotels: HotelData[];
-  error: string;
-  time: number;
-}
+import { HotelDataInterface, MocksStateInterface } from "@/interfaces";
 
 export const useMocksStore = defineStore({
   id: "mocks",
-  state: (): MocksState => ({
+  state: (): MocksStateInterface => ({
     hotels: [],
     error: "",
     time: 1500,
   }),
   actions: {
-    async fetchHotelData(this: { hotels: HotelData[]; error: string }) {
+    async fetchHotelData(this: {
+      hotels: HotelDataInterface[];
+      error: string;
+    }) {
       try {
         const cachedHotels = localStorage.getItem("hotels");
         if (cachedHotels) {
@@ -52,9 +31,11 @@ export const useMocksStore = defineStore({
   getters: {
     getHotelById:
       (state) =>
-      (id: number): HotelData | undefined => {
+      (id: number): HotelDataInterface | undefined => {
         try {
-          const hotel = state.hotels.find((hotel) => hotel.id === id);
+          const hotel = state.hotels.find(
+            (hotel: HotelDataInterface) => hotel.id === id
+          );
           return hotel;
         } catch (error) {
           throw new Error(`Erro ao buscar hotel com ID ${id}`);
@@ -63,10 +44,10 @@ export const useMocksStore = defineStore({
 
     getHotelsByLocale:
       (state) =>
-      (locale: string): HotelData[] => {
+      (locale: string): HotelDataInterface[] => {
         try {
           const hotels = state.hotels.filter(
-            (hotel) =>
+            (hotel: HotelDataInterface) =>
               hotel.location.city.toLowerCase() === locale.toLowerCase()
           );
           return hotels;
@@ -75,17 +56,17 @@ export const useMocksStore = defineStore({
         }
       },
 
-    getBestRatingHotels: (state) => (): HotelData[] => {
+    getBestRatingHotels: (state) => (): HotelDataInterface[] => {
       try {
         const bestRating = state.hotels
           .sort((a, b) => b.rating - a.rating)
-          .filter((hotel) => hotel.rating === 5);
+          .filter((hotel: HotelDataInterface) => hotel.rating === 5);
         return bestRating;
       } catch (error) {
         throw new Error("Erro ao buscar os hotéis mais bem avaliados");
       }
     },
-    getAllHotel: (state) => (): HotelData[] => {
+    getAllHotel: (state) => (): HotelDataInterface[] => {
       try {
         return state.hotels;
       } catch (error) {

@@ -1,32 +1,13 @@
-import { defineStore } from "pinia";
 import axios from "axios";
-
-interface User {
-  name: string;
-  email: string;
-  password: string;
-  birthDate: string;
-  cpf: string;
-  paymentMethod?: {
-    cardNumber?: string;
-    expiryDate?: string;
-    cvv?: string;
-  };
-}
-
-interface AuthState {
-  user: User | null;
-  token: string | null;
-  isLoading: boolean;
-  error: string | null;
-}
+import { defineStore } from "pinia";
+import { AuthStateInterface, UserInterface } from "@/interfaces";
 
 export const useAuthStore = defineStore("auth", {
   state: () => ({
-    user: null as AuthState["user"],
-    token: null as AuthState["token"],
-    isLoading: false as AuthState["isLoading"],
-    error: null as AuthState["error"],
+    user: null as AuthStateInterface["user"],
+    token: null as AuthStateInterface["token"],
+    isLoading: false as AuthStateInterface["isLoading"],
+    error: null as AuthStateInterface["error"],
   }),
 
   actions: {
@@ -46,7 +27,7 @@ export const useAuthStore = defineStore("auth", {
       }
     },
 
-    async register(newUser: User) {
+    async register(newUser: UserInterface) {
       this.isLoading = true;
       try {
         const response = await axios.post("/api/register", newUser);

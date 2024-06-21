@@ -6,7 +6,7 @@
     </h2>
 
     <label class="font-medium mb-8">
-      <i :class="getIconClass('search')" class="mr-2"></i>
+      <i :class="getIconClass('sort')" class="mr-2"></i>
       Ordenar por:
       <select id="order-by" v-model="orderBy" class=" ml-2 mb-8 px-4 py-2 bg-slate-50 rounded outline-none">
         <option v-for="(label, key) in orderOptions" :key="key" :value="key" class="px-4 py-2 hover:bg-gray-300">
@@ -37,25 +37,24 @@
 import { onBeforeMount, ref, watch } from 'vue';
 import { useMocksStore } from '@/stores/modules/mocks';
 import { useRouter } from 'vue-router';
-import { HotelData } from '@/stores/modules/mocks/mocksStore';
-import { SearchParams } from '@/views/Search.vue';
 import { getIconClass } from '@/utils';
 import CardHotel from '@/components/CardHotel.vue';
-import Button from './utils/Button.vue';
+import Button from './Button.vue';
 import BestRating from './BestRating.vue';
+import { HotelData, OrderBy, SearchParams } from '@/interfaces';
 
 const props = defineProps({
-  params: { type: Object as () => SearchParams, required: true }
+  params: { type: Object as () => SearchParams }
 });
 
 const hotels = ref<HotelData[]>([]);
 const mockStore = useMocksStore();
 
 onBeforeMount(async () => {
-  hotels.value = props.params.locale ? await mockStore.getHotelsByLocale(props.params.locale) : await mockStore.getAllHotel();
+  hotels.value = props.params?.locale ? await mockStore.getHotelsByLocale(props.params.locale) : await mockStore.getAllHotel();
 })
 
-type OrderBy = "rating" | "pricePerNight" | "locale" | "name";
+
 
 const orderOptions: Record<OrderBy, string> = {
   rating: "Avaliação",
