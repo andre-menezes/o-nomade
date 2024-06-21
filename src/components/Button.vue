@@ -1,13 +1,12 @@
 <template>
   <button :type="props.type" :disabled="props.disabled" class="
-      w-max
-      h-max
-      px-6
-      py-3
+      px-4
+      py-2
       shadow
       rounded
-      text-center
       cursor-pointer
+      text-sm
+      text-center
       text-white
       uppercase
       bg-primary
@@ -15,7 +14,8 @@
       disabled:bg-gray-100
       disabled:text-gray-300
       disabled:cursor-default
-      transition-colors" @click="handleClick">
+      transition-colors" @click="handleClick
+        " :class="props.small ? 'text-xs' : ''">
     <i v-if="props.icon" :class="props.icon" class="mr-2"></i>
     <span class="font-semibold">{{ props.text }}</span>
   </button>
@@ -36,6 +36,10 @@ const props = defineProps({
     default: 'button'
   },
   disabled: {
+    type: Boolean,
+    default: false
+  },
+  small: {
     type: Boolean,
     default: false
   }

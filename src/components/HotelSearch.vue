@@ -37,25 +37,24 @@
 import { onBeforeMount, ref, watch } from 'vue';
 import { useMocksStore } from '@/stores/modules/mocks';
 import { useRouter } from 'vue-router';
-import { HotelData } from '@/stores/modules/mocks/mocksStore';
-import { SearchParams } from '@/views/Search.vue';
 import { getIconClass } from '@/utils';
 import CardHotel from '@/components/CardHotel.vue';
 import Button from './Button.vue';
 import BestRating from './BestRating.vue';
+import { HotelData, OrderBy, SearchParams } from '@/interfaces';
 
 const props = defineProps({
-  params: { type: Object as () => SearchParams, required: true }
+  params: { type: Object as () => SearchParams }
 });
 
 const hotels = ref<HotelData[]>([]);
 const mockStore = useMocksStore();
 
 onBeforeMount(async () => {
-  hotels.value = props.params.locale ? await mockStore.getHotelsByLocale(props.params.locale) : await mockStore.getAllHotel();
+  hotels.value = props.params?.locale ? await mockStore.getHotelsByLocale(props.params.locale) : await mockStore.getAllHotel();
 })
 
-type OrderBy = "rating" | "pricePerNight" | "locale" | "name";
+
 
 const orderOptions: Record<OrderBy, string> = {
   rating: "Avaliação",

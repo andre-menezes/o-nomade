@@ -1,18 +1,13 @@
 <template>
-  <nav class="w-full rounded shadow bg-white flex items-center justify-between px-8 py-4 mb-8">
+  <section class="w-full rounded shadow bg-white flex items-center justify-between px-8 py-4 mb-8">
     <div class="flex font-poppins items-center uppercase font-bold text-xl">
       <img src="@/assets/img/o-nomade_logo.png" alt="O Nomade" class="w-14 mr-4">
-      O Nômade
+      <span class='hidden md:block'>O Nômade</span>
     </div>
-    <ul class="shrink flex justify-center">
-      <li v-for="item in menu" :key="item.path" class="uppercase hover:bg-slate-50 py-2 px-4 rounded font-semibold">
-        <a :href="item.path" :class="{ 'text-red-400': item.active, 'text-gray-700': !item.active }">
-          <i :class="getIconClass(item.icon)" class="mr-2"></i>
-          {{ item.name }}
-        </a>
-      </li>
-    </ul>
-  </nav>
+    <Menu />
+    <Button type="button" class="hidden md:block" text="Entrar" :icon="getIconClass('user')" />
+    <MenuMobile :menu="menu" />
+  </section>
 </template>
 
 
@@ -20,6 +15,9 @@
 import { watch, ref } from 'vue';
 import { getIconClass } from '@/utils';
 import { useRoute } from 'vue-router';
+import Button from './Button.vue';
+import MenuMobile from './MenuMobile.vue';
+import Menu from './Menu.vue';
 
 const menu = ref([
   {
@@ -29,19 +27,22 @@ const menu = ref([
     active: false
   },
   {
-    name: 'Hotéis',
-    icon: 'search',
-    path: '/pesquisa',
+    name: 'Hoteis',
+    icon: 'hotel',
+    path: '/hoteis',
     active: false
   }
 ])
 
 const route = useRoute();
 
-watch(route, () => {
+watch(route, (val) => {
   menu.value.forEach(item => {
-    console.log(item.path.substring(2))
-    item.active = route.fullPath.includes(item.path.substring(2));
+    console.log('val', val);
+    console.log('item', item);
+    if (val.name === item.name) {
+      item.active = true;
+    }
   })
 })
 </script>

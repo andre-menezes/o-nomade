@@ -14,20 +14,20 @@ const routes: Array<RouteRecordRaw> = [
     },
   },
   {
-    path: "/hotel/:id?",
-    name: "Hotel Details",
+    path: "/hoteis",
+    name: "Hoteis",
+    component: lazyLoad("Search"),
+    meta: {
+      layout: "default",
+    },
+  },
+  {
+    path: "/hoteis/:id?",
+    name: "Hoteis",
     component: lazyLoad("Hotel"),
     meta: {
       layout: "default",
       requiresId: true,
-    },
-  },
-  {
-    path: "/pesquisa",
-    name: "Search",
-    component: lazyLoad("Search"),
-    meta: {
-      layout: "default",
     },
   },
   {
@@ -49,17 +49,7 @@ const router = createRouter({
     } else {
       return { top: 0, left: 0 };
     }
-  }
-});
-
-router.beforeEach((to, from, next) => {
-  const requiresId = to.matched.some(record => record.meta.requiresId);
-
-  if (requiresId && !to.params.id) {
-    next({ name: 'Home' });
-  } else {
-    next();
-  }
+  },
 });
 
 export default router;

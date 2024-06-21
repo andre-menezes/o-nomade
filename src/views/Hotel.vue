@@ -13,6 +13,6 @@ const route = useRoute();
 const router = useRouter();
 
 watch(route, (to) => {
-  router.push({ name: 'Hotel Details', params: { id: to.params.id } })
+  router.push({ name: 'Hotel', params: { id: to.params.id } })
 })
 </script>

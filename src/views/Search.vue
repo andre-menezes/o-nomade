@@ -8,20 +8,10 @@ import { onBeforeMount, ref } from 'vue';
 import BestRating from '@/components/BestRating.vue';
 import HotelSearch from '@/components/HotelSearch.vue';
 import { useRoute } from 'vue-router';
-
-export interface SearchParams {
-  locale: string,
-  checkin: string,
-  checkout: string,
-  guests: {
-    adults: number,
-    children: number,
-    rooms: number,
-  },
-}
+import { SearchParamsInterface } from '@/interfaces';
 
 const route = useRoute();
-let searchParams = ref<SearchParams>({
+let searchParams = ref<SearchParamsInterface>({
   locale: '',
   checkin: '',
   checkout: '',

@@ -68,6 +68,7 @@ import Button from './Button.vue';
 import LocaleModal from './modals/LocaleModal.vue';
 import DateModal from './modals/DateModal.vue';
 import GuestModal from './modals/GuestModal.vue';
+import { DatePicker, Guests, HoverKeys } from '@/interfaces';
 
 const router = useRouter();
 
@@ -86,7 +87,7 @@ const hotelGuests = computed(() => {
 
 function searchHotels() {
   router.push({
-    path: '/pesquisa',
+    name: 'Hoteis',
     query: {
       locale: locale.value,
       checkin: checkin.value.toLocaleDateString() || '',
@@ -98,7 +99,7 @@ function searchHotels() {
   });
 }
 
-type HoverKeys = 'locale' | 'checkin' | 'checkout' | 'guests';
+
 
 const isHovered = reactive({
   locale: false,
@@ -121,10 +122,7 @@ function updateLocale(newLocale: string) {
   locale.value = newLocale;
 }
 
-interface DatePicker {
-  role: string,
-  value: string,
-}
+
 
 function updateDate({ role, value }: DatePicker) {
   if (role === 'check-in') {
@@ -141,15 +139,14 @@ function showDate(date: Date) {
   return date.toLocaleDateString();
 }
 
-interface Guests {
-  adults: number,
-  children: number,
-  rooms: number,
-}
+
 
 function updateGuests({ adults, children, rooms }: Guests) {
   guests.value.adults = adults;
   guests.value.children = children;
   guests.value.rooms = rooms;
 }
-</script>
+</script>import { HoverKeys, Guests } from '@/interfaces';
+import { DatePicker } from 'v-calendar';
+import { HoverKeys, Guests } from '@/interfaces';
+import { DatePicker } from 'v-calendar';
