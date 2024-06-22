@@ -15,13 +15,14 @@
           <input v-model="formLogin.password" placeholder="Senha" type="password"
             class="w-full px-2 py-2 pl-8 focus:outline-2 focus:outline-blue-500" />
         </div>
-        <a href="#" class="text-sm font-semibold text-blue-400 cursor-pointer hover:text-blue-300">Esqueceu a senha?</a>
       </div>
-      <Button text="Entrar" :icon="getIconClass('login')" class="mb-4" />
+      <Button text="Entrar" :icon="getIconClass('login')" class="mb-4" @click="submitUser('login')" />
       <p class="text-sm">Não tem uma conta? <span @click="openRegister = true"
           class="font-semibold text-blue-400 cursor-pointer hover:text-blue-300 ">Cadastre-se</span></p>
     </form>
+
     <hr v-if="openRegister">
+
     <form v-if="openRegister" class="mt-4 flex flex-col items-center">
       <h1 class="pt-4 text-3xl text-center font-bold font-poppins uppercase">Cadastro</h1>
       <div class="mb-8 w-full text-center">
@@ -43,14 +44,8 @@
           <input v-model="formRegister.password" placeholder="Senha" type="password"
             class="w-full px-2 py-2 pl-8 focus:outline-2 focus:outline-blue-500" />
         </div>
-        <div class="relative my-4 flex items-center shadow rounded text-sm disabled:bg-gray-100 disabled:text-gray-300 
-      disabled:cursor-default">
-          <i :class="getIconClass('password')" class="absolute left-0 px-2 text-gray-200"></i>
-          <input v-model="confirmPassword" placeholder="Confirme a senha" type="password"
-            class="w-full px-2 py-2 pl-8 focus:outline-2 focus:outline-blue-500" />
-        </div>
+        <Button text="Cadastrar" :icon="getIconClass('user')" @click="submitUser('register')" class="mb-4" />
       </div>
-      <Button text="Cadastrar" :icon="getIconClass('user')" @click="userRegister" class="mb-4" />
     </form>
   </section>
   <SnackBar v-if="snackbar.isOpened" :status="snackbar.status" :msg="snackbar.msg" />
@@ -76,7 +71,6 @@ const formRegister = reactive<UserRegister>({
 });
 
 
-const confirmPassword = ref('');
 const openRegister = ref(false);
 
 const authStore = useAuthStore();
@@ -90,8 +84,8 @@ const snackbar = ref<SnackBarInterface>({
 
 const router = useRouter();
 
-async function userRegister() {
-  const response = await authStore.register(formRegister);
+function submitUser(type: string) {
+  const response = type === 'login' ? authStore.login(formLogin.email, formLogin.password) : authStore.register(formRegister);
   snackbar.value.status = response.status as SnackBarStatus;
   snackbar.value.msg = response.msg;
   snackbar.value.isOpened = true;
