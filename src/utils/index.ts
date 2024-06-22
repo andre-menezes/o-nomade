@@ -1,4 +1,4 @@
-import { Icons } from "@/enums/icons";
+import { Icons } from "@/utils/icons";
 import { MenuInterface } from "@/interfaces";
 
 export function getIconClass(amenity: string): string {
@@ -21,3 +21,5 @@ export const menuItems: MenuInterface[] = [
 ];
 
 export const MOBILE_BREAKPOINT: number = 768;
+
+export const SNACKBAR_TIME: number = 5000;

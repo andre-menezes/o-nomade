@@ -5,18 +5,22 @@
       <span class='hidden md:block'>O Nômade</span>
     </div>
     <component :is="isMobile ? MenuMobile : Menu" />
-    <Button type="button" class="hidden md:block" text="Entrar" :icon="getIconClass('user')" />
+    <Button v-if="!isAuthenticated" type="button" class="hidden md:block" text="Entrar" :icon="getIconClass('login')"
+      @click="userLogin" />
   </section>
 </template>
 
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue';
 import { MOBILE_BREAKPOINT, getIconClass, menuItems } from '@/utils';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
+import { MenuInterface } from '@/interfaces';
+import { useAuthStore } from '@/stores/modules/auth';
 import Button from './Button.vue';
 import MenuMobile from './MenuMobile.vue';
 import Menu from './Menu.vue';
-import { MenuInterface } from '@/interfaces';
+
+const { isAuthenticated } = useAuthStore();
 
 const menu = ref<MenuInterface[]>(menuItems);
 
@@ -34,6 +38,7 @@ const updateWidth = () => {
   windowWidth.value = window.innerWidth;
 };
 
+
 onMounted(() => {
   window.addEventListener('resize', updateWidth);
 });
@@ -41,4 +46,10 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('resize', updateWidth);
 });
+
+const router = useRouter();
+
+function userLogin() {
+  router.push({ name: 'Login' });
+}
 </script>

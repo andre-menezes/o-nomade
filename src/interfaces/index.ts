@@ -2,6 +2,10 @@ export type HoverKeys = "locale" | "checkin" | "checkout" | "guests";
 
 export type OrderBy = "rating" | "pricePerNight" | "locale" | "name";
 
+export type InputTypes = "text" | "email" | "tel" | "password" | "textarea";
+
+export type SnackBarStatus = "success" | "error" | "warning" | "info";
+
 export interface MenuInterface {
   name: string;
   icon: string;
@@ -21,11 +25,12 @@ export interface GuestsInterface {
 }
 
 export interface UserInterface {
+  id?: number;
   name: string;
   email: string;
   password: string;
-  birthDate: string;
-  cpf: string;
+  birthDate?: string;
+  cpf?: string;
   paymentMethod?: {
     cardNumber?: string;
     expiryDate?: string;
@@ -74,4 +79,28 @@ export interface SearchParamsInterface {
     children: number;
     rooms: number;
   };
+}
+
+export interface UserLogin {
+  email: string;
+  password: string;
+}
+
+export interface UserRegister {
+  name: string;
+  email: string;
+  password: string;
+}
+
+export interface UserDTO {
+  id: number;
+  email: string;
+  password: string;
+  token?: string;
+}
+
+export interface SnackBarInterface {
+  status: SnackBarStatus;
+  msg: string;
+  isOpened: boolean;
 }

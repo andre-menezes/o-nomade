@@ -1,74 +1,82 @@
 import axios from "axios";
 import { defineStore } from "pinia";
-import { AuthStateInterface, UserInterface } from "@/interfaces";
+import { AuthStateInterface, UserDTO, UserInterface } from "@/interfaces";
+import md5 from "md5";
 
 export const useAuthStore = defineStore("auth", {
   state: () => ({
     user: null as AuthStateInterface["user"],
-    token: null as AuthStateInterface["token"],
     isLoading: false as AuthStateInterface["isLoading"],
     error: null as AuthStateInterface["error"],
+    isAuthenticated: false,
   }),
 
   actions: {
-    async login(email: string, password: string) {
-      this.isLoading = true;
-      try {
-        const response = await axios.post("/api/login", { email, password });
-        this.token = response.data.token;
-        this.user = response.data.user;
-        this.error = null;
-        this.saveAuthToLocalStorage();
-      } catch (err: any) {
-        this.error =
-          err.response?.data?.message || "Falha ao autenticar o usuário";
-      } finally {
-        this.isLoading = false;
-      }
-    },
+    async register(
+      user: UserInterface
+    ): Promise<{ status: string; msg: string }> {
+      const usersFromLocalStorage = localStorage.getItem("users");
+      let users: UserDTO[] = [];
 
-    async register(newUser: UserInterface) {
-      this.isLoading = true;
-      try {
-        const response = await axios.post("/api/register", newUser);
-        this.token = response.data.token;
-        this.user = response.data.user;
-        this.error = null;
-        this.saveAuthToLocalStorage();
-      } catch (err: any) {
-        this.error =
-          err.response?.data?.message || "Falha ao cadastrar o novo usuário";
-      } finally {
-        this.isLoading = false;
+      if (usersFromLocalStorage !== null) {
+        users = JSON.parse(usersFromLocalStorage) as UserDTO[];
       }
-    },
 
-    logout() {
-      this.user = null;
-      this.token = null;
-      localStorage.removeItem("authToken");
-      localStorage.removeItem("authUser");
-    },
+      if (users.length && users.find((u: UserDTO) => u.email === user.email))
+        return { status: "error", msg: "Usuário inválido" };
 
-    saveAuthToLocalStorage() {
-      if (this.token && this.user) {
-        localStorage.setItem("authToken", this.token);
-        localStorage.setItem("authUser", JSON.stringify(this.user));
-      }
+      const lastId = users.length ? users[users.length - 1].id : 1;
+
+      const newUser: UserDTO = {
+        id: lastId,
+        email: user.email,
+        password: md5(user.password),
+      };
+
+      const token = md5(JSON.stringify(user));
+
+      const userAuthenticated = { ...newUser, token };
+      users.push(userAuthenticated);
+      localStorage.setItem("users", JSON.stringify(users));
+      localStorage.setItem(
+        "userAuthenticated",
+        JSON.stringify(userAuthenticated)
+      );
+
+      return { status: "success", msg: "Usuário cadastrado com sucesso" };
     },
 
     loadAuthFromLocalStorage() {
-      const token = localStorage.getItem("authToken");
-      const user = localStorage.getItem("authUser");
-      if (token && user) {
-        this.token = token;
-        this.user = JSON.parse(user);
-      }
+      const userAuthenticated = localStorage.getItem("userAuthenticated");
+      console.log("user authenticated", userAuthenticated);
+      this.isAuthenticated = !!userAuthenticated;
     },
+
+    // async login(email: string, password: string) {
+    //   this.isLoading = true;
+    //   try {
+    //     const response = await axios.post("/api/login", { email, password });
+    //     this.user = response.data.user;
+    //     this.error = null;
+    //     this.saveAuthToLocalStorage();
+    //   } catch (err: any) {
+    //     this.error =
+    //       err.response?.data?.message || "Falha ao autenticar o usuário";
+    //   } finally {
+    //     this.isLoading = false;
+    //   }
+    // },
+
+    // loadAuthFromLocalStorage() {
+    //   return true;
+    // },
+
+    // logout() {
+    //   this.user = null;
+    // },
   },
 
   getters: {
-    isAuthenticated: (state) => !!state.token,
     userName: (state) => state.user?.name || "",
     userEmail: (state) => state.user?.email || "",
   },

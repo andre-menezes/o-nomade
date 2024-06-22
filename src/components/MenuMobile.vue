@@ -5,7 +5,7 @@
       <Menu />
       <hr>
       <article class="my-4 flex justify-center">
-        <Button type="button" text="Entrar" :icon="getIconClass('user')" class="mt-2" />
+        <Button type="button" text="Entrar" :icon="getIconClass('user')" class="mt-2" @click="userLogin" />
       </article>
     </section>
   </nav>
@@ -16,10 +16,17 @@ import { ref } from 'vue';
 import { getIconClass } from '@/utils';
 import Menu from './Menu.vue';
 import Button from './Button.vue';
+import { useRouter } from 'vue-router';
 
 const dialogMenu = ref(false);
 
 function toggleMenu() {
   dialogMenu.value = !dialogMenu.value;
+}
+
+const router = useRouter();
+
+function userLogin() {
+  router.push({ name: 'Login' });
 }
 </script>
