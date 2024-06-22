@@ -13,8 +13,8 @@ module.exports = {
         "secondary-hover": "#2196F3",
       },
       fontFamily: {
-        'poppins': ['Poppins', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        poppins: ["Poppins", "sans-serif"],
+        body: ["Inter", "sans-serif"],
       },
     },
   },
