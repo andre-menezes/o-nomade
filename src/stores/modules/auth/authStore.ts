@@ -12,9 +12,7 @@ export const useAuthStore = defineStore("auth", {
   }),
 
   actions: {
-    async register(
-      user: UserInterface
-    ): Promise<{ status: string; msg: string }> {
+    register(user: UserInterface): { status: string; msg: string } {
       const usersFromLocalStorage = localStorage.getItem("users");
       let users: UserDTO[] = [];
 
@@ -25,10 +23,8 @@ export const useAuthStore = defineStore("auth", {
       if (users.length && users.find((u: UserDTO) => u.email === user.email))
         return { status: "error", msg: "Usuário inválido" };
 
-      const lastId = users.length ? users[users.length - 1].id : 1;
-
       const newUser: UserDTO = {
-        id: lastId,
+        name: user.name,
         email: user.email,
         password: md5(user.password),
       };
@@ -48,28 +44,29 @@ export const useAuthStore = defineStore("auth", {
 
     loadAuthFromLocalStorage() {
       const userAuthenticated = localStorage.getItem("userAuthenticated");
-      console.log("user authenticated", userAuthenticated);
       this.isAuthenticated = !!userAuthenticated;
     },
 
-    // async login(email: string, password: string) {
-    //   this.isLoading = true;
-    //   try {
-    //     const response = await axios.post("/api/login", { email, password });
-    //     this.user = response.data.user;
-    //     this.error = null;
-    //     this.saveAuthToLocalStorage();
-    //   } catch (err: any) {
-    //     this.error =
-    //       err.response?.data?.message || "Falha ao autenticar o usuário";
-    //   } finally {
-    //     this.isLoading = false;
-    //   }
-    // },
+    login(email: string, password: string): { status: string; msg: string } {
+      const usersFromLocalStorage = localStorage.getItem("users");
+      let users: UserDTO[] = [];
 
-    // loadAuthFromLocalStorage() {
-    //   return true;
-    // },
+      if (usersFromLocalStorage !== null) {
+        users = JSON.parse(usersFromLocalStorage) as UserDTO[];
+      }
+
+      const user = users.find((u: UserDTO) => u.email === email);
+
+      if (!user) return { status: "error", msg: "Usuário não encontrado" };
+
+      if (user.password !== md5(password))
+        return { status: "error", msg: "Usuário ou senha incorretos" };
+
+      localStorage.setItem("userAuthenticated", JSON.stringify(user));
+      this.isAuthenticated = true;
+      this.user = user;
+      return { status: "success", msg: "Login efetuado com sucesso" };
+    },
 
     // logout() {
     //   this.user = null;

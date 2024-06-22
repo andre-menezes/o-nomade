@@ -22,4 +22,4 @@ export const menuItems: MenuInterface[] = [
 
 export const MOBILE_BREAKPOINT: number = 768;
 
-export const SNACKBAR_TIME: number = 5000;
+export const SNACKBAR_TIME: number = 3000;
