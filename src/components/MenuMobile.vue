@@ -5,7 +5,7 @@
       <Menu />
       <hr>
       <article v-if="!isAuthenticated" class="my-4 flex justify-center">
-        <Button type="button" text="Entrar" :icon="getIconClass('user')" class="mt-2" @click="userLogin" />
+        <Button type="button" text="Entrar" :icon="getIconClass('login')" class="mt-2" @click="userLogin" />
       </article>
       <article v-else v-if="isMobile" class="relative mt-6 flex flex-col gap-2 items-center">
         <div class="flex justify-center items-center h-14 w-14 text-white rounded-full bg-primary cursor-pointer">
