@@ -39,11 +39,17 @@ export const useAuthStore = defineStore("auth", {
         JSON.stringify(userAuthenticated)
       );
 
+      this.user = userAuthenticated;
+      this.isAuthenticated = true;
+
       return { status: "success", msg: "Usuário cadastrado com sucesso" };
     },
 
     loadAuthFromLocalStorage() {
       const userAuthenticated = localStorage.getItem("userAuthenticated");
+      if (userAuthenticated) {
+        this.user = JSON.parse(userAuthenticated);
+      }
       this.isAuthenticated = !!userAuthenticated;
     },
 
@@ -68,13 +74,13 @@ export const useAuthStore = defineStore("auth", {
       return { status: "success", msg: "Login efetuado com sucesso" };
     },
 
-    // logout() {
-    //   this.user = null;
-    // },
+    logout() {
+      this.user = null;
+      localStorage.removeItem("userAuthenticated");
+    },
   },
 
   getters: {
-    userName: (state) => state.user?.name || "",
-    userEmail: (state) => state.user?.email || "",
+    getUser: (state) => state.user || "",
   },
 });
