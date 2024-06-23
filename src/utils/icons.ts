@@ -25,6 +25,7 @@ export const Icons = Object.freeze({
   hotel: "fa-solid fa-hotel",
   location: "fa-solid fa-location-dot",
   login: "fa-solid fa-right-to-bracket",
+  logout: "fa-solid fa-right-from-bracket",
   mail: "fa-solid fa-envelope",
   menu: "fa-solid fa-bars",
   minus: "fa fa-minus",

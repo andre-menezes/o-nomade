@@ -39,7 +39,7 @@ export interface UserInterface {
 }
 
 export interface AuthStateInterface {
-  user: UserInterface | null;
+  user: UserDTO | null;
   token: string | null;
   isLoading: boolean;
   error: string | null;
