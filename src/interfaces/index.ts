@@ -1,6 +1,6 @@
 export type HoverKeys = "locale" | "checkin" | "checkout" | "guests";
 
-export type OrderBy = "rating" | "pricePerNight" | "locale" | "name";
+export type OrderBy = "none" | "rating" | "pricePerNight" | "locale" | "name";
 
 export type InputTypes = "text" | "email" | "tel" | "password" | "textarea";
 
@@ -67,6 +67,8 @@ export interface HotelDataInterface {
 export interface MocksStateInterface {
   hotels: HotelDataInterface[];
   error: string;
+  isLoading: boolean;
+  maxPagination: number;
   time: number;
 }
 

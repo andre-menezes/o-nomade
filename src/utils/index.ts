@@ -23,3 +23,7 @@ export const menuItems: MenuInterface[] = [
 export const MOBILE_BREAKPOINT: number = 768;
 
 export const SNACKBAR_TIME: number = 2000;
+
+export const TIMEOUT: number = 10000;
+
+export const LIMIT = 10;

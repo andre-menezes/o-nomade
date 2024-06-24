@@ -28,7 +28,7 @@ const mockStore = useMocksStore();
 onMounted(async () => {
   isLoading.value = true;
   try {
-    bestRatingHotel.value = await mockStore.getBestRatingHotels();
+    bestRatingHotel.value = await mockStore.fetchBestRatingHotel();
   } catch (error) {
     console.log(error);
   } finally {

@@ -27,11 +27,11 @@ app.component("VDatePicker", DatePicker);
 app.use(pinia);
 app.use(router);
 
-const mockStore = useMocksStore();
 const authStore = useAuthStore();
-
 authStore.loadAuthFromLocalStorage();
 
-mockStore.fetchHotelData().then(() => {
+const mockStore = useMocksStore();
+mockStore.fetchPagination();
+mockStore.fetchHotelData(1).then(() => {
   app.mount("#app");
 });

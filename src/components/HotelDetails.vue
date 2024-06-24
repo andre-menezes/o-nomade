@@ -100,13 +100,13 @@ const router = useRouter();
 
 const hotel = ref<HotelDataInterface | undefined>(undefined)
 
-watch(route, () => {
-  hotel.value = mockStore.getHotelById(+route.params.id);
+watch(route, async () => {
+  hotel.value = await mockStore.fetchHotelById(+route.params.id);
 })
 
-onBeforeMount(() => {
+onBeforeMount(async () => {
   if (route.params) {
-    hotel.value = mockStore.getHotelById(+route.params.id);
+    hotel.value = await mockStore.fetchHotelById(+route.params.id);
   }
 
   if (!hotel.value) {
