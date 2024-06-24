@@ -7,8 +7,9 @@
     "email": "andre_menezes@outlook.com"
   },
   "scripts": {
+    "backend": "yarn json-server src/database/db.json",
     "serve": "vue-cli-service serve --open",
-    "build": "CI=false vue-cli-service build"
+    "build": "vue-cli-service build"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.22",
@@ -18,6 +19,7 @@
     "@vueuse/core": "^10.11.0",
     "axios": "^1.7.2",
     "core-js": "^3.8.3",
+    "json-server": "^1.0.0-beta.1",
     "md5": "^2.3.0",
     "pinia": "^2.1.7",
     "v-calendar": "^3.1.2",

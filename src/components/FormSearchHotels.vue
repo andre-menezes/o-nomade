@@ -42,7 +42,7 @@
         </DateModal>
       </article>
 
-      <article class="relative">
+      <article class="relative min-w-max">
         <div @click.stop="openModal('guests')"
           class="px-6 py-3 shadow rounded text-center cursor-pointer hover:bg-slate-100 active:bg-gray-300 transition-colors">
           <div class="font-bold">
