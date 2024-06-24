@@ -4,8 +4,6 @@ export type OrderBy = "none" | "rating" | "pricePerNight" | "locale" | "name";
 
 export type InputTypes = "text" | "email" | "tel" | "password" | "textarea";
 
-export type SnackBarStatus = "success" | "error" | "warning" | "info";
-
 export interface MenuInterface {
   name: string;
   icon: string;
@@ -102,7 +100,12 @@ export interface UserDTO {
 }
 
 export interface SnackBarInterface {
-  status: SnackBarStatus;
+  status: number;
   msg: string;
   isOpened: boolean;
+}
+
+export interface HttpStatus {
+  status: number;
+  msg: string;
 }
