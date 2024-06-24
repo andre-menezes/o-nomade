@@ -54,7 +54,7 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue';
 import { SNACKBAR_TIME, getIconClass } from '@/utils';
-import { SnackBarInterface, SnackBarStatus, UserLogin, UserRegister } from '@/interfaces';
+import { SnackBarInterface, UserLogin, UserRegister } from '@/interfaces';
 import { useAuthStore } from '@/stores/modules/auth';
 import { useRouter } from 'vue-router';
 import Button from '@/components/Button.vue';
@@ -77,24 +77,29 @@ const authStore = useAuthStore();
 
 
 const snackbar = ref<SnackBarInterface>({
-  status: 'success',
+  status: 0,
   msg: '',
   isOpened: false
 })
 
 const router = useRouter();
 
-function submitUser(type: string) {
-  const response = type === 'login' ? authStore.login(formLogin.email, formLogin.password) : authStore.register(formRegister);
-  snackbar.value.status = response.status as SnackBarStatus;
-  snackbar.value.msg = response.msg;
-  snackbar.value.isOpened = true;
+async function submitUser(type: string) {
+  const response = type === 'register' ? await authStore.fetchUserRegister(formRegister) : await authStore.fetchUserLogin(formLogin);
+  if (!response) {
+    snackbar.value.status = 400
+    snackbar.value.msg = 'Erro';
+  } else {
+    snackbar.value.status = response.status;
+    snackbar.value.msg = response.msg;
+    snackbar.value.isOpened = true;
 
-  setTimeout(() => {
-    snackbar.value.isOpened = false;
-    if (snackbar.value.status === 'success') {
-      router.back();
-    }
-  }, SNACKBAR_TIME);
+    setTimeout(() => {
+      snackbar.value.isOpened = false;
+      if (snackbar.value.status === 200) {
+        router.back();
+      }
+    }, SNACKBAR_TIME);
+  }
 }
 </script>
