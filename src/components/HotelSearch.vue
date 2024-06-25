@@ -45,12 +45,14 @@ import CardHotel from '@/components/CardHotel.vue';
 import Button from './Button.vue';
 import BestRating from './BestRating.vue';
 import { HotelDataInterface, OrderBy, SearchParamsInterface } from '@/interfaces';
+import { useAuthStore } from '@/stores/modules/auth';
 
 const props = defineProps({
   params: { type: Object as () => SearchParamsInterface }
 });
 
 const hotels = ref<HotelDataInterface[]>([]);
+const authStore = useAuthStore();
 const mockStore = useMocksStore();
 
 const loading = ref(false);
@@ -58,6 +60,9 @@ const loading = ref(false);
 onBeforeMount(async () => {
   loading.value = true;
   try {
+    if (props.params) {
+      authStore.setGuestInfo(props.params)
+    }
     hotels.value = props.params?.locale ? await mockStore.fetchHotelByLocale(props.params.locale) : await mockStore.fetchHotelData(page.value);
   } catch (error) {
     console.log(error);

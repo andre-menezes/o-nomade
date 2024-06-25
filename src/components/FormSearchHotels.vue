@@ -21,10 +21,9 @@
             <i :class="getIconClass('checkin')"></i>
             Check-in
           </div>
-          <span class="text-md text-gray-400">{{ showDate(checkin) }}</span>
+          <span class="text-md text-gray-400">{{ localeDateCheckin }}</span>
         </div>
-        <DateModal v-if="isHovered['checkin']" role="check-in" :data="checkin" @close="closeModal('checkin')"
-          @data="updateDate">
+        <DateModal v-if="isHovered['checkin']" role="checkin" @close="closeModal('checkin')">
         </DateModal>
       </article>
 
@@ -35,10 +34,9 @@
             <i :class="getIconClass('checkout')"></i>
             Check-out
           </div>
-          <span class="text-md text-gray-400">{{ showDate(checkout) }}</span>
+          <span class="text-md text-gray-400">{{ localeDateCheckout }}</span>
         </div>
-        <DateModal v-if="isHovered['checkout']" role="check-out" :min="checkin" :data="checkout"
-          @close="closeModal('checkout')" @data="updateDate">
+        <DateModal v-if="isHovered['checkout']" role="checkout" @close="closeModal('checkout')">
         </DateModal>
       </article>
 
@@ -51,7 +49,7 @@
           </div>
           <span class="text-md text-gray-400">{{ hotelGuests }}</span>
         </div>
-        <GuestModal v-if="isHovered['guests']" @close="closeModal('guests')" :data="guests" @data="updateGuests">
+        <GuestModal v-if="isHovered['guests']" @close="closeModal('guests')">
         </GuestModal>
       </article>
 
@@ -64,11 +62,13 @@
 import { computed, reactive, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { getIconClass } from '@/utils';
+import { DatePickerInterface, GuestsInterface, HoverKeys } from '@/interfaces';
+import { useAppStore } from '@/stores/modules/app';
+import moment from "moment";
 import Button from './Button.vue';
 import LocaleModal from './modals/LocaleModal.vue';
 import DateModal from './modals/DateModal.vue';
 import GuestModal from './modals/GuestModal.vue';
-import { DatePickerInterface, GuestsInterface, HoverKeys } from '@/interfaces';
 
 const router = useRouter();
 
@@ -81,8 +81,10 @@ const selectedLocale = computed(() => {
   return locale.value ? locale.value : 'Busque um destino'
 });
 
+const appStore = useAppStore();
+
 const hotelGuests = computed(() => {
-  return `Adultos: ${guests.value.adults} | Crianças: ${guests.value.children} | Quartos: ${guests.value.rooms}`;
+  return `Adultos: ${appStore.getAdults} | Crianças: ${appStore.getChildren} | Quartos: ${appStore.getRooms}`;
 });
 
 function searchHotels() {
@@ -120,24 +122,12 @@ function updateLocale(newLocale: string) {
   locale.value = newLocale;
 }
 
-function updateDate({ role, value }: DatePickerInterface) {
-  if (role === 'check-in') {
-    checkin.value = new Date(value);
-    if (checkout.value < checkin.value) {
-      checkout.value = checkin.value
-    }
-  } else {
-    checkout.value = new Date(value);
-  }
-}
-
-function showDate(date: Date) {
-  return date.toLocaleDateString();
-}
-
 function updateGuests({ adults, children, rooms }: GuestsInterface) {
   guests.value.adults = adults;
   guests.value.children = children;
   guests.value.rooms = rooms;
 }
+
+const localeDateCheckin = computed(() => moment(appStore.getCheckin).format('DD/MM/YYYY'))
+const localeDateCheckout = computed(() => moment(appStore.getCheckout).format('DD/MM/YYYY'))
 </script>

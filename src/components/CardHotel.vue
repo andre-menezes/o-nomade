@@ -1,12 +1,12 @@
 <template>
   <article
-    class="relative flex flex-col place-items-center w-full rounded bg-white shadow-lg shadow-black/30 overflow-hidden"
+    class="relative flex flex-col place-items-center w-full max-w-lg rounded bg-white shadow-lg shadow-black/30 overflow-hidden"
     :class="itemSelected ? 'outline outline-offset-2 outline-8 outline-orange-500' : ''">
     <div class="h-3/5 overflow-hidden">
       <img :src="hotel.image" alt="hotel" class="scale-150">
     </div>
     <div class="w-full flex flex-col grow gap-4 justify-between items-center px-4 py-4">
-      <p class="text-lg text-center font-bold">
+      <p class="text-xl lg:text-2xl text-center font-bold">
         <i :class="getIconClass('hotel')"></i>
         {{ hotel.name }}
       </p>

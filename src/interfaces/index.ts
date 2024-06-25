@@ -4,6 +4,8 @@ export type OrderBy = "none" | "rating" | "pricePerNight" | "locale" | "name";
 
 export type InputTypes = "text" | "email" | "tel" | "password" | "textarea";
 
+export type CardTypes = "credit" | "debit";
+
 export interface MenuInterface {
   name: string;
   icon: string;
@@ -36,8 +38,27 @@ export interface UserInterface {
   };
 }
 
+export interface BookingInterface {
+  idUser: number;
+  idHotel: number;
+  name: string;
+  email: string;
+  phone: string;
+  birthDate: string;
+  cpf: string;
+  paymentMethod: {
+    pix?: boolean;
+    cardType?: "credit" | "debit";
+    cardNumber?: string;
+    expiryDate?: string;
+    cvv?: string;
+  };
+  rates: number;
+  totalPrice: number;
+}
+
 export interface AuthStateInterface {
-  user: UserDTO | null;
+  user: UserInterface | null;
   token: string | null;
   isLoading: boolean;
   error: string | null;
@@ -90,13 +111,6 @@ export interface UserRegister {
   name: string;
   email: string;
   password: string;
-}
-
-export interface UserDTO {
-  name: string;
-  email: string;
-  password: string;
-  token?: string;
 }
 
 export interface SnackBarInterface {
