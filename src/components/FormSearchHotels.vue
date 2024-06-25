@@ -51,7 +51,7 @@
           </div>
           <span class="text-md text-gray-400">{{ hotelGuests }}</span>
         </div>
-        <GuestModal v-if="isHovered['guests']" @close="closeModal('guests')" :data="guests" @data="updateGuests">
+        <GuestModal v-if="isHovered['guests']" @close="closeModal('guests')">
         </GuestModal>
       </article>
 
@@ -64,11 +64,12 @@
 import { computed, reactive, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { getIconClass } from '@/utils';
+import { DatePickerInterface, GuestsInterface, HoverKeys } from '@/interfaces';
+import { useAppStore } from '@/stores/modules/app';
 import Button from './Button.vue';
 import LocaleModal from './modals/LocaleModal.vue';
 import DateModal from './modals/DateModal.vue';
 import GuestModal from './modals/GuestModal.vue';
-import { DatePickerInterface, GuestsInterface, HoverKeys } from '@/interfaces';
 
 const router = useRouter();
 
@@ -81,8 +82,10 @@ const selectedLocale = computed(() => {
   return locale.value ? locale.value : 'Busque um destino'
 });
 
+const appStore = useAppStore();
+
 const hotelGuests = computed(() => {
-  return `Adultos: ${guests.value.adults} | Crianças: ${guests.value.children} | Quartos: ${guests.value.rooms}`;
+  return `Adultos: ${appStore.getAdults} | Crianças: ${appStore.getChildren} | Quartos: ${appStore.getRooms}`;
 });
 
 function searchHotels() {

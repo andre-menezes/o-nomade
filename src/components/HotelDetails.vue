@@ -83,6 +83,8 @@
         </button>
       </div>
     </div>
+
+    <BookingModal v-if="openBookinModal" @close="openBookinModal = false" />
   </section>
 </template>
 
@@ -92,6 +94,7 @@ import { useRoute, useRouter } from 'vue-router';
 import { useMocksStore } from '@/stores/modules/mocks';
 import { getIconClass } from '@/utils';
 import { HotelDataInterface } from '@/interfaces';
+import BookingModal from '@/components/modals/BookingModal.vue'
 
 const mockStore = useMocksStore();
 
@@ -124,7 +127,10 @@ const price = computed(() => {
   return hotelPrice;
 })
 
+const openBookinModal = ref(false)
+
 function bookHotel() {
-  console.log('Reservar')
+  window.scrollTo({ top: 0 });
+  openBookinModal.value = true;
 }
 </script>

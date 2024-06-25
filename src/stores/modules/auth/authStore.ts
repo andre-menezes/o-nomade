@@ -2,7 +2,7 @@ import { defineStore } from "pinia";
 import {
   AuthStateInterface,
   HttpStatus,
-  UserDTO,
+  SearchParamsInterface,
   UserInterface,
   UserLogin,
 } from "@/interfaces";
@@ -19,6 +19,16 @@ export const useAuthStore = defineStore("auth", {
     isLoading: false as AuthStateInterface["isLoading"],
     error: null as AuthStateInterface["error"],
     isAuthenticated: false,
+    booking: {
+      locale: "",
+      checkin: new Date().toLocaleDateString(),
+      checkout: new Date().toLocaleDateString(),
+      guests: {
+        adults: 1,
+        children: 0,
+        rooms: 1,
+      },
+    } as SearchParamsInterface,
   }),
 
   actions: {
@@ -91,9 +101,14 @@ export const useAuthStore = defineStore("auth", {
       this.user = null;
       localStorage.removeItem("userAuthenticated");
     },
+
+    setGuestInfo(data: SearchParamsInterface) {
+      this.booking = data;
+    },
   },
 
   getters: {
     getUser: (state) => state.user || "",
+    getGuestInfo: (state) => state.booking,
   },
 });

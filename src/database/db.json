@@ -35,12 +35,7 @@
       },
       "description": "Desfrute de uma estadia relaxante com vista para o mar.",
       "image": "https://images.unsplash.com/photo-1598598795009-f80c5072e665",
-      "amenities": [
-        "Wi-Fi grátis",
-        "Piscina",
-        "Bar na piscina",
-        "Spa"
-      ],
+      "amenities": ["Wi-Fi grátis", "Piscina", "Bar na piscina", "Spa"],
       "rating": 4,
       "numberOfRooms": 8,
       "pricePerNight": 600,
@@ -173,12 +168,7 @@
       },
       "description": "Vista panorâmica da cidade.",
       "image": "https://images.unsplash.com/photo-1592229505726-ca121723b8ef",
-      "amenities": [
-        "Wi-Fi grátis",
-        "Restaurante",
-        "Academia",
-        "Spa"
-      ],
+      "amenities": ["Wi-Fi grátis", "Restaurante", "Academia", "Spa"],
       "rating": 3,
       "numberOfRooms": 3,
       "pricePerNight": 400,
@@ -472,12 +462,7 @@
       },
       "description": "Luxo e conforto no coração do Rio.",
       "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945",
-      "amenities": [
-        "Wi-Fi grátis",
-        "Piscina",
-        "Restaurante",
-        "Spa"
-      ],
+      "amenities": ["Wi-Fi grátis", "Piscina", "Restaurante", "Spa"],
       "rating": 3,
       "numberOfRooms": 8,
       "pricePerNight": 700,
@@ -698,5 +683,6 @@
       "email": "andre_menezes@outlook.com",
       "password": "e10adc3949ba59abbe56e057f20f883e"
     }
-  ]
+  ],
+  "bookings": []
 }
