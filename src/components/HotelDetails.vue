@@ -84,7 +84,7 @@
       </div>
     </div>
 
-    <BookingModal v-if="openBookinModal" @close="openBookinModal = false" />
+    <BookingModal v-if="openBookinModal" @close="openBookinModal = false" :hotel="hotel" />
   </section>
 </template>
 

@@ -39,7 +39,8 @@ export interface UserInterface {
 }
 
 export interface BookingInterface {
-  userId?: number;
+  idUser: number;
+  idHotel: number;
   name: string;
   email: string;
   phone: string;
@@ -52,6 +53,8 @@ export interface BookingInterface {
     expiryDate?: string;
     cvv?: string;
   };
+  rates: number;
+  totalPrice: number;
 }
 
 export interface AuthStateInterface {

@@ -81,9 +81,29 @@
               </article>
             </div>
           </div>
-          <div>
+          <section>
+            <article class="relative my-4 mb-8 flex items-center shadow rounded text-sm disabled:bg-gray-100 disabled:text-gray-300 
+        disabled:cursor-default">
+              <label class="absolute -top-5 text-md font-semibold">Checkin</label>
+              <i :class="getIconClass('checkin')" class="absolute left-0 px-2 text-gray-200"></i>
+              <input v-model="selectedCheckin" placeholder="Checkin" type="date"
+                class="w-full px-2 py-2 pl-8 focus:outline-2 focus:outline-blue-500" />
+            </article>
+            <article class="relative my-4 flex items-center shadow rounded text-sm disabled:bg-gray-100 disabled:text-gray-300 
+        disabled:cursor-default">
+              <label class="absolute -top-5 text-md font-semibold">Checkout</label>
+              <i :class="getIconClass('checkout')" class="absolute left-0 px-2 text-gray-200"></i>
+              <input v-model="selectedCheckout" placeholder="Checkout" type="date"
+                class="w-full px-2 py-2 pl-8 focus:outline-2 focus:outline-blue-500" />
+            </article>
             <GuestOptions />
-          </div>
+          </section>
+        </section>
+        <section class="flex justify-center gap-10 py-8">
+          <p class="text-lg font-bold">Diárias: <span class="py-2 px-4 rounded bg-blue-200/40">{{ getDays() }}</span>
+          </p>
+          <p class="text-lg font-bold">Valor total: <span class="py-2 px-4 rounded bg-green-200/40">{{ totalPrice
+              }}</span></p>
         </section>
         <Button class="w-full" text="Reservar" :icon="getIconClass('checkin')" @click="bookingHotel()" />
       </form>
@@ -92,16 +112,24 @@
 </template>
 
 <script setup lang="ts">
-import { defineEmits, ref, watch } from 'vue';
+import { computed, defineEmits, ref, watch } from 'vue';
 import { getIconClass } from '@/utils';
-import { BookingInterface, CardTypes } from '@/interfaces';
+import { BookingInterface, CardTypes, HotelDataInterface } from '@/interfaces';
+import { useAppStore } from '@/stores/modules/app';
+import { useAuthStore } from '@/stores/modules/auth';
+import { useMocksStore } from '@/stores/modules/mocks';
+import { useRouter } from 'vue-router';
 import Button from '../Button.vue';
 import GuestOptions from '../GuestOptions.vue';
+import moment from 'moment';
+
+const appStore = useAppStore();
 
 const paymentMethod = ref('pix');
 
 const userData = ref<BookingInterface>({
-  userId: undefined,
+  idUser: undefined,
+  idHotel: undefined,
   name: '',
   email: '',
   phone: '',
@@ -119,7 +147,14 @@ watch(paymentMethod, (val) => {
   userData.value.paymentMethod.pix = val === 'pix';
 })
 
-function bookingHotel() {
+const authStore = useAuthStore();
+const mockStore = useMocksStore();
+const router = useRouter();
+
+async function bookingHotel() {
+  if (!authStore.getUser?.id) {
+    router.push({ name: 'Login' })
+  }
   const bookingData = userData.value;
   if (userData.value.paymentMethod.pix) {
     delete bookingData.paymentMethod.cardType;
@@ -129,7 +164,12 @@ function bookingHotel() {
   } else {
     delete bookingData.paymentMethod.pix;
   }
-  console.log('asgas', bookingData)
+  bookingData.idUser = authStore.getUser?.id
+  bookingData.idHotel = props.hotel.id
+  bookingData.rates = getDays();
+  bookingData.totalPrice = getDays() * props.hotel.pricePerNight;
+  await mockStore.fetchBooking(bookingData);
+  router.push({ name: 'Home' });
 }
 
 const paymentOptions = {
@@ -143,4 +183,33 @@ const emit = defineEmits('close');
 function handleClick() {
   emit('close')
 }
+
+const selectedCheckin = ref(appStore.getCheckin)
+const selectedCheckout = ref(appStore.getCheckout)
+
+watch(selectedCheckin, (val) => {
+  appStore.setCheckin(val);
+  function getDays(val, selectedCheckout);
+})
+watch(selectedCheckout, (val) => {
+  appStore.setCheckout(val);
+  getDays(selectedCheckin, val);
+})
+
+function getDays(start, end) {
+  let checkin = moment(appStore.getCheckin);
+  let checkout = moment(appStore.getCheckout);
+  if (start && end) {
+    checkin = moment(start);
+    checkout = moment(end);
+  }
+  return checkout.diff(checkin, 'days');
+}
+
+const props = defineProps({
+  hotel: HotelDataInterface,
+  required: true
+})
+
+const totalPrice = computed(() => getDays() * props.hotel.pricePerNight)
 </script>

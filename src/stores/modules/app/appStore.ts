@@ -1,3 +1,4 @@
+import moment from "moment";
 import { defineStore } from "pinia";
 
 export const useAppStore = defineStore("app", {
@@ -5,6 +6,9 @@ export const useAppStore = defineStore("app", {
     adults: 1,
     children: 0,
     rooms: 1,
+    checkin: moment().format("YYYY-MM-DD"),
+    checkout: moment().add(1, "d").format("YYYY-MM-DD"),
+    days: 0,
   }),
 
   actions: {
@@ -26,17 +30,20 @@ export const useAppStore = defineStore("app", {
     decreaseRooms() {
       this.rooms--;
     },
+    setCheckin(value: string) {
+      this.checkin = value;
+    },
+    setCheckout(value: string) {
+      this.checkout = value;
+    },
   },
 
   getters: {
-    getAdults: (state) => {
-      return state.adults;
-    },
-    getChildren: (state) => {
-      return state.children;
-    },
-    getRooms: (state) => {
-      return state.rooms;
-    },
+    getAdults: (state) => state.adults,
+    getChildren: (state) => state.children,
+    getRooms: (state) => state.rooms,
+    getCheckin: (state) => state.checkin,
+    getCheckout: (state) => state.checkout,
+    getDays: (state) => state.days,
   },
 });

@@ -1,12 +1,16 @@
 import { defineStore } from "pinia";
-import { HotelDataInterface, MocksStateInterface } from "@/interfaces";
+import {
+  BookingInterface,
+  HotelDataInterface,
+  MocksStateInterface,
+} from "@/interfaces";
 import API from "@/config/axios";
 import { LIMIT } from "@/utils";
 
 function returnError() {
   console.log({
     status: 404,
-    msg: "Erro ao buscar os dados dos hotéis:",
+    msg: "Erro ao realizar a solicitação",
   });
 }
 
@@ -85,6 +89,18 @@ export const useMocksStore = defineStore({
       try {
         const response = await API.get(`/hotels?id=${id}`);
         return response.data[0];
+      } catch (error) {
+        returnError();
+      } finally {
+        this.isLoading = false;
+      }
+    },
+
+    async fetchBooking(data: BookingInterface) {
+      this.isLoading = true;
+      try {
+        const response = await API.post("/bookings", data);
+        console.log("reposta reserva", response);
       } catch (error) {
         returnError();
       } finally {

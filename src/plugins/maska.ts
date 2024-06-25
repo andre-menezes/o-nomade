@@ -1,4 +1,3 @@
-// src/plugins/maskaPlugin.ts
 import { App, DirectiveBinding } from "vue";
 import { MaskInput } from "maska";
 

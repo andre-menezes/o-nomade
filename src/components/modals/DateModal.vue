@@ -9,40 +9,53 @@
       Selecione a data do {{ props.role }}
     </h3>
     <div class="grow px-4 py-4 flex items-center justify-center">
-      <VDatePicker borderless v-model="date" color="gray" :min-date="props.min" @click="handleClick" />
+      <input type="date" v-model="selectedDate" :min="minDate" class="border rounded p-2">
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { defineEmits, ref } from 'vue';
+import moment from 'moment';
+import { computed, defineEmits, onBeforeMount, ref, watch } from 'vue';
 import { getIconClass } from '@/utils';
+import { useAppStore } from '@/stores/modules/app';
+
+const appStore = useAppStore();
 
 const props = defineProps({
   role: {
     type: String,
-    require: true,
-    default: 'check-in'
-  },
-  data: {
-    type: Date,
-    default: new Date()
-  },
-  min: {
-    type: Date,
-    default: new Date()
+    required: true,
+    default: 'checkin'
   }
-})
+});
 
-const date = ref(props.data);
+const emit = defineEmits(['close']);
 
-const emit = defineEmits(['close', 'data'])
-
-function handleClick() {
-  emit('data', { role: props.role, value: date.value })
-}
+const minDate = ref(appStore.getCheckin)
 
 function closeModal() {
   emit('close');
 }
+
+const selectedDate = ref(moment().format('YYYY-MM-DD'));
+
+watch(selectedDate, (val) => {
+  if (props.role === 'checkin') {
+    appStore.setCheckin(val)
+    appStore.setCheckout(moment(val).add(1, 'd').format('YYYY-MM-DD'))
+  } else {
+    appStore.setCheckout(val)
+  }
+})
+
+onBeforeMount(() => {
+  if (props.role === 'checkin') {
+    selectedDate.value = appStore.getCheckin
+    minDate.value = appStore.getCheckin
+  } else {
+    selectedDate.value = appStore.getCheckout
+    minDate.value = appStore.getCheckout
+  }
+})
 </script>

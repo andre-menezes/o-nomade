@@ -1,7 +1,7 @@
 {
   "hotels": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Hotel Paradiso",
       "location": {
         "address": "Rua Exemplo, 123",
@@ -24,7 +24,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Hotel Tropical",
       "location": {
         "address": "Av. das Palmeiras, 456",
@@ -35,14 +35,19 @@
       },
       "description": "Desfrute de uma estadia relaxante com vista para o mar.",
       "image": "https://images.unsplash.com/photo-1598598795009-f80c5072e665",
-      "amenities": ["Wi-Fi grátis", "Piscina", "Bar na piscina", "Spa"],
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Bar na piscina",
+        "Spa"
+      ],
       "rating": 4,
       "numberOfRooms": 8,
       "pricePerNight": 600,
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Pousada da Serra",
       "location": {
         "address": "Estrada da Montanha, 789",
@@ -65,7 +70,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Hotel Beira Mar",
       "location": {
         "address": "Av. Oceânica, 101",
@@ -88,7 +93,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Pousada Recanto",
       "location": {
         "address": "Rua das Flores, 55",
@@ -111,7 +116,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Hotel Estrela",
       "location": {
         "address": "Rua das Estrelas, 88",
@@ -134,7 +139,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Pousada do Sol",
       "location": {
         "address": "Praia do Sol, 23",
@@ -157,7 +162,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Hotel Mirante",
       "location": {
         "address": "Rua do Mirante, 112",
@@ -168,14 +173,19 @@
       },
       "description": "Vista panorâmica da cidade.",
       "image": "https://images.unsplash.com/photo-1592229505726-ca121723b8ef",
-      "amenities": ["Wi-Fi grátis", "Restaurante", "Academia", "Spa"],
+      "amenities": [
+        "Wi-Fi grátis",
+        "Restaurante",
+        "Academia",
+        "Spa"
+      ],
       "rating": 3,
       "numberOfRooms": 3,
       "pricePerNight": 400,
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Hotel Encanto",
       "location": {
         "address": "Rua Encantada, 77",
@@ -198,7 +208,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Pousada do Campo",
       "location": {
         "address": "Estrada do Campo, 90",
@@ -221,7 +231,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Hotel Flor de Lis",
       "location": {
         "address": "Rua das Flores, 201",
@@ -244,7 +254,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Pousada Vista Verde",
       "location": {
         "address": "Estrada do Vale, 12",
@@ -267,7 +277,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Hotel Bela Vista",
       "location": {
         "address": "Av. Central, 333",
@@ -290,7 +300,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Pousada Caminho das Águas",
       "location": {
         "address": "Estrada das Águas, 45",
@@ -313,7 +323,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "Hotel Porto Azul",
       "location": {
         "address": "Av. Atlântica, 999",
@@ -336,7 +346,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Pousada Terra do Sol",
       "location": {
         "address": "Rua do Sol, 89",
@@ -359,7 +369,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Hotel Central Plaza",
       "location": {
         "address": "Praça Central, 5",
@@ -382,7 +392,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Pousada Jardim Secreto",
       "location": {
         "address": "Rua do Jardim, 14",
@@ -405,7 +415,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "Hotel Rio Verde",
       "location": {
         "address": "Av. Rio Verde, 123",
@@ -428,7 +438,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "Pousada Mar Azul",
       "location": {
         "address": "Rua da Praia, 9",
@@ -451,7 +461,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 21,
+      "id": "21",
       "name": "Hotel Luxo Imperial",
       "location": {
         "address": "Rua das Palmeiras, 321",
@@ -462,14 +472,19 @@
       },
       "description": "Luxo e conforto no coração do Rio.",
       "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945",
-      "amenities": ["Wi-Fi grátis", "Piscina", "Restaurante", "Spa"],
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Restaurante",
+        "Spa"
+      ],
       "rating": 3,
       "numberOfRooms": 8,
       "pricePerNight": 700,
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 22,
+      "id": "22",
       "name": "Pousada Encanto do Mar",
       "location": {
         "address": "Praia Encantada, 56",
@@ -492,7 +507,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 23,
+      "id": "23",
       "name": "Hotel Vista Mar",
       "location": {
         "address": "Av. Atlântica, 200",
@@ -515,7 +530,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 24,
+      "id": "24",
       "name": "Pousada Jardim Tropical",
       "location": {
         "address": "Rua do Jardim, 45",
@@ -538,7 +553,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 25,
+      "id": "25",
       "name": "Hotel Porto Seguro",
       "location": {
         "address": "Av. Beira Mar, 123",
@@ -561,7 +576,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 26,
+      "id": "26",
       "name": "Pousada do Paraíso",
       "location": {
         "address": "Estrada do Paraíso, 99",
@@ -584,7 +599,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 27,
+      "id": "27",
       "name": "Hotel Bela Praia",
       "location": {
         "address": "Rua da Praia, 11",
@@ -607,7 +622,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 28,
+      "id": "28",
       "name": "Pousada Refúgio da Serra",
       "location": {
         "address": "Estrada da Serra, 33",
@@ -630,7 +645,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 29,
+      "id": "29",
       "name": "Hotel Montanha Encantada",
       "location": {
         "address": "Rua das Montanhas, 78",
@@ -653,7 +668,7 @@
       "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
     },
     {
-      "id": 30,
+      "id": "30",
       "name": "Pousada da Praia",
       "location": {
         "address": "Rua da Praia, 21",
@@ -684,5 +699,38 @@
       "password": "e10adc3949ba59abbe56e057f20f883e"
     }
   ],
-  "bookings": []
+  "bookings": [
+    {
+      "id": "2b03",
+      "idUser": "7f16",
+      "idHotel": "17",
+      "name": "Andre Menezes",
+      "email": "andre_menezes@outlook.com",
+      "phone": "(12) 33467-4525",
+      "birthDate": "20/04/1987",
+      "cpf": "123.456.123-45",
+      "paymentMethod": {
+        "cardNumber": "6123 4671 7341 7834",
+        "expiryDate": "10/28",
+        "cvv": "126"
+      },
+      "rates": 3,
+      "totalPrice": 1350
+    },
+    {
+      "id": "452d",
+      "idUser": "7f16",
+      "idHotel": "10",
+      "name": "Andre Menezes",
+      "email": "andre_menezes@outlook.com",
+      "phone": "(53) 51562-3461",
+      "birthDate": "20/04/1987",
+      "cpf": "124.125.613-61",
+      "paymentMethod": {
+        "pix": true
+      },
+      "rates": 7,
+      "totalPrice": 3500
+    }
+  ]
 }
