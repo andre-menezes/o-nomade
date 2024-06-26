@@ -11,7 +11,7 @@
         {{ hotel.name }}
       </p>
       <p>
-        <i v-for="n in hotel.rating" :class="getIconClass('star')"
+        <i v-for="_n in hotel.rating" :class="getIconClass('star')"
           class="w-4 text-yellow-300 drop-shadow drop-shadow-black"></i>
       </p>
       <p class="text-sm text-gray-400">
@@ -36,13 +36,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { defineEmits, ref, watch } from 'vue';
 import { useRouter } from 'vue-router';
 import { getIconClass } from '@/utils';
 import { HotelDataInterface } from '@/interfaces';
 import Button from './Button.vue';
 
-defineProps({
+const props = defineProps({
   hotel: {
     type: Object as () => HotelDataInterface,
     required: true
@@ -60,4 +60,10 @@ const router = useRouter();
 function moreDetails(id: number) {
   router.push({ name: 'Hotel', params: { id } });
 }
+
+const emit = defineEmits(['selected']);
+
+watch(itemSelected, () => {
+  emit('selected', props.hotel)
+})
 </script>

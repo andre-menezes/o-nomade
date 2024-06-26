@@ -101,7 +101,24 @@ const mockStore = useMocksStore();
 const route = useRoute();
 const router = useRouter();
 
-const hotel = ref<HotelDataInterface | undefined>(undefined)
+const hotel = ref<HotelDataInterface>({
+  id: 0,
+  name: '',
+  location: {
+    city: '',
+    state: '',
+    address: '',
+    country: '',
+    zip_code: '',
+  },
+  description: '',
+  image: '',
+  amenities: [],
+  rating: 0,
+  numberOfRooms: 0,
+  pricePerNight: 0,
+  cancellationPolicy: ''
+})
 
 watch(route, async () => {
   hotel.value = await mockStore.fetchHotelById(+route.params.id);

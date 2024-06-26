@@ -8,15 +8,15 @@
       <i :class="getIconClass('calendar')" class="mr-2"></i>
       Selecione a data do {{ props.role }}
     </h3>
-    <div class="grow px-4 py-4 flex items-center justify-center">
-      <input type="date" v-model="selectedDate" :min="minDate" class="border rounded p-2">
+    <div class="w-full px-4 py-4 flex items-center justify-center">
+      <input type="date" v-model="selectedDate" :min="minDate" class="w-full border rounded p-2">
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
 import moment from 'moment';
-import { computed, defineEmits, onBeforeMount, ref, watch } from 'vue';
+import { defineEmits, onBeforeMount, ref, watch } from 'vue';
 import { getIconClass } from '@/utils';
 import { useAppStore } from '@/stores/modules/app';
 

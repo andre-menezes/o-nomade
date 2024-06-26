@@ -39,8 +39,8 @@ export interface UserInterface {
 }
 
 export interface BookingInterface {
-  idUser: number;
-  idHotel: number;
+  idUser: number | undefined;
+  idHotel: number | undefined;
   name: string;
   email: string;
   phone: string;
@@ -81,6 +81,15 @@ export interface HotelDataInterface {
   numberOfRooms: number;
   pricePerNight: number;
   cancellationPolicy: string;
+}
+
+export interface HotelCompareInterface {
+  id: number;
+  name: string;
+  rating: number;
+  amenities: string;
+  description: string;
+  pricePerNight: string;
 }
 
 export interface MocksStateInterface {
