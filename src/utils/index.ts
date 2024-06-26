@@ -20,6 +20,15 @@ export const menuItems: MenuInterface[] = [
   },
 ];
 
+export const menuWithAuthenticatedRoutes: MenuInterface[] = [
+  ...menuItems,
+  {
+    name: "Minhas Reservas",
+    icon: "suitcase",
+    path: "/minhas-reservas",
+    active: false,
+  },
+];
 export const MOBILE_BREAKPOINT: number = 768;
 
 export const SNACKBAR_TIME: number = 2000;

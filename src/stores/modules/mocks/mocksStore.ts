@@ -99,8 +99,21 @@ export const useMocksStore = defineStore({
     async fetchBooking(data: BookingInterface) {
       this.isLoading = true;
       try {
-        const response = await API.post("/bookings", data);
-        console.log("reposta reserva", response);
+        await API.post("/bookings", data);
+      } catch (error) {
+        returnError();
+      } finally {
+        this.isLoading = false;
+      }
+    },
+
+    async fetchBookingsByUser(idUser: string) {
+      this.isLoading = true;
+      try {
+        const response = API.get("/bookings");
+        return (await response).data.filter(
+          (b: BookingInterface) => b.idUser === idUser
+        );
       } catch (error) {
         returnError();
       } finally {

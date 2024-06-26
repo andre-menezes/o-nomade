@@ -1,8 +1,5 @@
 <template>
-  <section v-if="isLoading">
-    Loading Skeleton...
-  </section>
-  <section v-else class="w-full lg:w-9/12 lg:mx-auto bg-white px-8 py-6 pb-8 my-10 rounded shadow">
+  <section class="w-full lg:w-9/12 lg:mx-auto bg-white px-8 py-6 pb-8 my-10 rounded shadow">
     <h2 class="text-xl font-semibold mb-8">
       <i :class="getIconClass('star')"></i>
       Confira os hotéis mais bem avaliados
@@ -21,18 +18,9 @@ import { HotelDataInterface } from '@/interfaces';
 import CardHotel from './CardHotel.vue';
 
 const bestRatingHotel = ref<HotelDataInterface[] | null>(null);
-const isLoading = ref(false);
-
 const mockStore = useMocksStore();
 
 onMounted(async () => {
-  isLoading.value = true;
-  try {
-    bestRatingHotel.value = await mockStore.fetchBestRatingHotel();
-  } catch (error) {
-    console.log(error);
-  } finally {
-    isLoading.value = false;
-  }
+  bestRatingHotel.value = await mockStore.fetchBestRatingHotel();
 })
 </script>

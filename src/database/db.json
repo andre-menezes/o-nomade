@@ -701,36 +701,57 @@
   ],
   "bookings": [
     {
-      "id": "2b03",
+      "id": "1d91",
       "idUser": "7f16",
-      "idHotel": "17",
+      "idHotel": "3",
+      "checkin": "2024-06-26",
+      "checkout": "2024-07-01",
       "name": "Andre Menezes",
       "email": "andre_menezes@outlook.com",
-      "phone": "(12) 33467-4525",
+      "phone": "(12) 33333-4444",
       "birthDate": "20/04/1987",
-      "cpf": "123.456.123-45",
-      "paymentMethod": {
-        "cardNumber": "6123 4671 7341 7834",
-        "expiryDate": "10/28",
-        "cvv": "126"
-      },
-      "rates": 3,
-      "totalPrice": 1350
-    },
-    {
-      "id": "452d",
-      "idUser": "7f16",
-      "idHotel": "10",
-      "name": "Andre Menezes",
-      "email": "andre_menezes@outlook.com",
-      "phone": "(53) 51562-3461",
-      "birthDate": "20/04/1987",
-      "cpf": "124.125.613-61",
+      "cpf": "123.456.789-00",
       "paymentMethod": {
         "pix": true
       },
-      "rates": 7,
-      "totalPrice": 3500
+      "rates": 5,
+      "totalPrice": 2000
+    },
+    {
+      "id": "1466",
+      "idUser": "7f16",
+      "idHotel": "5",
+      "checkin": "2024-07-22",
+      "checkout": "2024-07-27",
+      "name": "Andre Menezes",
+      "email": "andre_menezes@outlook.com",
+      "phone": "(12) 33333-4444",
+      "birthDate": "20/04/1987",
+      "cpf": "123.456.789-00",
+      "paymentMethod": {
+        "cardNumber": "1111 2222 3333 4444",
+        "expiryDate": "12/30",
+        "cvv": "321"
+      },
+      "rates": 5,
+      "totalPrice": 1750
+    },
+    {
+      "id": "bad3",
+      "idUser": "7f16",
+      "idHotel": "20",
+      "checkin": "2024-08-30",
+      "checkout": "2024-09-01",
+      "name": "Evelyn Quirino",
+      "email": "teste@teste.com",
+      "phone": "(08) 91237-5901",
+      "birthDate": "25/10/1998",
+      "cpf": "432.016.798-42",
+      "paymentMethod": {
+        "pix": true
+      },
+      "rates": 2,
+      "totalPrice": 920
     }
   ]
 }

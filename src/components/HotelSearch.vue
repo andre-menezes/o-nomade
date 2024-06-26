@@ -43,7 +43,7 @@
       </select>
     </label>
 
-    <article v-if="!loading && !hotels.length">
+    <article v-if="!hotels.length">
       <div class="text-center text-2xl py-8">
         <div class="mb-8">
           <i :class="getIconClass('sad')" class="mr-2"></i>

@@ -25,7 +25,7 @@ export interface GuestsInterface {
 }
 
 export interface UserInterface {
-  id?: number;
+  id: string;
   name: string;
   email: string;
   password: string;
@@ -39,8 +39,11 @@ export interface UserInterface {
 }
 
 export interface BookingInterface {
-  idUser: number | undefined;
+  id?: string;
+  idUser: string | undefined;
   idHotel: number | undefined;
+  checkin: string;
+  checkout: string;
   name: string;
   email: string;
   phone: string;
