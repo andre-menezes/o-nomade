@@ -15,7 +15,13 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { MenuInterface } from '@/interfaces';
-import { getIconClass, menuItems } from '@/utils';
+import { getIconClass, menuItems, menuWithAuthenticatedRoutes } from '@/utils';
+import { useAuthStore } from '@/stores/modules/auth';
 
-const menu = ref<MenuInterface[]>(menuItems);
+const authStore = useAuthStore();
+
+let listMenu = authStore.getIsAuthenticated ? menuWithAuthenticatedRoutes : menuItems;
+
+const menu = ref<MenuInterface[]>(listMenu);
+
 </script>

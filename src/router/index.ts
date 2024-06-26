@@ -47,6 +47,15 @@ const routes: Array<RouteRecordRaw> = [
       requiresAuth: true,
     },
   },
+  {
+    path: "/minhas-reservas",
+    name: "Minhas Reservas",
+    component: lazyLoad("MyBookings"),
+    meta: {
+      layout: "default",
+      requiresAuth: true,
+    },
+  },
 
   {
     path: "/:pathMatch(.*)*",

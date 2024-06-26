@@ -10,7 +10,10 @@ import md5 from "md5";
 import API from "@/config/axios";
 
 function returnError() {
-  console.log("Erro");
+  console.log({
+    status: 404,
+    msg: "Erro ao realizar a solicitação",
+  });
 }
 
 export const useAuthStore = defineStore("auth", {
@@ -110,5 +113,6 @@ export const useAuthStore = defineStore("auth", {
   getters: {
     getUser: (state) => state.user,
     getGuestInfo: (state) => state.booking,
+    getIsAuthenticated: (state) => state.isAuthenticated,
   },
 });

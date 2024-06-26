@@ -132,8 +132,10 @@ const appStore = useAppStore();
 const paymentMethod = ref('pix');
 
 const userData = ref<BookingInterface>({
-  idUser: 0,
+  idUser: '',
   idHotel: 0,
+  checkin: '',
+  checkout: '',
   name: '',
   email: '',
   phone: '',
@@ -172,6 +174,8 @@ async function bookingHotel() {
   }
   bookingData.idUser = authStore.getUser?.id
   bookingData.idHotel = props.hotel.id
+  bookingData.checkin = selectedCheckin.value
+  bookingData.checkout = selectedCheckout.value
   bookingData.rates = getDays(appStore.getCheckin, appStore.getCheckout);
   bookingData.totalPrice = getDays(appStore.getCheckin, appStore.getCheckout) * props.hotel.pricePerNight;
   await mockStore.fetchBooking(bookingData);
