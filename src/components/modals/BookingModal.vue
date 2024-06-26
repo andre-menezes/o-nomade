@@ -81,6 +81,7 @@
               </article>
             </div>
           </div>
+
           <section>
             <article class="relative my-4 mb-8 flex items-center shadow rounded text-sm disabled:bg-gray-100 disabled:text-gray-300 
         disabled:cursor-default">
@@ -99,12 +100,15 @@
             <GuestOptions />
           </section>
         </section>
+
         <section class="flex justify-center gap-10 py-8">
-          <p class="text-lg font-bold">Diárias: <span class="py-2 px-4 rounded bg-blue-200/40">{{ getDays() }}</span>
+          <p class="text-lg font-bold">Diárias: <span class="py-2 px-4 rounded bg-blue-200/40">{{
+            getDays(selectedCheckin, selectedCheckout) }}</span>
           </p>
           <p class="text-lg font-bold">Valor total: <span class="py-2 px-4 rounded bg-green-200/40">{{ totalPrice
               }}</span></p>
         </section>
+
         <Button class="w-full" text="Reservar" :icon="getIconClass('checkin')" @click="bookingHotel()" />
       </form>
     </div>
@@ -114,7 +118,7 @@
 <script setup lang="ts">
 import { computed, defineEmits, ref, watch } from 'vue';
 import { getIconClass } from '@/utils';
-import { BookingInterface, CardTypes, HotelDataInterface } from '@/interfaces';
+import { BookingInterface, HotelDataInterface } from '@/interfaces';
 import { useAppStore } from '@/stores/modules/app';
 import { useAuthStore } from '@/stores/modules/auth';
 import { useMocksStore } from '@/stores/modules/mocks';
@@ -128,8 +132,8 @@ const appStore = useAppStore();
 const paymentMethod = ref('pix');
 
 const userData = ref<BookingInterface>({
-  idUser: undefined,
-  idHotel: undefined,
+  idUser: 0,
+  idHotel: 0,
   name: '',
   email: '',
   phone: '',
@@ -140,7 +144,9 @@ const userData = ref<BookingInterface>({
     cardNumber: undefined,
     expiryDate: undefined,
     cvv: undefined,
-  }
+  },
+  rates: 0,
+  totalPrice: 0
 });
 
 watch(paymentMethod, (val) => {
@@ -166,8 +172,8 @@ async function bookingHotel() {
   }
   bookingData.idUser = authStore.getUser?.id
   bookingData.idHotel = props.hotel.id
-  bookingData.rates = getDays();
-  bookingData.totalPrice = getDays() * props.hotel.pricePerNight;
+  bookingData.rates = getDays(appStore.getCheckin, appStore.getCheckout);
+  bookingData.totalPrice = getDays(appStore.getCheckin, appStore.getCheckout) * props.hotel.pricePerNight;
   await mockStore.fetchBooking(bookingData);
   router.push({ name: 'Home' });
 }
@@ -178,7 +184,7 @@ const paymentOptions = {
   debitCard: 'Cartão de Débito'
 }
 
-const emit = defineEmits('close');
+const emit = defineEmits(['close']);
 
 function handleClick() {
   emit('close')
@@ -189,14 +195,14 @@ const selectedCheckout = ref(appStore.getCheckout)
 
 watch(selectedCheckin, (val) => {
   appStore.setCheckin(val);
-  function getDays(val, selectedCheckout);
+  getDays(val, selectedCheckout.value);
 })
 watch(selectedCheckout, (val) => {
   appStore.setCheckout(val);
-  getDays(selectedCheckin, val);
+  getDays(selectedCheckin.value, val);
 })
 
-function getDays(start, end) {
+function getDays(start: string, end: string) {
   let checkin = moment(appStore.getCheckin);
   let checkout = moment(appStore.getCheckout);
   if (start && end) {
@@ -207,9 +213,27 @@ function getDays(start, end) {
 }
 
 const props = defineProps({
-  hotel: HotelDataInterface,
-  required: true
+  hotel: {
+    type: Object as () => HotelDataInterface,
+    required: true
+  },
 })
 
-const totalPrice = computed(() => getDays() * props.hotel.pricePerNight)
-</script>
+const totalPrice = computed(() => getDays(selectedCheckin.value, selectedCheckout.value) * props.hotel.pricePerNight)
+</script>{
+idUser: undefined,
+idHotel: undefined,
+name: '',
+email: '',
+phone: '',
+birthDate: '',
+cpf: '',
+paymentMethod: {
+pix: (paymentMethod.value === 'pix'),
+cardNumber: undefined,
+expiryDate: undefined,
+cvv: undefined,
+},
+rates: 0,
+totalPrice: 0
+}

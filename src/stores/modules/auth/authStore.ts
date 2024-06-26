@@ -108,7 +108,7 @@ export const useAuthStore = defineStore("auth", {
   },
 
   getters: {
-    getUser: (state) => state.user || "",
+    getUser: (state) => state.user,
     getGuestInfo: (state) => state.booking,
   },
 });

@@ -1,4 +1,32 @@
 <template>
+  <section v-if="hotelsToCompare.length"
+    class="w-full overflow-x-auto mb-8 px-8 py-8 bg-white rounded shadow flex flex-col">
+    <table class="w-max">
+      <thead>
+        <tr>
+          <th v-for="item in headers" :key="item.value" class="text-center w-fit px-8">{{ item.text }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="hotel in hotelsToCompare" :key="hotel.id">
+          <td v-for="item in headers" :key="item.value" class="text-center">
+            <template v-if="item.value === 'rating'">
+              <i v-for="_n in hotel.rating" :class="getIconClass('star')"
+                class="w-4 text-yellow-300 drop-shadow drop-shadow-black"></i>
+            </template>
+            <template v-else-if="item.value === 'action'">
+              <Button small @click="moreDetails(hotel.id)" text="Mais detalhes" :icon="getIconClass('details')"
+                class="my-2" />
+            </template>
+            <template v-else>
+              {{ hotel[item.value as keyof HotelCompareInterface] }}
+            </template>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
   <section class="w-full px-8 py-8 bg-white rounded shadow flex flex-col">
     <h2 class="text-2xl mb-14 font-semibold">
       <i :class="getIconClass('search')"></i>
@@ -27,12 +55,13 @@
 
     <article v-else class="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center"
       :class="hotels.length < 4 ? `lg:grid-cols-${hotels.length} xl:grid-cols-${hotels.length}` : 'lg:grid-cols-3 xl:grid-cols-4'">
-      <CardHotel v-for="hotel in hotels" :key="hotel.id" :hotel="hotel" />
+      <CardHotel v-for="hotel in hotels" :key="hotel.id" :hotel="hotel" compare @selected="addToCompare" />
     </article>
 
     <Button v-if="!params?.locale && page < mockStore.maxPagination" class="w-max self-center mt-8" text="Carregar mais"
       @click="loadMore" :icon="getIconClass('load')" />
   </section>
+
   <BestRating v-if="!hotels.length" />
 </template>
 
@@ -44,7 +73,7 @@ import { getIconClass } from '@/utils';
 import CardHotel from '@/components/CardHotel.vue';
 import Button from './Button.vue';
 import BestRating from './BestRating.vue';
-import { HotelDataInterface, OrderBy, SearchParamsInterface } from '@/interfaces';
+import { HotelCompareInterface, HotelDataInterface, OrderBy, SearchParamsInterface } from '@/interfaces';
 import { useAuthStore } from '@/stores/modules/auth';
 
 const props = defineProps({
@@ -112,5 +141,35 @@ const page = ref(1);
 async function loadMore() {
   page.value++;
   await mockStore.fetchHotelData(page.value);
+}
+
+const hotelsToCompare = ref<HotelCompareInterface[]>([]);
+
+function addToCompare(hotel: HotelDataInterface) {
+  if (!hotelsToCompare.value.find((h) => h.id === hotel.id)) {
+    const newHotel = {
+      id: hotel.id,
+      name: hotel.name,
+      rating: hotel.rating,
+      amenities: hotel.amenities.join(', '),
+      description: hotel.description,
+      pricePerNight: `R$${hotel.pricePerNight}`,
+    }
+    hotelsToCompare.value.push(newHotel);
+  } else {
+    hotelsToCompare.value = hotelsToCompare.value.filter((h) => h.id !== hotel.id)
+  }
+}
+
+const headers = [
+  { text: 'Nome do Hotel', value: 'name' },
+  { text: 'Avaliação', value: 'rating' },
+  { text: 'Comodidades', value: 'amenities' },
+  { text: 'Diária', value: 'pricePerNight' },
+  { text: '', value: 'action' },
+]
+
+function moreDetails(id: number) {
+  router.push({ name: 'Hotel', params: { id } });
 }
 </script>
