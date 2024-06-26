@@ -220,20 +220,4 @@ const props = defineProps({
 })
 
 const totalPrice = computed(() => getDays(selectedCheckin.value, selectedCheckout.value) * props.hotel.pricePerNight)
-</script>{
-idUser: undefined,
-idHotel: undefined,
-name: '',
-email: '',
-phone: '',
-birthDate: '',
-cpf: '',
-paymentMethod: {
-pix: (paymentMethod.value === 'pix'),
-cardNumber: undefined,
-expiryDate: undefined,
-cvv: undefined,
-},
-rates: 0,
-totalPrice: 0
-}
+</script>
