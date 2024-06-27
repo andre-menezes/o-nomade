@@ -22,7 +22,6 @@ Principais bibliotecas e frameworks utilizados no projeto:
 - **Pinia**: Para gerenciar os estados da aplicação.
 - **Vue 3**: Framework JavaScript para construção de interfaces de usuário.
 - **Vue Router**: Para gerenciar as rotas da aplicação.
-- **Vue Test Utils**: Para realizar os testes da aplicação.
 - **TailwindCSS**: Para estilização da aplicação.
 - **Typescript**: Para tipagem estática e garantir a integridade dos dados da aplicação.
 
@@ -53,12 +52,6 @@ yarn backend
 yarn serve
 ```
 
-### Rodar os testes unitários
-
-```sh
-yarn test
-```
-
 ### Realizar o build
 
 ```sh
@@ -84,7 +77,6 @@ src/
 │       ├── app/
 │       ├── auth/
 │       ├── mocks/
-├── tests/
 ├── utils/
 └── views/
 ```

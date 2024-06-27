@@ -160,8 +160,8 @@ const mockStore = useMocksStore();
 const router = useRouter();
 
 async function bookingHotel() {
-  if (!authStore.getUser?.id) {
-    router.push({ name: 'Login' })
+  if (!authStore.isAuthenticated) {
+    return router.push({ name: 'Login' })
   }
   const bookingData = userData.value;
   if (userData.value.paymentMethod.pix) {
