@@ -1,0 +1,806 @@
+{
+  "hotels": [
+    {
+      "id": "1",
+      "name": "Hotel Paradiso",
+      "location": {
+        "address": "Rua Exemplo, 123",
+        "city": "São Paulo",
+        "state": "SP",
+        "country": "Brasil",
+        "zip_code": "01000-000"
+      },
+      "description": "Um hotel de luxo no coração da cidade.",
+      "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Academia",
+        "Café da manhã incluso"
+      ],
+      "rating": 3,
+      "numberOfRooms": 5,
+      "pricePerNight": 450,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "2",
+      "name": "Hotel Tropical",
+      "location": {
+        "address": "Av. das Palmeiras, 456",
+        "city": "Rio de Janeiro",
+        "state": "RJ",
+        "country": "Brasil",
+        "zip_code": "22000-000"
+      },
+      "description": "Desfrute de uma estadia relaxante com vista para o mar.",
+      "image": "https://images.unsplash.com/photo-1598598795009-f80c5072e665",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Bar na piscina",
+        "Spa"
+      ],
+      "rating": 4,
+      "numberOfRooms": 8,
+      "pricePerNight": 600,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "3",
+      "name": "Pousada da Serra",
+      "location": {
+        "address": "Estrada da Montanha, 789",
+        "city": "Gramado",
+        "state": "RS",
+        "country": "Brasil",
+        "zip_code": "95670-000"
+      },
+      "description": "Uma charmosa pousada nas montanhas.",
+      "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Lareira",
+        "Café da manhã incluso",
+        "Estacionamento gratuito"
+      ],
+      "rating": 5,
+      "numberOfRooms": 10,
+      "pricePerNight": 400,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "4",
+      "name": "Hotel Beira Mar",
+      "location": {
+        "address": "Av. Oceânica, 101",
+        "city": "Salvador",
+        "state": "BA",
+        "country": "Brasil",
+        "zip_code": "40000-000"
+      },
+      "description": "Acorde com a brisa do mar.",
+      "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Restaurante",
+        "Serviço de quarto"
+      ],
+      "rating": 4,
+      "numberOfRooms": 7,
+      "pricePerNight": 550,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "5",
+      "name": "Pousada Recanto",
+      "location": {
+        "address": "Rua das Flores, 55",
+        "city": "Paraty",
+        "state": "RJ",
+        "country": "Brasil",
+        "zip_code": "23970-000"
+      },
+      "description": "Um recanto de paz e tranquilidade.",
+      "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Café da manhã incluso",
+        "Estacionamento gratuito"
+      ],
+      "rating": 3,
+      "numberOfRooms": 6,
+      "pricePerNight": 350,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "6",
+      "name": "Hotel Estrela",
+      "location": {
+        "address": "Rua das Estrelas, 88",
+        "city": "Belo Horizonte",
+        "state": "MG",
+        "country": "Brasil",
+        "zip_code": "30100-000"
+      },
+      "description": "Conforto e elegância no centro da cidade.",
+      "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Restaurante",
+        "Academia",
+        "Café da manhã incluso"
+      ],
+      "rating": 4,
+      "numberOfRooms": 9,
+      "pricePerNight": 500,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "7",
+      "name": "Pousada do Sol",
+      "location": {
+        "address": "Praia do Sol, 23",
+        "city": "Florianópolis",
+        "state": "SC",
+        "country": "Brasil",
+        "zip_code": "88000-000"
+      },
+      "description": "A melhor vista para o pôr do sol.",
+      "image": "https://images.unsplash.com/photo-1586611292717-f828b167408c",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Café da manhã incluso",
+        "Estacionamento gratuito"
+      ],
+      "rating": 5,
+      "numberOfRooms": 5,
+      "pricePerNight": 450,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "8",
+      "name": "Hotel Mirante",
+      "location": {
+        "address": "Rua do Mirante, 112",
+        "city": "Curitiba",
+        "state": "PR",
+        "country": "Brasil",
+        "zip_code": "80000-000"
+      },
+      "description": "Vista panorâmica da cidade.",
+      "image": "https://images.unsplash.com/photo-1592229505726-ca121723b8ef",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Restaurante",
+        "Academia",
+        "Spa"
+      ],
+      "rating": 3,
+      "numberOfRooms": 3,
+      "pricePerNight": 400,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "9",
+      "name": "Hotel Encanto",
+      "location": {
+        "address": "Rua Encantada, 77",
+        "city": "Recife",
+        "state": "PE",
+        "country": "Brasil",
+        "zip_code": "50000-000"
+      },
+      "description": "Encanto e conforto em cada detalhe.",
+      "image": "https://images.unsplash.com/photo-1614957004131-9e8f2a13123c",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Serviço de quarto",
+        "Café da manhã incluso"
+      ],
+      "rating": 4,
+      "numberOfRooms": 7,
+      "pricePerNight": 450,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "10",
+      "name": "Pousada do Campo",
+      "location": {
+        "address": "Estrada do Campo, 90",
+        "city": "Campos do Jordão",
+        "state": "SP",
+        "country": "Brasil",
+        "zip_code": "12460-000"
+      },
+      "description": "Natureza e conforto em harmonia.",
+      "image": "https://images.unsplash.com/photo-1561501878-aabd62634533",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Lareira",
+        "Café da manhã incluso",
+        "Estacionamento gratuito"
+      ],
+      "rating": 5,
+      "numberOfRooms": 6,
+      "pricePerNight": 500,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "11",
+      "name": "Hotel Flor de Lis",
+      "location": {
+        "address": "Rua das Flores, 201",
+        "city": "Campinas",
+        "state": "SP",
+        "country": "Brasil",
+        "zip_code": "13000-000"
+      },
+      "description": "Conforto e elegância para sua estadia.",
+      "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Restaurante",
+        "Estacionamento gratuito"
+      ],
+      "rating": 4,
+      "numberOfRooms": 9,
+      "pricePerNight": 420,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "12",
+      "name": "Pousada Vista Verde",
+      "location": {
+        "address": "Estrada do Vale, 12",
+        "city": "Nova Friburgo",
+        "state": "RJ",
+        "country": "Brasil",
+        "zip_code": "28600-000"
+      },
+      "description": "Uma experiência única em meio à natureza.",
+      "image": "https://images.unsplash.com/photo-1598598795009-f80c5072e665",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Café da manhã incluso",
+        "Estacionamento gratuito"
+      ],
+      "rating": 5,
+      "numberOfRooms": 8,
+      "pricePerNight": 480,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "13",
+      "name": "Hotel Bela Vista",
+      "location": {
+        "address": "Av. Central, 333",
+        "city": "Búzios",
+        "state": "RJ",
+        "country": "Brasil",
+        "zip_code": "28950-000"
+      },
+      "description": "A melhor vista da cidade.",
+      "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Restaurante",
+        "Serviço de quarto"
+      ],
+      "rating": 4,
+      "numberOfRooms": 7,
+      "pricePerNight": 460,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "14",
+      "name": "Pousada Caminho das Águas",
+      "location": {
+        "address": "Estrada das Águas, 45",
+        "city": "Bonito",
+        "state": "MS",
+        "country": "Brasil",
+        "zip_code": "79290-000"
+      },
+      "description": "A tranquilidade que você procura.",
+      "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Café da manhã incluso",
+        "Estacionamento gratuito"
+      ],
+      "rating": 1,
+      "numberOfRooms": 6,
+      "pricePerNight": 440,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "15",
+      "name": "Hotel Porto Azul",
+      "location": {
+        "address": "Av. Atlântica, 999",
+        "city": "Fortaleza",
+        "state": "CE",
+        "country": "Brasil",
+        "zip_code": "60160-000"
+      },
+      "description": "Vista para o mar e conforto garantido.",
+      "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Restaurante",
+        "Serviço de quarto"
+      ],
+      "rating": 4,
+      "numberOfRooms": 10,
+      "pricePerNight": 490,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "16",
+      "name": "Pousada Terra do Sol",
+      "location": {
+        "address": "Rua do Sol, 89",
+        "city": "Natal",
+        "state": "RN",
+        "country": "Brasil",
+        "zip_code": "59000-000"
+      },
+      "description": "Um refúgio à beira-mar.",
+      "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Café da manhã incluso",
+        "Estacionamento gratuito"
+      ],
+      "rating": 4,
+      "numberOfRooms": 5,
+      "pricePerNight": 430,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "17",
+      "name": "Hotel Central Plaza",
+      "location": {
+        "address": "Praça Central, 5",
+        "city": "São Paulo",
+        "state": "SP",
+        "country": "Brasil",
+        "zip_code": "01000-001"
+      },
+      "description": "Conveniência e conforto no centro da cidade.",
+      "image": "https://images.unsplash.com/photo-1586611292717-f828b167408c",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Academia",
+        "Restaurante",
+        "Serviço de quarto"
+      ],
+      "rating": 4,
+      "numberOfRooms": 10,
+      "pricePerNight": 450,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "18",
+      "name": "Pousada Jardim Secreto",
+      "location": {
+        "address": "Rua do Jardim, 14",
+        "city": "Ilhabela",
+        "state": "SP",
+        "country": "Brasil",
+        "zip_code": "11630-000"
+      },
+      "description": "Um jardim de tranquilidade e paz.",
+      "image": "https://images.unsplash.com/photo-1592229505726-ca121723b8ef",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Café da manhã incluso",
+        "Estacionamento gratuito"
+      ],
+      "rating": 2,
+      "numberOfRooms": 6,
+      "pricePerNight": 470,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "19",
+      "name": "Hotel Rio Verde",
+      "location": {
+        "address": "Av. Rio Verde, 123",
+        "city": "Goiânia",
+        "state": "GO",
+        "country": "Brasil",
+        "zip_code": "74000-000"
+      },
+      "description": "Conforto e praticidade na cidade.",
+      "image": "https://images.unsplash.com/photo-1614957004131-9e8f2a13123c",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Academia",
+        "Estacionamento gratuito"
+      ],
+      "rating": 3,
+      "numberOfRooms": 7,
+      "pricePerNight": 420,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "20",
+      "name": "Pousada Mar Azul",
+      "location": {
+        "address": "Rua da Praia, 9",
+        "city": "Maceió",
+        "state": "AL",
+        "country": "Brasil",
+        "zip_code": "57000-000"
+      },
+      "description": "Uma pousada encantadora à beira-mar.",
+      "image": "https://images.unsplash.com/photo-1561501878-aabd62634533",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Café da manhã incluso",
+        "Estacionamento gratuito"
+      ],
+      "rating": 4,
+      "numberOfRooms": 8,
+      "pricePerNight": 460,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "21",
+      "name": "Hotel Luxo Imperial",
+      "location": {
+        "address": "Rua das Palmeiras, 321",
+        "city": "Rio de Janeiro",
+        "state": "RJ",
+        "country": "Brasil",
+        "zip_code": "22000-001"
+      },
+      "description": "Luxo e conforto no coração do Rio.",
+      "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Restaurante",
+        "Spa"
+      ],
+      "rating": 3,
+      "numberOfRooms": 8,
+      "pricePerNight": 700,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "22",
+      "name": "Pousada Encanto do Mar",
+      "location": {
+        "address": "Praia Encantada, 56",
+        "city": "Ubatuba",
+        "state": "SP",
+        "country": "Brasil",
+        "zip_code": "11680-000"
+      },
+      "description": "Um refúgio à beira-mar com vista deslumbrante.",
+      "image": "https://images.unsplash.com/photo-1598598795009-f80c5072e665",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Café da manhã incluso",
+        "Estacionamento gratuito"
+      ],
+      "rating": 4,
+      "numberOfRooms": 6,
+      "pricePerNight": 480,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "23",
+      "name": "Hotel Vista Mar",
+      "location": {
+        "address": "Av. Atlântica, 200",
+        "city": "Salvador",
+        "state": "BA",
+        "country": "Brasil",
+        "zip_code": "40100-000"
+      },
+      "description": "Desfrute de uma vista incrível do mar.",
+      "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Restaurante",
+        "Serviço de quarto"
+      ],
+      "rating": 4,
+      "numberOfRooms": 9,
+      "pricePerNight": 500,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "24",
+      "name": "Pousada Jardim Tropical",
+      "location": {
+        "address": "Rua do Jardim, 45",
+        "city": "Manaus",
+        "state": "AM",
+        "country": "Brasil",
+        "zip_code": "69000-000"
+      },
+      "description": "Um oásis de tranquilidade em meio à selva.",
+      "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Café da manhã incluso",
+        "Estacionamento gratuito"
+      ],
+      "rating": 4,
+      "numberOfRooms": 7,
+      "pricePerNight": 450,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "25",
+      "name": "Hotel Porto Seguro",
+      "location": {
+        "address": "Av. Beira Mar, 123",
+        "city": "Porto Seguro",
+        "state": "BA",
+        "country": "Brasil",
+        "zip_code": "45810-000"
+      },
+      "description": "A melhor experiência à beira-mar.",
+      "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Restaurante",
+        "Serviço de quarto"
+      ],
+      "rating": 4,
+      "numberOfRooms": 8,
+      "pricePerNight": 470,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "26",
+      "name": "Pousada do Paraíso",
+      "location": {
+        "address": "Estrada do Paraíso, 99",
+        "city": "Chapada dos Guimarães",
+        "state": "MT",
+        "country": "Brasil",
+        "zip_code": "78195-000"
+      },
+      "description": "Descanse no paraíso natural.",
+      "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Café da manhã incluso",
+        "Estacionamento gratuito"
+      ],
+      "rating": 3,
+      "numberOfRooms": 7,
+      "pricePerNight": 500,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "27",
+      "name": "Hotel Bela Praia",
+      "location": {
+        "address": "Rua da Praia, 11",
+        "city": "Arraial do Cabo",
+        "state": "RJ",
+        "country": "Brasil",
+        "zip_code": "28930-000"
+      },
+      "description": "Desfrute da beleza das praias de Arraial.",
+      "image": "https://images.unsplash.com/photo-1586611292717-f828b167408c",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Restaurante",
+        "Serviço de quarto"
+      ],
+      "rating": 4,
+      "numberOfRooms": 6,
+      "pricePerNight": 460,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "28",
+      "name": "Pousada Refúgio da Serra",
+      "location": {
+        "address": "Estrada da Serra, 33",
+        "city": "Petrópolis",
+        "state": "RJ",
+        "country": "Brasil",
+        "zip_code": "25600-000"
+      },
+      "description": "Um refúgio de paz nas montanhas.",
+      "image": "https://images.unsplash.com/photo-1592229505726-ca121723b8ef",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Lareira",
+        "Café da manhã incluso",
+        "Estacionamento gratuito"
+      ],
+      "rating": 5,
+      "numberOfRooms": 6,
+      "pricePerNight": 480,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "29",
+      "name": "Hotel Montanha Encantada",
+      "location": {
+        "address": "Rua das Montanhas, 78",
+        "city": "Campos do Jordão",
+        "state": "SP",
+        "country": "Brasil",
+        "zip_code": "12460-001"
+      },
+      "description": "Um hotel encantador nas montanhas.",
+      "image": "https://images.unsplash.com/photo-1614957004131-9e8f2a13123c",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Lareira",
+        "Restaurante",
+        "Café da manhã incluso"
+      ],
+      "rating": 5,
+      "numberOfRooms": 5,
+      "pricePerNight": 520,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    },
+    {
+      "id": "30",
+      "name": "Pousada da Praia",
+      "location": {
+        "address": "Rua da Praia, 21",
+        "city": "Praia do Forte",
+        "state": "BA",
+        "country": "Brasil",
+        "zip_code": "48280-000"
+      },
+      "description": "Relaxe e aproveite a tranquilidade da praia.",
+      "image": "https://images.unsplash.com/photo-1561501878-aabd62634533",
+      "amenities": [
+        "Wi-Fi grátis",
+        "Piscina",
+        "Café da manhã incluso",
+        "Estacionamento gratuito"
+      ],
+      "rating": 4,
+      "numberOfRooms": 6,
+      "pricePerNight": 450,
+      "cancellationPolicy": "Cancelamento gratuito até 24 horas antes do check-in."
+    }
+  ],
+  "users": [
+    {
+      "id": "7f16",
+      "name": "Andre Menezes",
+      "email": "andre_menezes@outlook.com",
+      "password": "e10adc3949ba59abbe56e057f20f883e"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "1d91",
+      "idUser": "7f16",
+      "idHotel": "3",
+      "checkin": "2024-06-26",
+      "checkout": "2024-07-01",
+      "name": "Andre Menezes",
+      "email": "andre_menezes@outlook.com",
+      "phone": "(12) 33333-4444",
+      "birthDate": "20/04/1987",
+      "cpf": "123.456.789-00",
+      "paymentMethod": {
+        "pix": true
+      },
+      "rates": 5,
+      "totalPrice": 2000
+    },
+    {
+      "id": "1466",
+      "idUser": "7f16",
+      "idHotel": "5",
+      "checkin": "2024-07-22",
+      "checkout": "2024-07-27",
+      "name": "Andre Menezes",
+      "email": "andre_menezes@outlook.com",
+      "phone": "(12) 33333-4444",
+      "birthDate": "20/04/1987",
+      "cpf": "123.456.789-00",
+      "paymentMethod": {
+        "cardNumber": "1111 2222 3333 4444",
+        "expiryDate": "12/30",
+        "cvv": "321"
+      },
+      "rates": 5,
+      "totalPrice": 1750
+    },
+    {
+      "id": "bad3",
+      "idUser": "7f16",
+      "idHotel": "20",
+      "checkin": "2024-08-30",
+      "checkout": "2024-09-01",
+      "name": "Evelyn Quirino",
+      "email": "teste@teste.com",
+      "phone": "(08) 91237-5901",
+      "birthDate": "25/10/1998",
+      "cpf": "432.016.798-42",
+      "paymentMethod": {
+        "pix": true
+      },
+      "rates": 2,
+      "totalPrice": 920
+    },
+    {
+      "id": "15fa",
+      "idHotel": "17",
+      "checkin": "2024-07-04",
+      "checkout": "2024-07-08",
+      "name": "John Doe",
+      "email": "john.doe@email.com",
+      "phone": "(22) 22222-2222",
+      "birthDate": "01/01/1970",
+      "cpf": "111.111.111-11",
+      "paymentMethod": {
+        "pix": true
+      },
+      "rates": 4,
+      "totalPrice": 1800
+    },
+    {
+      "id": "11db",
+      "idHotel": "10",
+      "checkin": "2024-06-27",
+      "checkout": "2024-07-03",
+      "name": "Ada Lovelace",
+      "email": "ada.lovelace@email.com",
+      "phone": "(55) 55555-5555",
+      "birthDate": "20/02/1999",
+      "cpf": "444.444.444-44",
+      "paymentMethod": {
+        "pix": true
+      },
+      "rates": 6,
+      "totalPrice": 3000
+    },
+    {
+      "id": "926a",
+      "idUser": "7f16",
+      "idHotel": "29",
+      "checkin": "2024-06-28",
+      "checkout": "2024-06-30",
+      "name": "Evelyn Quirino",
+      "email": "evelyn.quirino98@outlook.com",
+      "phone": "(11) 95818-9849",
+      "birthDate": "25/10/1998",
+      "cpf": "421.403.468-66",
+      "paymentMethod": {
+        "pix": true
+      },
+      "rates": 2,
+      "totalPrice": 1040
+    }
+  ]
+}
