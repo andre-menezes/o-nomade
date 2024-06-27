@@ -752,6 +752,55 @@
       },
       "rates": 2,
       "totalPrice": 920
+    },
+    {
+      "id": "15fa",
+      "idHotel": "17",
+      "checkin": "2024-07-04",
+      "checkout": "2024-07-08",
+      "name": "John Doe",
+      "email": "john.doe@email.com",
+      "phone": "(22) 22222-2222",
+      "birthDate": "01/01/1970",
+      "cpf": "111.111.111-11",
+      "paymentMethod": {
+        "pix": true
+      },
+      "rates": 4,
+      "totalPrice": 1800
+    },
+    {
+      "id": "11db",
+      "idHotel": "10",
+      "checkin": "2024-06-27",
+      "checkout": "2024-07-03",
+      "name": "Ada Lovelace",
+      "email": "ada.lovelace@email.com",
+      "phone": "(55) 55555-5555",
+      "birthDate": "20/02/1999",
+      "cpf": "444.444.444-44",
+      "paymentMethod": {
+        "pix": true
+      },
+      "rates": 6,
+      "totalPrice": 3000
+    },
+    {
+      "id": "926a",
+      "idUser": "7f16",
+      "idHotel": "29",
+      "checkin": "2024-06-28",
+      "checkout": "2024-06-30",
+      "name": "Evelyn Quirino",
+      "email": "evelyn.quirino98@outlook.com",
+      "phone": "(11) 95818-9849",
+      "birthDate": "25/10/1998",
+      "cpf": "421.403.468-66",
+      "paymentMethod": {
+        "pix": true
+      },
+      "rates": 2,
+      "totalPrice": 1040
     }
   ]
 }
